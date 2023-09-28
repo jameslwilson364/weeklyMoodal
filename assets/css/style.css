@@ -8,12 +8,13 @@
 body {
     background-image: url(/assets/images/bg-calm.jpg);
     background-size: cover;
-    background-position: center;
     height: 100vh;
+
 }
 
 .hero {
     height: 100px;
+
 }
 
 .column {
