@@ -1,0 +1,71 @@
+
+
+body {
+    background-image: url(/assets/images/bg-calm.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.hero {
+    height: 100px;
+}
+
+.column {
+    margin: 10px;
+    margin-bottom: 25px;
+    background-color: rgb(10, 141, 211);
+    color: aliceblue;
+    box-shadow: 0px 0px 5px #fff;
+}
+
+.column:hover {
+    scale: 1.1;
+}
+
+.date {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.column h2 {
+    color: aliceblue;
+    font-weight: 700;
+}
+
+.control-options {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+.save {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.reset {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: auto;
+   margin-top: 25px;
+   border-radius: 10px;
+}
+
+.is-warning {
+    width: 33%;
+}
+
+footer {
+    text-align: center;
+    max-height: fit-content;
+    max-height: min-content;
+}
