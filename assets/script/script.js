@@ -19,6 +19,10 @@
 // 10-12 hours
 // I slept all day!
 
+// api to pull in weather data for day one 
+// day one value auto populates in each day's location field with weather data auto populated underneath
+// allow the user to edit their location in each card
+
 
 
 // submit button to capture all user inputs 
