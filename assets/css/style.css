@@ -1,28 +1,35 @@
 :root {
-    --happy: yellow;
-    --sad: blue;
-    --balanced: green;
-    --stressed: red;
+    --happy: rgb(248, 248, 158);
+    --sad: rgb(121, 207, 250);
+    --nuetral: rgb(162, 222, 162);
+    --angry: rgb(244, 135, 135);
 }
 
 body {
-    background-image: url(/assets/images/bg-calm.jpg);
+    background-image: linear-gradient(to left, rgb(244, 159, 159), rgb(255, 255, 193), rgb(146, 211, 237), rgb(211, 245, 222) );
     background-size: cover;
-    height: 100vh;
+    height: 100%;
 
 }
 
 .hero {
     height: 100px;
+    background-image: linear-gradient(rgb(10, 141, 211), rgb(68, 105, 156));
 
 }
 
 .column {
     margin: 10px;
     margin-bottom: 25px;
-    background-color: rgb(10, 141, 211);
+    background-image: linear-gradient(rgb(10, 141, 211), rgb(68, 105, 156));
     color: aliceblue;
-    box-shadow: 0px 0px 5px #fff;
+    border: 2px solid white;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.column a {
+    scale: 1.2;
 }
 
 .column:hover {
@@ -40,12 +47,65 @@ body {
     font-weight: 700;
 }
 
+.left {
+    position: fixed;
+    top:0;
+    max-block-size: 80px;
+}
+
+.right {
+    position: fixed;
+    top:0;
+    max-block-size: 80px;
+    right:0;
+}
+
+.water {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.water-qty {
+    align-items: center;
+    border-radius: 0;
+    text-align: center;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    width: 75px;
+}
+
 .control-options {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
 }
+
+.slide {
+    width: 100%;
+    text-align: center;
+
+}
+
+.containerR {
+    display: flex;
+    justify-content: center;
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    font-size: 100px;
+    margin:0 5px;
+}
+
+.subtitle {
+    text-align: center;
+}
+
 
 .save {
     display: flex;
@@ -54,7 +114,7 @@ body {
     justify-content: center;
     margin: auto;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .reset {
@@ -79,44 +139,67 @@ body {
     width: 10%;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-}
 
 .fa-code {
     margin: 5px;
 }
 
 .happy {
+    background-image: none;
     background-color: var(--happy);
+    font-size: 25px;
+    margin: 0;
+    border-radius: 1px;
+    border: none;
+
 }
 
 .sad {
+    background-image: none;
+    border: none;
     background-color: var(--sad);
+    font-size: 25px;
+    margin: 0;
+    border-radius: 1px;
+
 }
 
-.balanced {
-    background-color: var(--balanced);
+.nuetral {
+    background-image: none;
+    border: none;
+    background-color: var(--nuetral);
+    font-size: 25px;
+    margin: 0;
+    border-radius: 1px;
+
 }
 
-.stressed {
-    background-color: var(--stressed);
+.angry {
+    background-image: none;
+    border: none;
+    background-color: var(--angry);
+    font-size: 25px;
+    color: white;
+    margin: 0;
+    border-radius: 1px;
+
 }
+
+
 
 .block-mood {
-    background-color: blueviolet;
+    background-color: var(--happy);
     height: 150px;
     margin-right: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 75px;
+    color: black;
 }
 
 .block-weather {
-    background-color: rgb(10, 25, 119);
+    background-color: var(--sad);
     height: 150px;
     margin-left: 25px;
     display: flex;
@@ -125,10 +208,20 @@ footer {
 }
 
 .block-music {
-    background-color: rgb(43, 226, 55);
+    background-color: var(--nuetral);
     height: 150px;
     margin-right: 25px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-stats {
+    background-color: var(--angry);
+    height: 150px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -140,9 +233,10 @@ footer {
 
 .mood {
     display: flex;
+    flex-direction: column;
    justify-content: center;
    align-items: center;
-   font-size: 100px;
+    font-size: 60px;
    color: white;
 }
 
@@ -162,3 +256,48 @@ footer {
    flex-direction: column;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.container input {
+    align-items: center;
+    align-content: center;
+}
+
+.fa-bottle-water {
+    font-size: 75px;
+}
+
+.seperator {
+    margin: 20px 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(171, 212, 251);
+}
+
+.links {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.sleep {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.full {
+    width: 100%;
+}
+
+input[type="range"] {
+    background-color: #f74343; 
+
+}
+
+.make-bigger {
+    font-size: 50px;
+}
