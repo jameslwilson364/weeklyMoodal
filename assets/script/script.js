@@ -44,3 +44,13 @@
 // YouTube API for playlists
 // YouTube API for videos
 
+//possibly write a function to split the day of the week off to write this as a single function for all stress sliders
+
+var slider = document.getElementById("stress-slide-mon");
+var output = document.getElementById("stress-demo-mon");
+output.innerHTML = slider.value + "%"; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value + "%";
+};
