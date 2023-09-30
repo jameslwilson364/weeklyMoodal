@@ -31,7 +31,7 @@
               <form class="userForm face">
                 
                 <div class="water">
-                  <div class="subtitle is-6" style="color: white" >Glasses of Water</div>
+                  <h2 class="subtitle is-6" style="color: white" >Glasses of Water</h2>
                   <div class="containerR">
                     <p><i class="fa-solid fa-bottle-water"></i></p>
                     <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
@@ -66,58 +66,67 @@
                 </div>
 
                 <div class="stress">
+                  <h2 class="subtitle is-6">Stress Level</h2>
+
                   <div class="containerR">
-                    0<input id="stress-slide" class="slide" type="range" min="0" max="100">100%
+
+                    <input id="stress-slide" class="slide" type="range" min="0" max="100">
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
                   <div id="stress-demo" class="center"></div>
-                    <h2 class="subtitle is-6">Stress Level</h2>
                   
                 </div>
 
                 <div class="seperator"></div>
 
+                <!--This is the non-bulma Drop Down menu-->
+              <div class="hours">
+                <label for="hours-sleep subtitle is-6" ><h2>Hours of Sleep</h2></label>
+                <select name="hours-sleep">
+                  <option id="0-hour" class="font-adjust" value="0">0-4 Hours</option>
+                  <option id="4-hour" class="font-adjust" value="4">4-6 Hours</option>
+                  <option id="6-hour" class="font-adjust" value="6">6-8 Hours</option>
+                  <option id="8-hour" class="font-adjust" value="8"> 8+ Hours</option>
+                </select>
+              </div>
 
-                <div class="dropdown sleep"> <!--We will need to add the class of is-active in order to display the drop down via click listener-->
-                  <div class="dropdown-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                      <span>Hours of Sleep</span>
-                      <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </span>
-                    </button>
-                  </div>
-                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                      <a id="0-hours" href="#" class="dropdown-item">
-                        0-4 Hours
-                      </a>
-                      <hr class="dropdown-divider">
 
-                      <a id="4-hours"class="dropdown-item">
-                        4-6 Hours
-                      </a>
-                      <hr class="dropdown-divider">
-
-                      <a id="6-hours"href="#" class="dropdown-item">
-                        6-8 Hours
-                      </a>
-                      <hr class="dropdown-divider">
-
-                      <a id="8-hours"href="#" class="dropdown-item">
-                        8+ Hours
-                      </a>
-
-                    </div>
-                  </div>
-                </div>
-
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1f09cc;"></i></button>
+                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
               </form>
           </div>
+          
+              <div id="flip" class="column card flip">
+                <h2 class="subtitle is-5 has-text-centered">Flip-Preview</h2>
+                <div class="block-mood">
+                    <p id="mood-flip" class="mood-i"><i class="fa-regular fa-face-smile"></i></p>
+                </div>
+                <div class="block-weather">
+                    <div class="weather">
+                        <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
+                        <p id="temp-flip">Temp</p>
+                    </div>
+                </div>
+                <div class="block-music">
+                    <div class="music">
+                        <p><i class="fa-brands fa-youtube make-bigger"></i></p>
+                        <p id="video-title">Video Title</p>
+                        <div>
+                            <a id="" class="has-text-centered"> YouTube Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-stats">
+                  <ul>
+                    <li>Water Intake</li>
+                    <li>Hours of Sleep</li>
+                    <li>Stress %</li>
+                  </ul>
+                </div>
+                <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
+              </div>
 
-
+    <!--everything before the following two divs will show as a Bulma column-->
         </div>
       </div>
         
@@ -126,43 +135,6 @@
     <div>
       <button id="reset" class="button reset is-danger">Reset Week</button>
   </div>
-
-  <section>
-    <div class="container">
-       <div class="columns">
-
-         <div id="flip" class="column card flip">
-           <h2 class="subtitle is-5 has-text-centered">Flip-Preview</h2>
-           <div class="block-mood">
-               <p id="mood-flip" class="mood-i"><i class="fa-regular fa-face-smile"></i></p>
-           </div>
-           <div class="block-weather">
-               <div class="weather">
-                   <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
-                   <p id="temp-flip">Temp</p>
-               </div>
-           </div>
-           <div class="block-music">
-               <div class="music">
-                   <p><i class="fa-brands fa-youtube make-bigger"></i></p>
-                   <p id="video-title">Video Title</p>
-                   <div>
-                       <a id="" class="has-text-centered"> YouTube Link</a>
-                   </div>
-               </div>
-           </div>
-           <div class="block-stats">
-             <ul>
-               <li>Water Intake</li>
-               <li>Hours of Sleep</li>
-               <li>Stress %</li>
-             </ul>
-           </div>
-           <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
-         </div>
-       </div>
-     </div>
-</section>
 
 
 <!--
@@ -214,11 +186,22 @@
           </div>
     </section>-->
 
-    <footer class="links">
-      <button id="ryan-link" class="button is-warning"><i class="fa-solid fa-code"></i>  Ryan's Portfolio</button>
-      <button id="james-link" class="button is-warning"><i class="fa-solid fa-code"></i>  James's Portfolio</button>
-      <button id="luis-link" class="button is-warning"><i class="fa-solid fa-code"></i>  Luis' Portfolio</button>
-    </footer>
+    <div class="links">
+
+      <a href="https://jameslwilson364.github.io/Challenge-2-Wilson/">
+        <button id="james-link" class="button is-warning"><i class="fa-solid fa-code"></i>  James's Portfolio</button>
+        </a>
+      
+      <a href="https://cazthetraveler.github.io/Luis-Olmos-Portfolio/">
+        <button id="luis-link" class="button is-warning"><i class="fa-solid fa-code"></i>  Luis' Portfolio</button>
+        </a>
+
+
+      <a href="https://8bitginger.github.io/studentPortfolio/">
+        <button id="ryan-link" class="button is-warning"><i class="fa-solid fa-code"></i>  Ryan's Portfolio</button>
+        </a>
+
+    </div>
 
     <script src="assets/script/script.js"></script>
   </body>
