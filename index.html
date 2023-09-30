@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekly Moodal</title>
 
+    <link rel="stylesheet" href="">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
@@ -25,6 +27,97 @@
 
           <div id="sunday" class="column card">
             <h2 class="subtitle is-5 has-text-centered">Sunday</h2>
+            <h2 class="subtitle is-6 has-text-centered">Date</h2>
+              <form class="userForm face">
+                
+                <div class="water">
+                  <div class="subtitle is-6" style="color: white" >Glasses of Water</div>
+                  <div class="containerR">
+                    <p><i class="fa-solid fa-bottle-water"></i></p>
+                    <input type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                  </div>
+                </div>
+
+                <div class="seperator"></div>
+                
+                <div class="mood">
+                  <h2 class="subtitle is-6">Mood</h2>
+                  <div class="container columns">
+                    
+                    <div class="column happy">
+                      <a class="happy-block"><i class="fa-solid fa-face-smile" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column nuetral">
+                      <a class="nuetral-block"><i class="fa-solid fa-face-meh" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column sad">
+                      <a class="sad-block"><i class="fa-solid fa-face-sad-tear" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column angry">
+                        <a class="angry-block"><i i class="fa-solid fa-face-angry" style="color: #474747;"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="seperator"></div>
+
+                </div>
+
+                <div class="stress">
+                  <div class="containerR">
+                    0<input id="stress-slide-mon" class="slide" type="range" min="0" max="100">100%
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div id="stress-demo-mon" class="center"></div>
+                    <h2 class="subtitle is-6">Stress Level</h2>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <div class="dropdown sleep"> <!--We will need to add the class of is-active in order to display the drop down via click listener-->
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span>Hours of Sleep</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        0-4 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a class="dropdown-item">
+                        4-6 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        6-8 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        8+ Hours
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+
+                <button id="save-Sun" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1f09cc;"></i></button>
+              </form>
+          </div>
+
+          <div id="monday" class="column card">
+            <h2 class="subtitle is-5 has-text-centered">Monday</h2>
               <form class="userForm">
                 
                 <div class="water">
@@ -108,155 +201,646 @@
                   </div>
                 </div>
 
-              <button id="save-Sun" class="save button is-link is-light">SAVE</button>
-
-
+                <button id="save-Sun" class="save button is-link is-light">SAVE</button>
               </form>
-          </div>
-
-          <div id="monday" class="column card">
-            <h2 class="subtitle is-5 has-text-centered">Monday</h2>
-            <h3 class="date">Date</h3>
-            <form class="userForm">
-                <input class="field" placeholder="Stress Level">
-                <input class="field" placeholder="Glasses of Water">
-                <input class="field" placeholder="Energy Level">
-                <input class="field" placeholder="Minutes of Exercise">
-                <input class="field" placeholder="Hours of Sleep">
-                <input class="field" placeholder="Choose Color">  
-              <div class="control-options">
-                <input class="control" type="checkbox"> Option 1
-                <input class="control" type="checkbox"> Option 2
-                <input class="control" type="checkbox"> Option 3
-                <input class="control" type="checkbox"> Option 4
-            </div>
-            <button id="save-mon" class="save button is-link is-light">SAVE</button>
-
-            </form>
           </div>
 
           <div id="tuesday" class="column card">
             <h2 class="subtitle is-5 has-text-centered">Tuesday</h2>
-            <h3 class="date">Date</h3>
-            <form class="userForm">
-                <input class="field" placeholder="Stress Level">
-                <input class="field" placeholder="Glasses of Water">
-                <input class="field" placeholder="Energy Level">
-                <input class="field" placeholder="Minutes of Exercise">
-                <input class="field" placeholder="Hours of Sleep">
-                <input class="field" placeholder="Choose Color">  
-              <div class="control-options">
-                <input class="control" type="checkbox"> Option 1
-                <input class="control" type="checkbox"> Option 2
-                <input class="control" type="checkbox"> Option 3
-                <input class="control" type="checkbox"> Option 4
-            </div>
-            <button id="save-tue" class="save button is-link is-light">SAVE</button>
+              <form class="userForm">
+                
+                <div class="water">
+                  <div class="subtitle is-6">Glasses of Water</div>
+                  <div class="container">
+                    <p><i class="fa-solid fa-bottle-water"></i></p>
+                    <input type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                  </div>
+                </div>
 
-            </form>
+                <div class="seperator"></div>
+                
+                <div class="mood">
+                  <h2 class="subtitle is-6">Mood</h2>
+                  <div class="container columns">
+                    
+                    <div class="column happy">
+                      <a class="happy-block"><i class="fa-solid fa-face-smile" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column nuetral">
+                      <a class="nuetral-block"><i class="fa-solid fa-face-meh" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column sad">
+                      <a class="sad-block"><i class="fa-solid fa-face-sad-tear" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column angry">
+                        <a class="angry-block"><i i class="fa-solid fa-face-angry" style="color: #474747;"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="seperator"></div>
+
+                </div>
+
+                <div class="stress">
+                  <div class="containerR">
+                    0<input id="stress-slide" class="slide" type="range" min="0" max="100">100%
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    <div id="stress-demo"></div>
+                  </div>
+                    <h2 class="subtitle is-6">Stress Level</h2>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <div class="dropdown sleep"> <!--We will need to add the class of is-active in order to display the drop down via click listener-->
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span>Hours of Sleep</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        0-4 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a class="dropdown-item">
+                        4-6 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        6-8 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        8+ Hours
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+
+                <button id="save-Sun" class="save button is-link is-light">SAVE</button>
+              </form>
           </div>
 
           <div id="wednesday" class="column card">
             <h2 class="subtitle is-5 has-text-centered">Wednesday</h2>
-            <h3 class="date">Date</h3>
-            <form class="userForm">
-                <input class="field" placeholder="Stress Level">
-                <input class="field" placeholder="Glasses of Water">
-                <input class="field" placeholder="Energy Level">
-                <input class="field" placeholder="Minutes of Exercise">
-                <input class="field" placeholder="Hours of Sleep">
-                <input class="field" placeholder="Choose Color"> 
-              <div class="control-options">
-                <input class="control" type="checkbox"> Option 1
-                <input class="control" type="checkbox"> Option 2
-                <input class="control" type="checkbox"> Option 3
-                <input class="control" type="checkbox"> Option 4
-            </div>
-            <button id="save-wed" class="save button is-link is-light">SAVE</button>
+              <form class="userForm">
+                
+                <div class="water">
+                  <div class="subtitle is-6">Glasses of Water</div>
+                  <div class="container">
+                    <p><i class="fa-solid fa-bottle-water"></i></p>
+                    <input type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                  </div>
+                </div>
 
-            </form>
+                <div class="seperator"></div>
+                
+                <div class="mood">
+                  <h2 class="subtitle is-6">Mood</h2>
+                  <div class="container columns">
+                    
+                    <div class="column happy">
+                      <a class="happy-block"><i class="fa-solid fa-face-smile" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column nuetral">
+                      <a class="nuetral-block"><i class="fa-solid fa-face-meh" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column sad">
+                      <a class="sad-block"><i class="fa-solid fa-face-sad-tear" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column angry">
+                        <a class="angry-block"><i i class="fa-solid fa-face-angry" style="color: #474747;"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="seperator"></div>
+
+                </div>
+
+                <div class="stress">
+                  <div class="containerR">
+                    0<input id="stress-slide" class="slide" type="range" min="0" max="100">100%
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    <div id="stress-demo"></div>
+                  </div>
+                    <h2 class="subtitle is-6">Stress Level</h2>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <div class="dropdown sleep"> <!--We will need to add the class of is-active in order to display the drop down via click listener-->
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span>Hours of Sleep</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        0-4 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a class="dropdown-item">
+                        4-6 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        6-8 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        8+ Hours
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+
+                <button id="save-Sun" class="save button is-link is-light">SAVE</button>
+              </form>
           </div>
 
           <div id="thursday" class="column card">
             <h2 class="subtitle is-5 has-text-centered">Thursday</h2>
-            <h3 class="date">Date</h3>
-            <form class="userForm">
-                <input class="field" placeholder="Stress Level">
-                <input class="field" placeholder="Glasses of Water">
-                <input class="field" placeholder="Energy Level">
-                <input class="field" placeholder="Minutes of Exercise">
-                <input class="field" placeholder="Hours of Sleep">
-                <input class="field" placeholder="Choose Color">  
-              <div class="control-options">
-                <input class="control" type="checkbox"> Option 1
-                <input class="control" type="checkbox"> Option 2
-                <input class="control" type="checkbox"> Option 3
-                <input class="control" type="checkbox"> Option 4
-            </div>
-            <button id="save-thr" class="save button is-link is-light">SAVE</button>
+              <form class="userForm">
+                
+                <div class="water">
+                  <div class="subtitle is-6">Glasses of Water</div>
+                  <div class="container">
+                    <p><i class="fa-solid fa-bottle-water"></i></p>
+                    <input type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                  </div>
+                </div>
 
-            </form>
+                <div class="seperator"></div>
+                
+                <div class="mood">
+                  <h2 class="subtitle is-6">Mood</h2>
+                  <div class="container columns">
+                    
+                    <div class="column happy">
+                      <a class="happy-block"><i class="fa-solid fa-face-smile" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column nuetral">
+                      <a class="nuetral-block"><i class="fa-solid fa-face-meh" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column sad">
+                      <a class="sad-block"><i class="fa-solid fa-face-sad-tear" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column angry">
+                        <a class="angry-block"><i i class="fa-solid fa-face-angry" style="color: #474747;"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="seperator"></div>
+
+                </div>
+
+                <div class="stress">
+                  <div class="containerR">
+                    0<input id="stress-slide" class="slide" type="range" min="0" max="100">100%
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    <div id="stress-demo"></div>
+                  </div>
+                    <h2 class="subtitle is-6">Stress Level</h2>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <div class="dropdown sleep"> <!--We will need to add the class of is-active in order to display the drop down via click listener-->
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span>Hours of Sleep</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        0-4 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a class="dropdown-item">
+                        4-6 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        6-8 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        8+ Hours
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+
+                <button id="save-Sun" class="save button is-link is-light">SAVE</button>
+              </form>
           </div>
 
           <div id="friday" class="column card">
             <h2 class="subtitle is-5 has-text-centered">Friday</h2>
-            <h3 class="date">Date</h3>
-            <form class="userForm">
-                <input class="field" placeholder="Stress Level">
-                <input class="field" placeholder="Glasses of Water">
-                <input class="field" placeholder="Energy Level">
-                <input class="field" placeholder="Minutes of Exercise">
-                <input class="field" placeholder="Hours of Sleep">
-                <input class="field" placeholder="Choose Color"> 
-              <div class="control-options">
-                <input class="control" type="checkbox"> Option 1
-                <input class="control" type="checkbox"> Option 2
-                <input class="control" type="checkbox"> Option 3
-                <input class="control" type="checkbox"> Option 4
-            </div>
-            <button id="save-fri" class="save button is-link is-light">SAVE</button>
+              <form class="userForm">
+                
+                <div class="water">
+                  <div class="subtitle is-6">Glasses of Water</div>
+                  <div class="container">
+                    <p><i class="fa-solid fa-bottle-water"></i></p>
+                    <input type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                  </div>
+                </div>
 
-            </form>
+                <div class="seperator"></div>
+                
+                <div class="mood">
+                  <h2 class="subtitle is-6">Mood</h2>
+                  <div class="container columns">
+                    
+                    <div class="column happy">
+                      <a class="happy-block"><i class="fa-solid fa-face-smile" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column nuetral">
+                      <a class="nuetral-block"><i class="fa-solid fa-face-meh" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column sad">
+                      <a class="sad-block"><i class="fa-solid fa-face-sad-tear" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column angry">
+                        <a class="angry-block"><i i class="fa-solid fa-face-angry" style="color: #474747;"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="seperator"></div>
+
+                </div>
+
+                <div class="stress">
+                  <div class="containerR">
+                    0<input id="stress-slide" class="slide" type="range" min="0" max="100">100%
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    <div id="stress-demo"></div>
+                  </div>
+                    <h2 class="subtitle is-6">Stress Level</h2>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <div class="dropdown sleep"> <!--We will need to add the class of is-active in order to display the drop down via click listener-->
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span>Hours of Sleep</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        0-4 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a class="dropdown-item">
+                        4-6 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        6-8 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        8+ Hours
+                      </a>
+
+                    </div>
+
+                    <div id="sunday" class="column card">
+                      <h2 class="subtitle is-5 has-text-centered">Sunday</h2>
+                        <form class="userForm">
+                          
+                          <div class="water">
+                            <div class="subtitle is-6">Glasses of Water</div>
+                            <div class="container">
+                              <p><i class="fa-solid fa-bottle-water"></i></p>
+                              <input type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                            </div>
+                          </div>
+          
+                          <div class="seperator"></div>
+                          
+                          <div class="mood">
+                            <h2 class="subtitle is-6">Mood</h2>
+                            <div class="container columns">
+                              
+                              <div class="column happy">
+                                <a class="happy-block"><i class="fa-solid fa-face-smile" style="color: #474747;"></i></a>
+                              </div>
+          
+                              <div class="column nuetral">
+                                <a class="nuetral-block"><i class="fa-solid fa-face-meh" style="color: #474747;"></i></a>
+                              </div>
+          
+                              <div class="column sad">
+                                <a class="sad-block"><i class="fa-solid fa-face-sad-tear" style="color: #474747;"></i></a>
+                              </div>
+          
+                              <div class="column angry">
+                                  <a class="angry-block"><i i class="fa-solid fa-face-angry" style="color: #474747;"></i></a>
+                              </div>
+                            </div>
+          
+                            <div class="seperator"></div>
+          
+                          </div>
+          
+                          <div class="stress">
+                            <div class="containerR">
+                              0<input id="stress-slide" class="slide" type="range" min="0" max="100">100%
+                              <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                              <div id="stress-demo"></div>
+                            </div>
+                              <h2 class="subtitle is-6">Stress Level</h2>
+                            
+                          </div>
+          
+                          <div class="seperator"></div>
+          
+                          <div class="dropdown sleep"> <!--We will need to add the class of is-active in order to display the drop down via click listener-->
+                            <div class="dropdown-trigger">
+                              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <span>Hours of Sleep</span>
+                                <span class="icon is-small">
+                                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                              </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                              <div class="dropdown-content">
+                                <a href="#" class="dropdown-item">
+                                  0-4 Hours
+                                </a>
+                                <hr class="dropdown-divider">
+          
+                                <a class="dropdown-item">
+                                  4-6 Hours
+                                </a>
+                                <hr class="dropdown-divider">
+          
+                                <a href="#" class="dropdown-item">
+                                  6-8 Hours
+                                </a>
+                                <hr class="dropdown-divider">
+          
+                                <a href="#" class="dropdown-item">
+                                  8+ Hours
+                                </a>
+          
+                              </div>
+                            </div>
+                          </div>
+          
+                          <button id="save-Sun" class="save button is-link is-light">SAVE</button>
+                        </form>
+                    </div>
+
+                    <div id="sunday" class="column card">
+                      <h2 class="subtitle is-5 has-text-centered">Sunday</h2>
+                        <form class="userForm">
+                          
+                          <div class="water">
+                            <div class="subtitle is-6">Glasses of Water</div>
+                            <div class="container">
+                              <p><i class="fa-solid fa-bottle-water"></i></p>
+                              <input type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                            </div>
+                          </div>
+          
+                          <div class="seperator"></div>
+                          
+                          <div class="mood">
+                            <h2 class="subtitle is-6">Mood</h2>
+                            <div class="container columns">
+                              
+                              <div class="column happy">
+                                <a class="happy-block"><i class="fa-solid fa-face-smile" style="color: #474747;"></i></a>
+                              </div>
+          
+                              <div class="column nuetral">
+                                <a class="nuetral-block"><i class="fa-solid fa-face-meh" style="color: #474747;"></i></a>
+                              </div>
+          
+                              <div class="column sad">
+                                <a class="sad-block"><i class="fa-solid fa-face-sad-tear" style="color: #474747;"></i></a>
+                              </div>
+          
+                              <div class="column angry">
+                                  <a class="angry-block"><i i class="fa-solid fa-face-angry" style="color: #474747;"></i></a>
+                              </div>
+                            </div>
+          
+                            <div class="seperator"></div>
+          
+                          </div>
+          
+                          <div class="stress">
+                            <div class="containerR">
+                              0<input id="stress-slide" class="slide" type="range" min="0" max="100">100%
+                              <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                              <div id="stress-demo"></div>
+                            </div>
+                              <h2 class="subtitle is-6">Stress Level</h2>
+                            
+                          </div>
+          
+                          <div class="seperator"></div>
+          
+                          <div class="dropdown sleep"> <!--We will need to add the class of is-active in order to display the drop down via click listener-->
+                            <div class="dropdown-trigger">
+                              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <span>Hours of Sleep</span>
+                                <span class="icon is-small">
+                                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                              </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                              <div class="dropdown-content">
+                                <a href="#" class="dropdown-item">
+                                  0-4 Hours
+                                </a>
+                                <hr class="dropdown-divider">
+          
+                                <a class="dropdown-item">
+                                  4-6 Hours
+                                </a>
+                                <hr class="dropdown-divider">
+          
+                                <a href="#" class="dropdown-item">
+                                  6-8 Hours
+                                </a>
+                                <hr class="dropdown-divider">
+          
+                                <a href="#" class="dropdown-item">
+                                  8+ Hours
+                                </a>
+          
+                              </div>
+                            </div>
+                          </div>
+          
+                          <button id="save-Sun" class="save button is-link is-light">SAVE</button>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+
+                <button id="save-Sun" class="save button is-link is-light">SAVE</button>
+              </form>
           </div>
 
-          <div id="saturday" class="column card">
+          <div id="saturday" class="column card front">
             <h2 class="subtitle is-5 has-text-centered">Saturday</h2>
-            <h3 class="date">Date</h3>
-            <form class="userForm">
-                <input class="field" placeholder="Stress Level">
-                <input class="field" placeholder="Glasses of Water">
-                <input class="field" placeholder="Energy Level">
-                <input class="field" placeholder="Minutes of Exercise">
-                <input class="field" placeholder="Hours of Sleep">
-                <input class="field" placeholder="Choose Color">  
-              <div class="control-options">
-                <input class="control" type="checkbox"> Option 1
-                <input class="control" type="checkbox"> Option 2
-                <input class="control" type="checkbox"> Option 3
-                <input class="control" type="checkbox"> Option 4
-            </div>
-            <button id="save-sat" class="save button is-link is-light">SAVE</button>
+              <form class="userForm">
+                
+                <div class="water">
+                  <div class="subtitle is-6">Glasses of Water</div>
+                  <div class="container">
+                    <p><i class="fa-solid fa-bottle-water"></i></p>
+                    <input type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                  </div>
+                </div>
 
-            </form>
+                <div class="seperator"></div>
+                
+                <div class="mood">
+                  <h2 class="subtitle is-6">Mood</h2>
+                  <div class="container columns">
+                    
+                    <div class="column happy">
+                      <a class="happy-block"><i class="fa-solid fa-face-smile" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column nuetral">
+                      <a class="nuetral-block"><i class="fa-solid fa-face-meh" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column sad">
+                      <a class="sad-block"><i class="fa-solid fa-face-sad-tear" style="color: #474747;"></i></a>
+                    </div>
+
+                    <div class="column angry">
+                        <a class="angry-block"><i i class="fa-solid fa-face-angry" style="color: #474747;"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="seperator"></div>
+
+                </div>
+
+                <div class="stress">
+                  <div class="containerR">
+                    0<input id="stress-slide" class="slide" type="range" min="0" max="100">100%
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    <div id="stress-demo"></div>
+                  </div>
+                    <h2 class="subtitle is-6">Stress Level</h2>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <div class="dropdown sleep"> <!--We will need to add the class of is-active in order to display the drop down via click listener-->
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span>Hours of Sleep</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        0-4 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a class="dropdown-item">
+                        4-6 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        6-8 Hours
+                      </a>
+                      <hr class="dropdown-divider">
+
+                      <a href="#" class="dropdown-item">
+                        8+ Hours
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+
+                <button id="save-Sun" class="save button is-link is-light">SAVE</button>
+              </form>
           </div>
-
-
-        
         </div>
-
-
-
+      </div>
+        
     </section>
 
     <div>
       <button id="reset" class="button reset is-danger">Reset Week</button>
   </div>
-
+<!--
    <section>
-         <div class="container flip">
+         <div class="container">
             <div class="columns">
     
-              <div id="flip" class="column card">
+              <div id="sunday-flip" class="column card flip">
                 <h2 class="subtitle is-5 has-text-centered">Flip-Preview</h2>
                 <div class="block-mood">
                     <p class="mood-i"><i class="fa-regular fa-face-smile"></i></p>
@@ -284,8 +868,10 @@
                   </ul>
                 </div>
                 <button id="edit-flip" class="edit button is-link is-light">EDIT</button> 
-
-    </section>
+              </div>
+            </div>
+          </div>
+    </section>-->
 
     <!-- This is the Bulma MODAL Example 
     <section>
@@ -304,6 +890,6 @@
       <button id="luis-link" class="button is-warning"><i class="fa-solid fa-code"></i>  Luis' Portfolio</button>
     </footer>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="assets/script/script.js"></script>
   </body>
 </html>
