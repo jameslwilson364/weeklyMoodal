@@ -29,7 +29,7 @@ body {
     margin-bottom: 25px;
     background-image: linear-gradient(rgb(10, 141, 211), rgb(68, 105, 156));
     color: aliceblue;
-    border: 2px solid white;
+    border: 5px solid white;
     justify-content: center;
     border-radius: 15px;
 
@@ -137,7 +137,7 @@ body {
     justify-content: center;
     margin: auto;
     margin-top: 25px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 .is-warning {
@@ -237,7 +237,7 @@ body {
 .flip {
     width: 200px;
     filter: brightness(90%);
-    visibility: hidden;
+    
 }
 
 .mood {
@@ -311,6 +311,7 @@ body {
 .make-bigger {
     font-size: 50px;
 }
+
 
 
 
