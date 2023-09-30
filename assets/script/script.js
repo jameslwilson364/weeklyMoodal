@@ -5,6 +5,15 @@
 // water intake stored as a variable
 // maybe we can do a visual where cups of water fill on the page as the user rolls over or clicks them???
 // plus/minus clicks (store the variable as a number)
+// var dailyWaterIntake = 0;
+// function onClickPlus() {
+//  clicks += 1;
+//  document.getElementById("water").innerHTML = clicks;
+//  };
+// function onClickMinus() {
+//  clicks -= 1;
+//  document.getElementById("water").innerHTML = clicks;
+//  };
 
 // checkboxes for moods stored as a variable (do we want to have the user to be able to check multiple boxes)
 // happy, sad, angry, neutral
