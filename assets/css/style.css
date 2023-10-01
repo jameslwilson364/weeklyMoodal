@@ -164,6 +164,7 @@ body {
     border-radius: 50%;
     padding: 10px 25px;
     font-size: xx-large;
+
 }
 
 .is-warning {
@@ -375,4 +376,5 @@ label {
     justify-content: center;
     margin-bottom: 10px;
 }
+
 

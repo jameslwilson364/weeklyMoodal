@@ -55,7 +55,7 @@
 
 //possibly write a function to split the day of the week off to write this as a single function for all stress sliders
 
-//slider variables
+
 var slider = document.getElementById("stress-slide");
 var output = document.getElementById("stress-demo");
 output.innerHTML = slider.value + "%"; // Display the default slider value
