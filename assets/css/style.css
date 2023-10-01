@@ -39,12 +39,10 @@ body {
     scale: 1.2;
 }
 
-.column:hover {
+.flip:hover {
     scale: 1.1;
     transition: ease-in-out 0.4s;
 }
-
-
 
 .column h2 {
     color: aliceblue;
@@ -88,10 +86,34 @@ body {
     text-align: center;
 }
 
-.slide {
-    width: 100%;
-    text-align: center;
 
+.slide {
+    -webkit-appearance: none;
+    width: 95%;
+    height: 5px;
+    border-radius: 5px;  
+    background: #ffffff;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-bottom: 20px;
+}
+
+.slide::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #fc0000;
+    cursor: pointer;
+  }
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
 }
 
 .containerR {
@@ -119,7 +141,8 @@ body {
     margin: auto;
     margin-top: 10px;
     border-radius: 50%;
-    padding: 10px 12px;
+    padding: 10px 25px;
+    font-size: xx-large;
 }
 
 .reset {
@@ -128,6 +151,7 @@ body {
    justify-content: center;
    margin: auto;
    margin-top: 25px;
+   margin-bottom: 50px;
    border-radius: 10px;
 }
 
@@ -138,6 +162,9 @@ body {
     margin: auto;
     margin-top: 25px;
     border-radius: 50%;
+    padding: 10px 25px;
+    font-size: xx-large;
+
 }
 
 .is-warning {
@@ -197,7 +224,7 @@ body {
 
 .block-mood {
     background-color: var(--happy);
-    height: 150px;
+    height: 130px;
     margin-right: 25px;
     display: flex;
     justify-content: center;
@@ -208,7 +235,7 @@ body {
 
 .block-weather {
     background-color: var(--sad);
-    height: 150px;
+    height: 130px;
     margin-left: 25px;
     display: flex;
     justify-content: center;
@@ -217,7 +244,7 @@ body {
 
 .block-music {
     background-color: var(--nuetral);
-    height: 150px;
+    height: 130px;
     margin-right: 25px;
     display: flex;
     justify-content: center;
@@ -226,7 +253,7 @@ body {
 
 .block-stats {
     background-color: var(--angry);
-    height: 150px;
+    height: 130px;
     margin-left: 25px;
     display: flex;
     flex-direction: column;
@@ -234,9 +261,15 @@ body {
     align-items: center;
 }
 
+.happy:hover,
+.sad:hover,
+.nuetral:hover,
+.angry:hover {
+    scale: 1.1;
+}
+
 .flip {
     width: 200px;
-    filter: brightness(90%);
     
 }
 
@@ -287,9 +320,10 @@ body {
 }
 
 .links {
-    position: fixed;
-    bottom: 0;
+
     width: 100%;
+    text-align: center;
+
 }
 
 .sleep {
@@ -312,6 +346,35 @@ body {
     font-size: 50px;
 }
 
+.hour {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
 
+select {
+    width: 98%;
+    border: 1px solid white;
+    background-color: rgb(149, 196, 237);
+    font-size: larger;
+    border-radius: 10px;
+    margin-left: 5px;
+    color:white;
+    margin-bottom: 10px;
+
+}
+
+.font-adjust {
+    font-size: larger;
+    text-align: center;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 
 
