@@ -25,9 +25,9 @@
       <div class="container">
         <div class="columns">
 
-          <div id="day" class="column card">
-            <h2 id="day" class="subtitle is-5 has-text-centered">Sunday</h2>
-            <h2 id="date" class="subtitle is-6 has-text-centered">Date</h2>
+          <div class="column card">
+            <h2 id="day" class="subtitle is-5 has-text-centered"></h2>
+            <h2 id="date" class="subtitle is-6 has-text-centered"></h2>
               <form class="userForm face">
                 
                 <div class="water">
@@ -87,7 +87,7 @@
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
                 <label for="hours-sleep subtitle is-6" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep">
+                <select name="hours-sleep" id="hours-sleep">
                   <option id="0-hour" class="font-adjust" value="0">0-4 Hours</option>
                   <option id="4-hour" class="font-adjust" value="4">4-6 Hours</option>
                   <option id="6-hour" class="font-adjust" value="6">6-8 Hours</option>
@@ -207,6 +207,8 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="assets/script/script.js"></script>
   </body>
 </html>
