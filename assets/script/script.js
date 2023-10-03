@@ -15,6 +15,40 @@
 //  document.getElementById("water").innerHTML = clicks;
 //  };
 
+var currentDate = dayjs().format('MMMM DD, YYYY');
+var currentDay = dayjs().format("dddd");
+
+var day = $("#day");
+var date = $("#date");
+
+day.text(currentDay);
+date.text(currentDate);
+
+var slider = document.getElementById("stress-slide");
+var output = document.getElementById("stress-demo");
+
+output.innerHTML = slider.value + "%";
+slider.oninput = function() {
+  output.innerHTML = this.value + "%";
+};
+
+
+
+var saveButton = $("#save");
+
+saveButton.click(function(event) {
+  event.preventDefault();
+
+  var waterCount = $("#water-counter");
+  var moodInput = $("input[name=mood]:radio:checked");
+  var sleepCount = $('#hours-sleep').find(":selected");
+
+  console.log(waterCount.val());
+  console.log(moodInput.val());
+  console.log(slider.value);
+  console.log(sleepCount.val());
+});
+
 // checkboxes for moods stored as a variable (do we want to have the user to be able to check multiple boxes)
 // happy, sad, angry, neutral
 
@@ -56,13 +90,15 @@
 //possibly write a function to split the day of the week off to write this as a single function for all stress sliders
 
 
-var slider = document.getElementById("stress-slide");
-var output = document.getElementById("stress-demo");
-output.innerHTML = slider.value + "%"; // Display the default slider value
+// var slider = document.getElementById("stress-slide");
+// var output = document.getElementById("stress-demo");
+// output.innerHTML = slider.value + "%"; // Display the default slider value
 
 
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value + "%";
-};
+// // Update the current slider value (each time you drag the slider handle)
+// slider.oninput = function() {
+//   output.innerHTML = this.value + "%";
+// };
+
+
 
