@@ -376,3 +376,37 @@ label {
     margin-bottom: 10px;
 }
 
+.fa-face-smile, .fa-face-meh, .fa-face-sad-tear, .fa-face-angry {
+    font-size: 30px;
+    margin: 5px;
+    transition: 0.25s;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+}
+
+.fa-face-smile:hover, .fa-face-meh:hover, .fa-face-sad-tear:hover, .fa-face-angry:hover {
+    transition: 0.25s;
+    scale: 1.2;
+}
+
+input[type="radio"]:checked + #happy {
+    scale: 1.1;
+    color: var(--happy);
+}
+
+input[type="radio"]:checked + #neutral {
+    scale: 1.1;
+    color: var(--nuetral);
+}
+
+input[type="radio"]:checked + #sad {
+    scale: 1.1;
+    color: var(--sad);
+}
+
+input[type="radio"]:checked + #angry {
+    scale: 1.1;
+    color: var(--angry);
+}
