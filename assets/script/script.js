@@ -24,6 +24,7 @@ var date = $("#date");
 day.text(currentDay);
 date.text(currentDate);
 
+//Slider Functions
 var slider = document.getElementById("stress-slide");
 var output = document.getElementById("stress-demo");
 
@@ -32,7 +33,14 @@ slider.oninput = function() {
   output.innerHTML = this.value + "%";
 };
 
+var sliderA = document.getElementById("energy-slide");
+var outputA = document.getElementById("energy-demo");
 
+outputA.innerHTML = sliderA.value + "%";
+sliderA.oninput = function() {
+  outputA.innerHTML = this.value + "%";
+};
+// End Slider functions
 
 var saveButton = $("#save");
 
@@ -42,10 +50,12 @@ saveButton.click(function(event) {
   var waterCount = $("#water-counter");
   var moodInput = $("input[name=mood]:radio:checked");
   var sleepCount = $('#hours-sleep').find(":selected");
+  
 
   console.log(waterCount.val());
   console.log(moodInput.val());
   console.log(slider.value);
+  console.log(sliderA.value);
   console.log(sleepCount.val());
 });
 

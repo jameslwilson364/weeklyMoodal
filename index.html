@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekly Moodal</title>
 
-    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Dosis:wght@200&family=Major+Mono+Display&family=Mooli&family=Nova+Round&family=Skranji&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -16,9 +18,8 @@
   </head>
   <body>
     <header class="hero is-info has-text-centered">
-      <h1 class="title is-1">Weekly Moodal</h1>
+      <h1 class="heading"><span class="transparent" >Weekly </span>Moodal</h1>
       <img class="left" src="/assets/images/Poodal.png">
-      <img class="right" src="/assets/images/Moodal.png">
     </header>
     <section class="section">
 
@@ -26,12 +27,12 @@
         <div class="columns">
 
           <div class="column card">
-            <h2 id="day" class="subtitle is-5 has-text-centered"></h2>
-            <h2 id="date" class="subtitle is-6 has-text-centered"></h2>
+            <h2 id="day" class="subtitle is-4 has-text-centered"></h2>
+            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)"></h2>
               <form class="userForm face">
                 
                 <div class="water">
-                  <h2 class="subtitle is-6" style="color: white" >Glasses of Water</h2>
+                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
                   <div class="containerR">
                     <p><i class="fa-solid fa-bottle-water"></i></p>
                     <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
@@ -41,7 +42,7 @@
                 <div class="seperator"></div>
                 
                 <div class="mood">
-                  <h2 class="subtitle is-6">Mood</h2>
+                  <h2 class="subtitle is-5">Mood</h2>
                   <div class="container columns">
                     
                     <input type="radio" name="mood" id="happy" value="happy">
@@ -70,7 +71,7 @@
                 </div>
 
                 <div class="stress">
-                  <h2 class="subtitle is-6">Stress Level</h2>
+                  <h2 class="subtitle is-5">Stress Level</h2>
 
                   <div class="containerR">
 
@@ -84,14 +85,31 @@
 
                 <div class="seperator"></div>
 
+                <div class="anxiety">
+                  <h2 class="subtitle is-5">Energy Level</h2>
+
+                  <div class="containerR">
+
+                    <input id="energy-slide" class="slider" type="range" min="0" max="100" step="25">
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div id="energy-demo" class="center"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
-                <label for="hours-sleep subtitle is-6" ><h2>Hours of Sleep</h2></label>
+                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
                 <select name="hours-sleep" id="hours-sleep">
+                  <div class="content">
                   <option id="0-hour" class="font-adjust" value="0">0-4 Hours</option>
                   <option id="4-hour" class="font-adjust" value="4">4-6 Hours</option>
                   <option id="6-hour" class="font-adjust" value="6">6-8 Hours</option>
                   <option id="8-hour" class="font-adjust" value="8"> 8+ Hours</option>
+                  </div>
                 </select>
               </div>
 
@@ -101,9 +119,10 @@
           </div>
           
               <div id="flip" class="column card flip">
-                <h2 class="subtitle is-5 has-text-centered">Flip-Preview</h2>
+                <h2 id="day-saved" class="subtitle is-4 has-text-centered">Flip Day</h2>
+                <h2 id="date-saved" class="subtitle is-5 has-text-centered transparent">Flip Date</h2>
                 <div class="block-mood">
-                    <p id="mood-flip" class="mood-i"><i class="fa-regular fa-face-smile"></i></p>
+                    <p id="mood-flip"></p>
                 </div>
                 <div class="block-weather">
                     <div class="weather">
@@ -120,13 +139,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="block-stats">
-                  <ul>
-                    <li>Water Intake</li>
-                    <li>Hours of Sleep</li>
-                    <li>Stress %</li>
-                  </ul>
-                </div>
+                <div class="block-water">
+                  <div class="water-display">
+                    <p id="water-display">Water Intake:</p>
+                  </div>
+                  </div>
+                <div class="block-stress">
+                    <div class="stress-display">
+                      <p id="stress-display">Stress:___%</p>
+                    </div>
+                  </div>
+                  <div class="block-sleep">
+                    <div class="sleep-display">
+                      <p id="sleep-display">Hours of Sleep:</p>
+                    </div>
+                  </div>
+                  <div class="block-energy">
+                    <div class="energy-display">
+                      <p id="energy-display">Energy Level:___%</p>
+                    </div>
+                  </div>
+
                 <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
               </div>
 
