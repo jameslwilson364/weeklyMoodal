@@ -33,8 +33,8 @@ slider.oninput = function() {
   output.innerHTML = this.value + "%";
 };
 
-var sliderA = document.getElementById("anxiety-slide");
-var outputA = document.getElementById("anxiety-demo");
+var sliderA = document.getElementById("energy-slide");
+var outputA = document.getElementById("energy-demo");
 
 outputA.innerHTML = sliderA.value + "%";
 sliderA.oninput = function() {
