@@ -85,7 +85,20 @@
 
                 <div class="seperator"></div>
 
-                
+                <div class="anxiety">
+                  <h2 class="subtitle is-5">Anxiety Level</h2>
+
+                  <div class="containerR">
+
+                    <input id="anxiety-slide" class="slider" type="range" min="0" max="100">
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div id="anxiety-demo" class="center"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
 
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
@@ -141,7 +154,12 @@
                       <p id="sleep-display">Hours of Sleep:</p>
                     </div>
                   </div>
-                
+                  <div class="block-anxiety">
+                    <div class="anxiety-display">
+                      <p id="anxiety-display">Anxiety:___%</p>
+                    </div>
+                  </div>
+
                 <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
               </div>
 

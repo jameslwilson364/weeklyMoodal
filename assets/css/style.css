@@ -38,13 +38,13 @@ h1.heading {
 .column {
     margin: 10px;
     margin-bottom: 25px;
-    background-image: linear-gradient(rgb(10, 141, 211), rgb(68, 105, 156));
+    background-image: linear-gradient(to top, rgb(10, 141, 211), rgb(68, 105, 156));
     color: aliceblue;
     border: 5px solid white;
     justify-content: center;
     border-radius: 15px;
     min-width: 200px;
-    
+
 }
 
 .column a {
@@ -52,8 +52,14 @@ h1.heading {
 }
 
 .flip:hover {
-    scale: 1.07;
-    transition: ease-in-out 0.4s;
+    scale: 1.05;
+    transition: ease-in 0.6s;
+    transition: ease-out 0.10s;
+    transform: translateY(-10px);
+}
+
+.flip:hover::after {
+    opacity: 1;
 }
 
 .column h2 {
@@ -114,14 +120,36 @@ h1.heading {
 .slide::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%; 
-    background: #fc0000;
+    background-image: linear-gradient( -90deg, #ee2513 0%, #daae51 100%);
+    border: 2px solid white;
     cursor: pointer;
   }
 
+  .slider {
+    -webkit-appearance: none;
+    width: 95%;
+    height: 5px;
+    border-radius: 5px;  
+    background: #ffffff;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-bottom: 20px;
+}
 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; 
+    background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+    cursor: pointer;
+    border: 2px solid white;
+  }
 
 .container {
     display: flex;
@@ -151,7 +179,7 @@ h1.heading {
     text-align: center;
     justify-content: center;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 25px;
     border-radius: 50%;
     padding: 0px 25px;
     font-size: xx-large;
@@ -162,9 +190,11 @@ h1.heading {
    flex-wrap: wrap;
    justify-content: center;
    margin: auto;
-   margin-top: 25px;
-   margin-bottom: 50px;
+   margin-top: 10px;
+   margin-bottom: 60px;
    border-radius: 10px;
+   width: 40%;
+   height: 40px;
 }
 
 .edit {
@@ -254,7 +284,7 @@ h1.heading {
     background-image:url(/assets/images/weatherback.jpg);
     background-size: cover;
     background-position: center;
-    height: 130px;
+    height: 100px;
     margin-left: 25px;
     display: flex;
     justify-content: center;
@@ -276,7 +306,7 @@ h1.heading {
     background-image: url(/assets/images/youtube.png);
     background-size: cover;
     background-position: center;
-    height: 130px;
+    height: 200px;
     margin-right: 25px;
     display: flex;
     justify-content: center;
@@ -296,9 +326,9 @@ h1.heading {
 }
 
 .water-display {
-    background-image: linear-gradient(to top, rgb(190, 241, 248), rgb(100, 100, 247), rgb(127, 189, 218));
-    background-size: cover;
-    color: rgb(235, 234, 249);
+    background-image: linear-gradient( -90deg, #0bc3f6 0%, #ffffff 100%);
+    backdrop-filter: blur(15px);
+    color: rgb(21, 4, 255);
     display: flex;
     width: 90%;
     height: 50px;
@@ -313,12 +343,12 @@ h1.heading {
 
 .water-display p {
     margin-left: 5px;
+    font-weight: 600;
 }
 
 .stress-display {
-    background-image: linear-gradient(to left, red, grey, rgb(94, 92, 92));
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient( -90deg, #ee2513 0%, #daae51 100%);
+    backdrop-filter: blur(15px);
     display: flex;
     width: 90%;
     height: 50px;
@@ -328,17 +358,17 @@ h1.heading {
     align-items: center;
     font-size: large;
     box-shadow: 0 10px 10px -5px black;
-
+    color:rgb(0, 0, 0);
 }
 
 .stress-display p {
     margin-left: 5px;
+    font-weight: 600;
 }
 
 .sleep-display {
-    background-image: linear-gradient(to bottom, rgb(105, 67, 105), rgb(37, 34, 34));
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient(90deg, #dcd062 0%, #3A1C71 100%);
+    color:#0c0c0c;
     display: flex;
     width: 90%;
     height: 50px;
@@ -353,6 +383,7 @@ h1.heading {
 
     .sleep-display p {
         margin-left: 5px;
+        font-weight: 600;
     }
 
 .happy:hover,
@@ -360,6 +391,26 @@ h1.heading {
 .nuetral:hover,
 .angry:hover {
     scale: 1.1;
+}
+
+.anxiety-display {
+    background-image: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+    backdrop-filter: blur(15px);
+    display: flex;
+    width: 90%;
+    height: 50px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-items: center;
+    font-size: large;
+    box-shadow: 0 10px 10px -5px black;
+    color:rgb(0, 0, 0);
+}
+
+.anxiety-display p {
+    margin-left: 5px;
+    font-weight: 600;
 }
 
 .flip {
@@ -421,6 +472,15 @@ h1.heading {
 
 }
 
+.links button {
+    width: 30%;
+    height: 50px;
+    font-family: 'delicious handrawn';
+    font-size: x-large;
+    
+}
+
+
 .sleep {
     display: flex;
     justify-content: center;
@@ -453,7 +513,6 @@ h1.heading {
 select {
     width: 85%;
     style:none;
-    border: none;
     background-color: transparent;
     font-size: larger;
     color: #fff;
@@ -521,3 +580,4 @@ input[type="radio"]:checked + #angry {
     opacity: 70%;
     font-weight: 200;
 }
+
