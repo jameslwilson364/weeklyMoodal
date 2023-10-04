@@ -499,7 +499,7 @@ h1.heading {
 }
 
 .links button {
-    width: 30%;
+    width: fit-content;
     height: 50px;
     font-family: 'delicious handrawn';
     font-size: x-large;
@@ -607,3 +607,47 @@ input[type="radio"]:checked + #angry {
     font-weight: 200;
 }
 
+@media screen and (max-width: 576px) {
+    .card {
+      width: max-content;
+      margin-bottom: 20px;
+    }
+
+    .column {
+        width: 300px;
+    }
+    .column:hover {
+        scale:1;
+    }
+
+    .flip:hover {
+        scale: 1;
+        transform: none;
+    }
+
+    .reset {
+        width: min-content;
+        font-size: medium;
+        margin-top: 5px;
+        margin-bottom: 45px;
+    }
+
+    .edit {
+        font-size: larger;
+        padding: 5px 15px;
+    }
+
+    .save {
+        font-size: larger;
+        padding: 5px 15px;
+    }
+
+    .links button {
+        font-size: small;
+        width: 22%;
+    }
+
+    .head-image {
+        display: none;
+    }
+}
