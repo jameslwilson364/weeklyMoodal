@@ -33,18 +33,24 @@ h1.heading {
     transform-style: preserve-3d;
     transform-origin: center right;
     transition: transform 1s;
+    box-shadow: 5px 5px 10px grey;
+
 }
 
 .column {
     margin: 10px;
-    margin-bottom: 25px;
     background-image: linear-gradient(to top, rgb(10, 141, 211), rgb(68, 105, 156));
     color: aliceblue;
     border: 5px solid white;
     justify-content: center;
     border-radius: 15px;
-    min-width: 200px;
+    min-width: 180px;
 
+}
+
+.container {
+    scale: .85;
+    width: 85%;
 }
 
 .column a {
@@ -191,7 +197,6 @@ h1.heading {
    flex-wrap: wrap;
    justify-content: center;
    margin: auto;
-   margin-top: 10px;
    margin-bottom: 60px;
    border-radius: 10px;
    width: 20%;
@@ -542,19 +547,21 @@ select {
     background-color: transparent;
     font-size: larger;
     color: #fff;
-    border-radius: 12px;
+    border-radius: 10px;
     border: 2px solid white;
 }
 
 option {
-    background-color: transparent;
-
+    background-color: rgb(24, 163, 239);
+    font-weight: 500;
     border-radius: 15px;
-    color: rgb(32, 131, 218);
-    
+    color: white;
+
 }
 
-
+.hidden {
+    display: none;
+}
 
 .font-adjust {
    
@@ -608,8 +615,12 @@ input[type="radio"]:checked + #angry {
 }
 
 @media screen and (max-width: 576px) {
+    .container {
+        scale: 1;
+    }
+
     .card {
-      width: max-content;
+      width: min-content;
       margin-bottom: 20px;
     }
 
@@ -648,6 +659,6 @@ input[type="radio"]:checked + #angry {
     }
 
     .head-image {
-        display: none;
+        visibility: hidden;
     }
 }
