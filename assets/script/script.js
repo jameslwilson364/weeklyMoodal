@@ -20,6 +20,7 @@ var currentDay = dayjs().format("dddd");
 
 var day = $("#day");
 var date = $("#date");
+var waterIntake = [];
 
 day.text(currentDay);
 date.text(currentDate);
@@ -46,22 +47,23 @@ var saveButton = $("#save");
 
 saveButton.click(function(event) {
   event.preventDefault();
-
+  
   var waterCount = $("#water-counter");
   var moodInput = $("input[name=mood]:radio:checked");
   var sleepCount = $('#hours-sleep').find(":selected");
   
   // added localStorage for each item on day 1
   console.log(waterCount.val());
-  localStorage.setItem("WaterDay1", waterCount.val());
-  console.log(moodInput.val());
-  localStorage.setItem("MoodDay2", moodInput.val());
-  console.log(slider.value);
-  localStorage.setItem("StressDay1", slider.value);
-  console.log(sliderA.value);
-  localStorage.setItem("EnergyDay1", sliderA.value);
-  console.log(sleepCount.val());
-  localStorage.setItem("SleepDay1", sleepCount.val())
+  waterIntake.push(waterCount.val());
+  localStorage.setItem("waterIntake", waterIntake);
+  // console.log(moodInput.val());
+  // localStorage.setItem("MoodDay2", moodInput.val());
+  // console.log(slider.value);
+  // localStorage.setItem("StressDay1", slider.value);
+  // console.log(sliderA.value);
+  // localStorage.setItem("EnergyDay1", sliderA.value);
+  // console.log(sleepCount.val());
+  // localStorage.setItem("SleepDay1", sleepCount.val())
 });
 
 // reset button clears all localStorage 
