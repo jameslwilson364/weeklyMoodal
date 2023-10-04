@@ -61,15 +61,24 @@ saveButton.click(function(event) {
   
   // added localStorage for each item on day 1
   console.log(waterCount.val());
-  localStorage.setItem("WaterIntake", waterCount.val());
+  allWater.push(waterCount.val());
+  localStorage.setItem("allWater", allWater);
+
   console.log(moodInput.val());
-  localStorage.setItem("MoodIntake", moodInput.val());
+  allMood.push(moodInput.val());
+  localStorage.setItem("allMood", allMood);
+  
   console.log(slider.value);
-  localStorage.setItem("StressIntake", slider.value);
+  allStress.push(slider.value);
+  localStorage.setItem("StressIntake", allStress );
+
   console.log(sliderA.value);
-  localStorage.setItem("EnergyIntake", sliderA.value);
+  allEnergy.push(sliderA.value);
+  localStorage.setItem("EnergyIntake", allEnergy);
+
   console.log(sleepCount.val());
-  localStorage.setItem("SleepIntake", sleepCount.val())
+  allSleep.push(sleepCount.val());
+  localStorage.setItem("SleepIntake", allSleep);
 
   createCard();
 });
@@ -77,34 +86,28 @@ saveButton.click(function(event) {
 
 //10-03
 function createCard() {
-  var waterCount = $("#water-counter");
 
+  //water display
+  console.log(localStorage.getItem("allWater"));
+  var waterDisplayFlip1 = $('#water-display');
+  waterDisplayFlip1.text("Water: "+allWater[0]+ " units");
 
-  allWater.push(waterCount.val());
-  console.log(allWater);
-  localStorage.setItem("waterIntake", allWater);
+  //stress display
+  console.log(localStorage.getItem("allStress"));
+  var stressDisplayFlip1 = $('#stress-display');
+  stressDisplayFlip1.text("Stress Level: "+allStress+"%");
 
-  allStress.push(slider.val());
-  console.log(allStress);
-  localStorage.setItem("stressIntake", allStress);
+  // sleep
+  console.log(localStorage.getItem("allSleep"));
+  var sleepDisplayFlip1 = $('#sleep-display');
+  sleepDisplayFlip1.text("Slept: "+allSleep+" hours");
 
+  // energy
+  console.log(localStorage.getItem("allEnergy"));
+  var energyDisplayFlip1 = $('#energy-display');
+  energyDisplayFlip1.text("Energy Level: "+allEnergy+"%");
 
-  allEnergy.push(sliderA.val());
-  console.log(allEnergy);
-  localStorage.setItem("energyIntake", allEnergy);
-
-
-  allMood.push(moodInput.val());
-  console.log(allMood);
-  localStorage.setItem("moodIntake", allMood);
-
-
-  allSleep.push(sleepCount.val());
-  console.log(allSleep);
-  localStorage.setItem("sleepIntake", allSleep);
-
-
-
+  
 }
 
 // reset button clears all localStorage 
