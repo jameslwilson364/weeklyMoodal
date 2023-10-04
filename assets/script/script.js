@@ -26,7 +26,7 @@ var allStress = [];
 var allMood = [];
 var allEnergy = [];
 var allSleep = [];
-
+var cardArray = [allWater, allStress, allMood, allEnergy, allSleep];
 
 
 day.text(currentDay);
@@ -80,12 +80,23 @@ saveButton.click(function(event) {
   allSleep.push(sleepCount.val());
   localStorage.setItem("SleepIntake", allSleep);
 
+  //added code her to move the Day and time over
+
+
+
   createCard();
 });
 
 
 //10-03
 function createCard() {
+  //day and date
+  var dayStamp = $("#day-saved");
+  var dateStamp = $("#date-saved");
+
+  dayStamp.text(currentDay);
+  dateStamp.text(currentDate);
+
 
   //water display
   console.log(localStorage.getItem("allWater"));
@@ -180,6 +191,4 @@ resetButton.click(function() {
 // slider.oninput = function() {
 //   output.innerHTML = this.value + "%";
 // };
-
-
 
