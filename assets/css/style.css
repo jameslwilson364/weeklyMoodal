@@ -268,7 +268,7 @@ h1.heading {
 
 
 .block-mood {
-    background-image:url(../images/happy-png.png);
+    background-color: grey;
     background-size: cover;
     background-position: center;
     height: 130px;
@@ -282,6 +282,22 @@ h1.heading {
     margin-bottom: 10px;
     box-shadow: 0 10px 10px -5px black;
 
+}
+
+.happy-back {
+    background-image:url(../images/happy-png.png);
+}
+
+.sad-back {
+    background-image:url(../images/sad-png.png);
+}
+
+.neutral-back {
+    background-image:url(../images/neutral-png.png);
+}
+
+.stressed-back {
+    background-image:url(../images/stressed-png.png);
 }
 
 .block-weather {
