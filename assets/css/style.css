@@ -457,6 +457,7 @@ h1.heading {
    align-items: center;
     font-size: 30px;
    color: white;
+   margin-bottom: 0;
 }
 
 .weather {
@@ -612,6 +613,10 @@ input[type="radio"]:checked + #angry {
 .transparent {
     opacity: 70%;
     font-weight: 200;
+}
+
+.containB {
+    scale:1;
 }
 
 @media screen and (max-width: 576px) {
