@@ -107,8 +107,20 @@ function createCard() {
   var energyDisplayFlip1 = $('#energy-display');
   energyDisplayFlip1.text("Energy Level: "+allEnergy+"%");
 
-  
-}
+  //mood
+  var blockMood = $("#block-mood");
+
+  if (allMood == "happy") {
+    blockMood.addClass("happy-back");
+  } else if (allMood == "neutral") {
+    blockMood.addClass("neutral-back");
+  } else if (allMood == "sad") {
+    blockMood.addClass("sad-back");
+  }  else if (allMood == "angry") {
+    blockMood.addClass("stressed-back");
+  };
+
+};
 
 // reset button clears all localStorage 
 var resetButton = $('#reset');
