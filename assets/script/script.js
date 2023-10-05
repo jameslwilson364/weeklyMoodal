@@ -224,7 +224,7 @@ editButton.click(function(event) {
   let popStress  = allStress.pop();
   let popWater = allWater.pop();
   let popSleep = allSleep.pop();
-  let popEnergy = allEnergy.pop();
+  let popEnergy = allEnergy.pop(); 
   $("form").trigger("reset");
   showSave();
   $("div").remove(".flip");
