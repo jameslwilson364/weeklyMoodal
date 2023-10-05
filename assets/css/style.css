@@ -10,12 +10,13 @@ body {
     background-size: cover;
     height: 100%;
     font-family: 'Mooli';
+    width: 100%;
 }
 
 .hero {
-    height: 100px;
+    height: 90px;
     background-image: linear-gradient(rgb(10, 141, 211), rgb(68, 105, 156));
-    display: relative;
+    
 }
 
 .hero img {
@@ -29,22 +30,35 @@ h1.heading {
     font-weight: 600;
 }
 
+section.section {
+    margin: 1px;
+    padding: 1px;
+}
+
 .card {
     transform-style: preserve-3d;
     transform-origin: center right;
     transition: transform 1s;
+    box-shadow: 5px 5px 10px grey;
+    
 }
 
 .column {
     margin: 10px;
-    margin-bottom: 25px;
     background-image: linear-gradient(to top, rgb(10, 141, 211), rgb(68, 105, 156));
     color: aliceblue;
     border: 5px solid white;
     justify-content: center;
     border-radius: 15px;
-    min-width: 200px;
+    min-width: 180px;
+    
+}
 
+.container {
+    scale: .85;
+    width: 85%;
+    display: flex;
+    justify-content: center;
 }
 
 .column a {
@@ -152,10 +166,6 @@ h1.heading {
     border: 2px solid white;
   }
 
-.container {
-    display: flex;
-    justify-content: center;
-}
 
 .containerR {
     display: flex;
@@ -191,7 +201,6 @@ h1.heading {
    flex-wrap: wrap;
    justify-content: center;
    margin: auto;
-   margin-top: 10px;
    margin-bottom: 60px;
    border-radius: 10px;
    width: 20%;
@@ -272,15 +281,16 @@ h1.heading {
     background-size: cover;
     background-position: center;
     height: 130px;
-    margin-right: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     font-size: 75px;
     color: black;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    margin: auto;
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 20px;
     box-shadow: 0 10px 10px -5px black;
+    max-width: 130px;
+    min-width: 130px;
 
 }
 
@@ -305,13 +315,13 @@ h1.heading {
     background-size: cover;
     background-position: center;
     height: 100px;
-    margin-left: 25px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(15, 15, 136);
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     box-shadow: 0 10px 10px -5px black;
 
 
@@ -333,7 +343,7 @@ h1.heading {
     align-items: center;
     font-weight: 700;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     box-shadow: 0 10px 10px -5px black;
 
 }
@@ -354,7 +364,7 @@ h1.heading {
     height: 50px;
     margin: auto;
     margin-left: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 10px;
     align-items: center;   ;
     font-size: medium;
@@ -374,7 +384,7 @@ h1.heading {
     width: 90%;
     height: 50px;
     margin-right: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 10px;
     align-items: center;
     font-size: medium;
@@ -390,13 +400,13 @@ h1.heading {
 }
 
 .sleep-display {
-    background-image: linear-gradient(90deg, #dcd062 0%, #3A1C71 100%);
+    background-image: linear-gradient(90deg, #dcd062 0%, #41178e 100%);
     color:#0c0c0c;
     display: flex;
     width: 90%;
     height: 50px;
     margin-left: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 10px;
     align-items: center;
     font-size: medium;
@@ -441,8 +451,8 @@ h1.heading {
 
 .flip {
     width: 200px;
-    
 }
+
 
 
 .mood {
@@ -452,6 +462,7 @@ h1.heading {
    align-items: center;
     font-size: 30px;
    color: white;
+   margin-bottom: 0;
 }
 
 .weather {
@@ -499,7 +510,7 @@ h1.heading {
 }
 
 .links button {
-    width: 30%;
+    width: fit-content;
     height: 50px;
     font-family: 'delicious handrawn';
     font-size: x-large;
@@ -542,19 +553,21 @@ select {
     background-color: transparent;
     font-size: larger;
     color: #fff;
-    border-radius: 12px;
+    border-radius: 10px;
     border: 2px solid white;
 }
 
 option {
-    background-color: transparent;
-
+    background-color: rgb(24, 163, 239);
+    font-weight: 500;
     border-radius: 15px;
-    color: rgb(32, 131, 218);
-    
+    color: white;
+
 }
 
-
+.hidden {
+    display: none;
+}
 
 .font-adjust {
    
@@ -607,3 +620,62 @@ input[type="radio"]:checked + #angry {
     font-weight: 200;
 }
 
+.containB {
+    scale:1;
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .container {
+        scale: 1;
+    }
+
+    .card {
+      width: min-content;
+      margin-bottom: 30px;
+    }
+
+    .column {
+        width: 300px;
+    }
+    .column:hover {
+        scale:1;
+    }
+
+    .flip:hover {
+        scale: 1;
+        transform: none;
+    }
+
+    .reset {
+        width: min-content;
+        font-size: medium;
+        margin-top: 0px;
+        margin-bottom: 45px;
+    }
+
+    .edit {
+        font-size: larger;
+        padding: 5px 15px;
+    }
+
+    .save {
+        font-size: larger;
+        padding: 5px 15px;
+    }
+
+    .links button {
+        font-size: small;
+        width: min-content;
+    }
+
+    .head-image {
+        visibility: hidden;
+    }
+
+    section.section {
+        margin: 20px;
+        padding: 20px;
+    }
+}

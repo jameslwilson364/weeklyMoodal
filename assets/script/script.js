@@ -26,7 +26,11 @@ var allStress = [];
 var allMood = [];
 var allEnergy = [];
 var allSleep = [];
-
+var allDate =[];
+var allDay = [];
+var allTemp = [];
+var allVideo = [];
+var cardArray = [allDay, allDate, allMood, allTemp, allVideo, allWater, allStress,allSleep, allEnergy];
 
 
 day.text(currentDay);
@@ -80,12 +84,23 @@ saveButton.click(function(event) {
   allSleep.push(sleepCount.val());
   localStorage.setItem("SleepIntake", allSleep);
 
+  //added two functions before the createCard
+
+  hideSave();
+  createFrame();
   createCard();
 });
 
 
 //10-03
 function createCard() {
+  //day and date
+  var dayStamp = $("#day-saved");
+  var dateStamp = $("#date-saved");
+
+  dayStamp.text(currentDay);
+  dateStamp.text(currentDate);
+
 
   //water display
   console.log(localStorage.getItem("allWater"));
@@ -181,5 +196,36 @@ resetButton.click(function() {
 //   output.innerHTML = this.value + "%";
 // };
 
+//template literal try
+function createFrame() {
+  $(".main").append('<div id="flip" class="column card flip"><h2 id="day-saved" class="subtitle is-4 has-text-centered">Flip Day</h2><h2 id="date-saved" class="subtitle is-6 has-text-centered transparent">Flip Date</h2><div id="block-mood" class="block-mood"><p id="mood-flip"></p></div><div class="block-weather"><div class="weather"><p id="weather-flip"><i class="fa-regular fa-sun"></i></p><p id="temp-flip">Temp</p></div></div><div class="block-music"><div class="music"><p><i class="fa-brands fa-youtube make-bigger"></i></p><p id="video-title">Video Title</p><div><a id="video-link" class="has-text-centered"> YouTube Link</a></div></div></div><div class="block-water"><div class="water-display"><p id="water-display">Water ___ units</p></div></div><div class="block-stress"><div class="stress-display"><p id="stress-display">Stress Level:___%</p></div></div><div class="block-sleep"><div class="sleep-display"><p id="sleep-display">Slept ___ hours</p></div></div><div class="block-energy"><div class="energy-display"><p id="energy-display">Energy Level:___%</p></div></div>  </div>')
+  //You may need to stringify this appended text and then you can save that into local storage.  then upon page refresh you can unstringify upon page run?  Possibly with the Create Card function instead so it will include all the dynamically created info?
+}
+
+var editButton = $("#edit");
 
 
+function hideSave() {
+  $( saveButton ).addClass( "hidden" );
+  $( editButton ).removeClass ("hidden");
+  
+};
+
+function showSave() {
+  
+  $( editButton ).addClass ("hidden");
+  $( saveButton ).removeClass("hidden");
+}
+
+editButton.click(function(event) {
+  event.preventDefault();
+  //we will need to use pop method to remove the last values added to each array here before moving to the save option.  Otherwise those values will still be listed in the array.  1st example listed below:
+  let popMood = allMood.pop();
+  let popStress  = allStress.pop();
+  let popWater = allWater.pop();
+  let popSleep = allSleep.pop();
+  let popEnergy = allEnergy.pop();
+  $("form").trigger("reset");
+  showSave();
+  $("div").remove(".flip");
+});
