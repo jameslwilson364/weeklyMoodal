@@ -30,27 +30,122 @@ var allDate =[];
 var allDay = [];
 var allTemp = [];
 var allVideo = [];
-var cardArray = [allDay, allDate, allMood, allTemp, allVideo, allWater, allStress,allSleep, allEnergy];
+var modalArray = [allDay, allDate, allMood, allTemp, allVideo, allWater, allStress,allSleep, allEnergy];
 
 
-day.text(currentDay);
-date.text(currentDate);
+
 
 //Slider Functions
-var slider = document.getElementById("stress-slide");
-var output = document.getElementById("stress-demo");
+var sliderSun = document.getElementById("stress-slide-sun");
+var outputSun = document.getElementById("stress-demo-sun");
 
-output.innerHTML = slider.value + "%";
-slider.oninput = function() {
-  output.innerHTML = this.value + "%";
+outputSun.innerHTML = sliderSun.value + "%";
+sliderSun.oninput = function() {
+  outputSun.innerHTML = this.value + "%";
 };
 
-var sliderA = document.getElementById("energy-slide");
-var outputA = document.getElementById("energy-demo");
+var sliderASun = document.getElementById("energy-slide-sun");
+var outputASun = document.getElementById("energy-demo-sun");
 
-outputA.innerHTML = sliderA.value + "%";
-sliderA.oninput = function() {
-  outputA.innerHTML = this.value + "%";
+outputASun.innerHTML = sliderASun.value + "%";
+sliderASun.oninput = function() {
+  outputASun.innerHTML = this.value + "%";
+};
+
+var sliderMon = document.getElementById("stress-slide-mon");
+var outputMon = document.getElementById("stress-demo-mon");
+
+outputMon.innerHTML = sliderMon.value + "%";
+sliderMon.oninput = function() {
+  outputMon.innerHTML = this.value + "%";
+};
+
+var sliderAMon = document.getElementById("energy-slide-mon");
+var outputAMon = document.getElementById("energy-demo-mon");
+
+outputAMon.innerHTML = sliderAMon.value + "%";
+sliderAMon.oninput = function() {
+  outputAMon.innerHTML = this.value + "%";
+};
+
+var sliderTue = document.getElementById("stress-slide-tue");
+var outputTue = document.getElementById("stress-demo-tue");
+
+outputTue.innerHTML = sliderTue.value + "%";
+sliderTue.oninput = function() {
+  outputTue.innerHTML = this.value + "%";
+};
+
+var sliderATue = document.getElementById("energy-slide-tue");
+var outputATue = document.getElementById("energy-demo-tue");
+
+outputATue.innerHTML = sliderATue.value + "%";
+sliderATue.oninput = function() {
+  outputATue.innerHTML = this.value + "%";
+};
+
+var sliderWed = document.getElementById("stress-slide-wed");
+var outputWed = document.getElementById("stress-demo-wed");
+
+outputWed.innerHTML = sliderWed.value + "%";
+sliderWed.oninput = function() {
+  outputWed.innerHTML = this.value + "%";
+};
+
+var sliderAWed = document.getElementById("energy-slide-wed");
+var outputAWed = document.getElementById("energy-demo-wed");
+
+outputAWed.innerHTML = sliderAWed.value + "%";
+sliderAWed.oninput = function() {
+  outputAWed.innerHTML = this.value + "%";
+};
+
+var sliderThu = document.getElementById("stress-slide-thu");
+var outputThu = document.getElementById("stress-demo-thu");
+
+outputThu.innerHTML = sliderThu.value + "%";
+sliderThu.oninput = function() {
+  outputThu.innerHTML = this.value + "%";
+};
+
+var sliderAThu = document.getElementById("energy-slide-thu");
+var outputAThu = document.getElementById("energy-demo-thu");
+
+outputAThu.innerHTML = sliderAThu.value + "%";
+sliderAThu.oninput = function() {
+  outputAThu.innerHTML = this.value + "%";
+};
+
+var sliderFri = document.getElementById("stress-slide-fri");
+var outputFri = document.getElementById("stress-demo-fri");
+
+outputFri.innerHTML = sliderFri.value + "%";
+sliderFri.oninput = function() {
+  outputFri.innerHTML = this.value + "%";
+};
+
+var sliderAFri = document.getElementById("energy-slide-fri");
+var outputAFri = document.getElementById("energy-demo-fri");
+
+outputAFri.innerHTML = sliderAFri.value + "%";
+sliderAFri.oninput = function() {
+  outputAFri.innerHTML = this.value + "%";
+};
+
+var sliderSat = document.getElementById("stress-slide-sat");
+var outputSat = document.getElementById("stress-demo-sat");
+
+outputSat.innerHTML = sliderSat.value + "%";
+sliderSat.oninput = function() {
+  outputSat.innerHTML = this.value + "%";
+};
+
+var sliderASat = document.getElementById("energy-slide-sat");
+var outputASat = document.getElementById("energy-demo-sat");
+
+outputASat.innerHTML = sliderASat.value + "%";
+sliderASat.oninput = function() {
+  outputASat.innerHTML = this.value + "%";
 };
 // End Slider functions
 
@@ -224,7 +319,7 @@ editButton.click(function(event) {
   let popStress  = allStress.pop();
   let popWater = allWater.pop();
   let popSleep = allSleep.pop();
-  let popEnergy = allEnergy.pop();
+  let popEnergy = allEnergy.pop(); 
   $("form").trigger("reset");
   showSave();
   $("div").remove(".flip");
