@@ -70,16 +70,6 @@ section.section {
 }
 
 
-.flip:hover {
-    scale: 1.05;
-    transition: ease-in 1.0s;
-    transition: ease-out 0.45s;
-    transform: translateY(-10px);
-}
-
-.flip:hover::after {
-    opacity: 1;
-}
 
 .column h2 {
     color: aliceblue;
