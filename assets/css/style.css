@@ -30,6 +30,11 @@ h1.heading {
     font-weight: 600;
 }
 
+h4 {
+    color: white;
+    font-weight: 600;
+}
+
 section.section {
     margin: 1px;
     padding: 1px;
@@ -628,8 +633,9 @@ input[type="radio"]:checked + #angry {
     margin-bottom: 25px;
     border-radius: 50%;
     padding: 35px 25px;
-    background-color:#61777d;
-    box-shadow: inset 0 0 10px;
+    background-image: radial-gradient(rgb(10, 141, 211), rgb(68, 105, 156));
+
+    box-shadow: 0 0 10px;
     color:white;
 }
 
@@ -645,20 +651,32 @@ h4 {
 
 /*start Dark Mode Code*/
 .darker {
-    background-image: linear-gradient(to left, rgb(95, 95, 95), rgb(149, 149, 149), rgb(96, 96, 96), rgb(58, 58, 58) );
+    background-image: linear-gradient(to left, rgb(95, 95, 95), rgb(45, 96, 105), rgb(63, 95, 111), rgb(58, 58, 58) );
 
 }
 
 .dark {
     background-image: linear-gradient(to top, rgb(5, 79, 119), rgb(12, 34, 65));
+    box-shadow: 3px 3px 7px rgb(157, 206, 21);
 
+}
+
+h4.dark {
+    color: white;
 }
 
 button.dark {
     background-color: black;
     color:yellow;
+    box-shadow: inset 0 0 10px;
+
 }
-/*will need to add code for dark mode to remove is-warning class from links*/
+
+
+
+
+/*will need to add code for dark mode to remove is-warning class from links
+will also need to change remove is-warning class from reset button*/
 
 
 /*nothing but Media Screen below this point*/
@@ -668,16 +686,29 @@ button.dark {
         scale: 1;
     }
 
+    body {
+        width: 100vw;
+        
+    }
+
     .card {
       width: min-content;
       margin-bottom: 30px;
+      
     }
 
     .column {
-        width: 300px;
+        width: 250px;
+        margin-left: 0;
+        margin-right: 5px;
+        
     }
     .column:hover {
         scale:1;
+    }
+
+    section {
+        margin: 0;
     }
 
     .flip:hover {
@@ -685,11 +716,19 @@ button.dark {
         transform: none;
     }
 
+   .hero {
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+   }
+
     .reset {
         width: min-content;
         font-size: medium;
         margin-top: 0px;
         margin-bottom: 45px;
+        
     }
 
     .edit {
@@ -704,7 +743,7 @@ button.dark {
 
     .links button {
         font-size: small;
-        width: min-content;
+        width: 100%;
     }
 
     .head-image {

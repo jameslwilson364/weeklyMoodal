@@ -324,3 +324,43 @@ editButton.click(function(event) {
   showSave();
   $("div").remove(".flip");
 });
+
+
+// in order to make light/dark mode work we will need to add button click function then we can toggle classes to the following targets :
+//body = darker toggles
+//hero =  dark toggles
+//card = dark toggles
+//button for dark = dark toggles
+//button for reset = dark toggles
+//button for link = dark toggles
+//button for link  class = is-warning remove
+
+
+//example code from earlier homework:
+//
+//$( ".toggle" ).on("click", function() {
+//  if( $( "body" ).hasClass( "darkMode" )) {
+//      $( "body" ).removeClass( "darkMode" );
+//  } else {
+//      $( "body" ).addClass( "darkMode" );
+//  }
+//
+//  if( $( ".jumbotron" ).hasClass( "darkModejumbo" )) {
+//      $( ".jumbotron" ).removeClass( "darkModejumbo" );
+// } else {
+//      $( ".jumbotron").addClass( "darkModejumbo" );
+//  }
+//
+//  if($( ".hour" ).hasClass( "hourDark")){
+//      $( ".hour" ).removeClass( "hourDark" );
+//  } else {
+//      $( ".hour" ).addClass( "hourDark");
+//  }
+//      
+// if($( "#toggle" ).hasClass( "toggleDark")){
+//      $( "#toggle" ).removeClass( "toggleDark" );
+//  } else {
+//      $( "#toggle" ).addClass( "toggleDark");
+//  }
+//
+//})
