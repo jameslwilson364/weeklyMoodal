@@ -27,8 +27,8 @@
         <div class="columns main">
 
           <div class="column card">
-            <h2 id="day" class="subtitle is-4 has-text-centered"></h2>
-            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)"></h2>
+            <h2 id="day" class="subtitle is-4 has-text-centered">Sunday</h2>
+            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
                 
                 <div class="water">
@@ -46,11 +46,11 @@
 
                   <div class="containerR">
 
-                    <input id="stress-slide" class="slide" type="range" min="0" max="100" step="10">
+                    <input id="stress-slide-sun" class="slide" type="range" min="0" max="100" step="10">
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="stress-demo" class="center"></div>
+                  <div id="stress-demo-sun" class="center"></div>
                   
                 </div>
 
@@ -86,16 +86,400 @@
 
                 </div>
 
-                <div class="anxiety">
+                <div class="energy">
                   <h2 class="subtitle is-5">Energy Level</h2>
 
                   <div class="containerR">
 
-                    <input id="energy-slide" class="slider" type="range" min="0" max="100" step="25">
+                    <input id="energy-slide-sun" class="slider" type="range" min="0" max="100" step="25">
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="energy-demo" class="center"></div>
+                  <div id="energy-demo-sun" class="center"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <!--This is the non-bulma Drop Down menu-->
+              <div class="hours">
+                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                <select name="hours-sleep" id="hours-sleep">
+                  <div class="content">
+                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
+                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
+                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
+                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
+                  </div>
+                </select>
+              </div>
+
+
+                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
+                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
+
+              </form>
+          </div>
+<!--MONDAY STARTS HERE-->
+
+          <div class="column card">
+            <h2 id="day" class="subtitle is-4 has-text-centered">Monday</h2>
+            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
+              <form id="form-main" class="userForm face">
+                
+                <div class="water">
+                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
+                  <div class="containerR">
+                    <p><i class="fa-solid fa-bottle-water"></i></p>
+                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                  </div>
+                </div>
+
+                <div class="seperator"></div>
+                
+                <div class="stress">
+                  <h2 class="subtitle is-5">Stress Level</h2>
+
+                  <div class="containerR">
+
+                    <input id="stress-slide-mon" class="slide" type="range" min="0" max="100" step="10">
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div id="stress-demo-mon" class="center"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <div class="mood">
+                  <h2 class="subtitle is-5">Mood</h2>
+                  <div class="container columns containB">
+                    
+                    <input type="radio" name="mood" id="happy" value="happy">
+                    <label for="happy" id="happy">
+                      <i class="fa fa-face-smile"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="neutral" value="neutral">
+                    <label for="neutral" id="neutral">
+                      <i class="fa fa-face-meh"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="sad" value="sad">
+                    <label for="sad" id="sad">
+                      <i class="fa fa-face-sad-tear"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="angry" value="angry">
+                    <label for="angry" id="angry">
+                      <i class="fa fa-face-angry"></i>
+                    </label>
+                    
+                  </div>
+
+                  <div class="seperator"></div>
+
+                </div>
+
+                <div class="energy">
+                  <h2 class="subtitle is-5">Energy Level</h2>
+
+                  <div class="containerR">
+
+                    <input id="energy-slide-mon" class="slider" type="range" min="0" max="100" step="25">
+                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div id="energy-demo-mon" class="center"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <!--This is the non-bulma Drop Down menu-->
+              <div class="hours">
+                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                <select name="hours-sleep" id="hours-sleep">
+                  <div class="content">
+                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
+                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
+                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
+                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
+                  </div>
+                </select>
+              </div>
+
+
+                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
+                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
+
+              </form>
+          </div>
+<!--TUESDAY STARTS HERE-->
+
+          <div class="column card">
+            <h2 id="day" class="subtitle is-4 has-text-centered">Tuesday</h2>
+            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
+              <form id="form-main" class="userForm face">
+                
+                <div class="water">
+                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
+                  <div class="containerR">
+                    <p><i class="fa-solid fa-bottle-water"></i></p>
+                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                  </div>
+                </div>
+
+                <div class="seperator"></div>
+                
+                <div class="stress">
+                  <h2 class="subtitle is-5">Stress Level</h2>
+
+                  <div class="containerR">
+
+                    <input id="stress-slide-tue" class="slide" type="range" min="0" max="100" step="10">
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div id="stress-demo-tue" class="center"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <div class="mood">
+                  <h2 class="subtitle is-5">Mood</h2>
+                  <div class="container columns containB">
+                    
+                    <input type="radio" name="mood" id="happy" value="happy">
+                    <label for="happy" id="happy">
+                      <i class="fa fa-face-smile"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="neutral" value="neutral">
+                    <label for="neutral" id="neutral">
+                      <i class="fa fa-face-meh"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="sad" value="sad">
+                    <label for="sad" id="sad">
+                      <i class="fa fa-face-sad-tear"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="angry" value="angry">
+                    <label for="angry" id="angry">
+                      <i class="fa fa-face-angry"></i>
+                    </label>
+                    
+                  </div>
+
+                  <div class="seperator"></div>
+
+                </div>
+
+                <div class="energy">
+                  <h2 class="subtitle is-5">Energy Level</h2>
+
+                  <div class="containerR">
+
+                    <input id="energy-slide-tue" class="slider" type="range" min="0" max="100" step="25">
+                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div id="energy-demo-tue" class="center"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <!--This is the non-bulma Drop Down menu-->
+              <div class="hours">
+                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                <select name="hours-sleep" id="hours-sleep">
+                  <div class="content">
+                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
+                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
+                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
+                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
+                  </div>
+                </select>
+              </div>
+
+
+                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
+                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
+
+              </form>
+          </div>
+<!--WEDNESDAY STARTS HERE-->
+
+          <div class="column card">
+            <h2 id="day" class="subtitle is-4 has-text-centered">Wednesday</h2>
+            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
+              <form id="form-main" class="userForm face">
+                
+                <div class="water">
+                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
+                  <div class="containerR">
+                    <p><i class="fa-solid fa-bottle-water"></i></p>
+                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                  </div>
+                </div>
+
+                <div class="seperator"></div>
+                
+                <div class="stress">
+                  <h2 class="subtitle is-5">Stress Level</h2>
+
+                  <div class="containerR">
+
+                    <input id="stress-slide-wed" class="slide" type="range" min="0" max="100" step="10">
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div id="stress-demo-wed" class="center"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <div class="mood">
+                  <h2 class="subtitle is-5">Mood</h2>
+                  <div class="container columns containB">
+                    
+                    <input type="radio" name="mood" id="happy" value="happy">
+                    <label for="happy" id="happy">
+                      <i class="fa fa-face-smile"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="neutral" value="neutral">
+                    <label for="neutral" id="neutral">
+                      <i class="fa fa-face-meh"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="sad" value="sad">
+                    <label for="sad" id="sad">
+                      <i class="fa fa-face-sad-tear"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="angry" value="angry">
+                    <label for="angry" id="angry">
+                      <i class="fa fa-face-angry"></i>
+                    </label>
+                    
+                  </div>
+
+                  <div class="seperator"></div>
+
+                </div>
+
+                <div class="energy">
+                  <h2 class="subtitle is-5">Energy Level</h2>
+
+                  <div class="containerR">
+
+                    <input id="energy-slide-wed" class="slider" type="range" min="0" max="100" step="25">
+                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div id="energy-demo-wed" class="center"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <!--This is the non-bulma Drop Down menu-->
+              <div class="hours">
+                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                <select name="hours-sleep" id="hours-sleep">
+                  <div class="content">
+                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
+                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
+                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
+                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
+                  </div>
+                </select>
+              </div>
+
+
+                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
+                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
+
+              </form>
+          </div>
+<!--THURSDAY STARTS HERE-->
+
+          <div class="column card">
+            <h2 id="day" class="subtitle is-4 has-text-centered">Thursday</h2>
+            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
+              <form id="form-main" class="userForm face">
+                
+                <div class="water">
+                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
+                  <div class="containerR">
+                    <p><i class="fa-solid fa-bottle-water"></i></p>
+                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                  </div>
+                </div>
+
+                <div class="seperator"></div>
+                
+                <div class="stress">
+                  <h2 class="subtitle is-5">Stress Level</h2>
+
+                  <div class="containerR">
+
+                    <input id="stress-slide-thu" class="slide" type="range" min="0" max="100" step="10">
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div id="stress-demo-thu" class="center"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <div class="mood">
+                  <h2 class="subtitle is-5">Mood</h2>
+                  <div class="container columns containB">
+                    
+                    <input type="radio" name="mood" id="happy" value="happy">
+                    <label for="happy" id="happy">
+                      <i class="fa fa-face-smile"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="neutral" value="neutral">
+                    <label for="neutral" id="neutral">
+                      <i class="fa fa-face-meh"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="sad" value="sad">
+                    <label for="sad" id="sad">
+                      <i class="fa fa-face-sad-tear"></i>
+                    </label>
+
+                    <input type="radio" name="mood" id="angry" value="angry">
+                    <label for="angry" id="angry">
+                      <i class="fa fa-face-angry"></i>
+                    </label>
+                    
+                  </div>
+
+                  <div class="seperator"></div>
+
+                </div>
+
+                <div class="energy">
+                  <h2 class="subtitle is-5">Energy Level</h2>
+
+                  <div class="containerR">
+
+                    <input id="energy-slide-thu" class="slider" type="range" min="0" max="100" step="25">
+                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div id="energy-demo-thu" class="center"></div>
                   
                 </div>
 
@@ -121,9 +505,11 @@
               </form>
           </div>
 
+<!--FRIDAY STARTS HERE-->
+
           <div class="column card">
-            <h2 id="day" class="subtitle is-4 has-text-centered"></h2>
-            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)"></h2>
+            <h2 id="day" class="subtitle is-4 has-text-centered">Friday</h2>
+            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
                 
                 <div class="water">
@@ -141,11 +527,11 @@
 
                   <div class="containerR">
 
-                    <input id="stress-slide" class="slide" type="range" min="0" max="100" step="10">
+                    <input id="stress-slide-fri" class="slide" type="range" min="0" max="100" step="10">
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="stress-demo" class="center"></div>
+                  <div id="stress-demo-fri" class="center"></div>
                   
                 </div>
 
@@ -181,16 +567,16 @@
 
                 </div>
 
-                <div class="anxiety">
+                <div class="energy">
                   <h2 class="subtitle is-5">Energy Level</h2>
 
                   <div class="containerR">
 
-                    <input id="energy-slide" class="slider" type="range" min="0" max="100" step="25">
+                    <input id="energy-slide-fri" class="slider" type="range" min="0" max="100" step="25">
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="energy-demo" class="center"></div>
+                  <div id="energy-demo-fri" class="center"></div>
                   
                 </div>
 
@@ -215,10 +601,10 @@
 
               </form>
           </div>
-
+<!--SATURDAY STARTS HERE-->
           <div class="column card">
-            <h2 id="day" class="subtitle is-4 has-text-centered"></h2>
-            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)"></h2>
+            <h2 id="day" class="subtitle is-4 has-text-centered">Saturday</h2>
+            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
                 
                 <div class="water">
@@ -236,11 +622,11 @@
 
                   <div class="containerR">
 
-                    <input id="stress-slide" class="slide" type="range" min="0" max="100" step="10">
+                    <input id="stress-slide-sat" class="slide" type="range" min="0" max="100" step="10">
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="stress-demo" class="center"></div>
+                  <div id="stress-demo-sat" class="center"></div>
                   
                 </div>
 
@@ -276,396 +662,16 @@
 
                 </div>
 
-                <div class="anxiety">
+                <div class="energy">
                   <h2 class="subtitle is-5">Energy Level</h2>
 
                   <div class="containerR">
 
-                    <input id="energy-slide" class="slider" type="range" min="0" max="100" step="25">
+                    <input id="energy-slide-sat" class="slider" type="range" min="0" max="100" step="25">
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="energy-demo" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <!--This is the non-bulma Drop Down menu-->
-              <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" id="hours-sleep">
-                  <div class="content">
-                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
-                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
-                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
-                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
-                  </div>
-                </select>
-              </div>
-
-
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
-                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
-
-              </form>
-          </div>
-
-          <div class="column card">
-            <h2 id="day" class="subtitle is-4 has-text-centered"></h2>
-            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)"></h2>
-              <form id="form-main" class="userForm face">
-                
-                <div class="water">
-                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
-                  <div class="containerR">
-                    <p><i class="fa-solid fa-bottle-water"></i></p>
-                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
-                  </div>
-                </div>
-
-                <div class="seperator"></div>
-                
-                <div class="stress">
-                  <h2 class="subtitle is-5">Stress Level</h2>
-
-                  <div class="containerR">
-
-                    <input id="stress-slide" class="slide" type="range" min="0" max="100" step="10">
-                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="stress-demo" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <div class="mood">
-                  <h2 class="subtitle is-5">Mood</h2>
-                  <div class="container columns containB">
-                    
-                    <input type="radio" name="mood" id="happy" value="happy">
-                    <label for="happy" id="happy">
-                      <i class="fa fa-face-smile"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="neutral" value="neutral">
-                    <label for="neutral" id="neutral">
-                      <i class="fa fa-face-meh"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="sad" value="sad">
-                    <label for="sad" id="sad">
-                      <i class="fa fa-face-sad-tear"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="angry" value="angry">
-                    <label for="angry" id="angry">
-                      <i class="fa fa-face-angry"></i>
-                    </label>
-                    
-                  </div>
-
-                  <div class="seperator"></div>
-
-                </div>
-
-                <div class="anxiety">
-                  <h2 class="subtitle is-5">Energy Level</h2>
-
-                  <div class="containerR">
-
-                    <input id="energy-slide" class="slider" type="range" min="0" max="100" step="25">
-                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="energy-demo" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <!--This is the non-bulma Drop Down menu-->
-              <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" id="hours-sleep">
-                  <div class="content">
-                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
-                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
-                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
-                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
-                  </div>
-                </select>
-              </div>
-
-
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
-                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
-
-              </form>
-          </div>
-
-          <div class="column card">
-            <h2 id="day" class="subtitle is-4 has-text-centered"></h2>
-            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)"></h2>
-              <form id="form-main" class="userForm face">
-                
-                <div class="water">
-                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
-                  <div class="containerR">
-                    <p><i class="fa-solid fa-bottle-water"></i></p>
-                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
-                  </div>
-                </div>
-
-                <div class="seperator"></div>
-                
-                <div class="stress">
-                  <h2 class="subtitle is-5">Stress Level</h2>
-
-                  <div class="containerR">
-
-                    <input id="stress-slide" class="slide" type="range" min="0" max="100" step="10">
-                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="stress-demo" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <div class="mood">
-                  <h2 class="subtitle is-5">Mood</h2>
-                  <div class="container columns containB">
-                    
-                    <input type="radio" name="mood" id="happy" value="happy">
-                    <label for="happy" id="happy">
-                      <i class="fa fa-face-smile"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="neutral" value="neutral">
-                    <label for="neutral" id="neutral">
-                      <i class="fa fa-face-meh"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="sad" value="sad">
-                    <label for="sad" id="sad">
-                      <i class="fa fa-face-sad-tear"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="angry" value="angry">
-                    <label for="angry" id="angry">
-                      <i class="fa fa-face-angry"></i>
-                    </label>
-                    
-                  </div>
-
-                  <div class="seperator"></div>
-
-                </div>
-
-                <div class="anxiety">
-                  <h2 class="subtitle is-5">Energy Level</h2>
-
-                  <div class="containerR">
-
-                    <input id="energy-slide" class="slider" type="range" min="0" max="100" step="25">
-                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="energy-demo" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <!--This is the non-bulma Drop Down menu-->
-              <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" id="hours-sleep">
-                  <div class="content">
-                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
-                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
-                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
-                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
-                  </div>
-                </select>
-              </div>
-
-
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
-                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
-
-              </form>
-          </div>
-
-          <div class="column card">
-            <h2 id="day" class="subtitle is-4 has-text-centered"></h2>
-            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)"></h2>
-              <form id="form-main" class="userForm face">
-                
-                <div class="water">
-                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
-                  <div class="containerR">
-                    <p><i class="fa-solid fa-bottle-water"></i></p>
-                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
-                  </div>
-                </div>
-
-                <div class="seperator"></div>
-                
-                <div class="stress">
-                  <h2 class="subtitle is-5">Stress Level</h2>
-
-                  <div class="containerR">
-
-                    <input id="stress-slide" class="slide" type="range" min="0" max="100" step="10">
-                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="stress-demo" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <div class="mood">
-                  <h2 class="subtitle is-5">Mood</h2>
-                  <div class="container columns containB">
-                    
-                    <input type="radio" name="mood" id="happy" value="happy">
-                    <label for="happy" id="happy">
-                      <i class="fa fa-face-smile"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="neutral" value="neutral">
-                    <label for="neutral" id="neutral">
-                      <i class="fa fa-face-meh"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="sad" value="sad">
-                    <label for="sad" id="sad">
-                      <i class="fa fa-face-sad-tear"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="angry" value="angry">
-                    <label for="angry" id="angry">
-                      <i class="fa fa-face-angry"></i>
-                    </label>
-                    
-                  </div>
-
-                  <div class="seperator"></div>
-
-                </div>
-
-                <div class="anxiety">
-                  <h2 class="subtitle is-5">Energy Level</h2>
-
-                  <div class="containerR">
-
-                    <input id="energy-slide" class="slider" type="range" min="0" max="100" step="25">
-                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="energy-demo" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <!--This is the non-bulma Drop Down menu-->
-              <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" id="hours-sleep">
-                  <div class="content">
-                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
-                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
-                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
-                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
-                  </div>
-                </select>
-              </div>
-
-
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
-                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
-
-              </form>
-          </div>
-
-          <div class="column card">
-            <h2 id="day" class="subtitle is-4 has-text-centered"></h2>
-            <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)"></h2>
-              <form id="form-main" class="userForm face">
-                
-                <div class="water">
-                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
-                  <div class="containerR">
-                    <p><i class="fa-solid fa-bottle-water"></i></p>
-                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
-                  </div>
-                </div>
-
-                <div class="seperator"></div>
-                
-                <div class="stress">
-                  <h2 class="subtitle is-5">Stress Level</h2>
-
-                  <div class="containerR">
-
-                    <input id="stress-slide" class="slide" type="range" min="0" max="100" step="10">
-                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="stress-demo" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <div class="mood">
-                  <h2 class="subtitle is-5">Mood</h2>
-                  <div class="container columns containB">
-                    
-                    <input type="radio" name="mood" id="happy" value="happy">
-                    <label for="happy" id="happy">
-                      <i class="fa fa-face-smile"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="neutral" value="neutral">
-                    <label for="neutral" id="neutral">
-                      <i class="fa fa-face-meh"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="sad" value="sad">
-                    <label for="sad" id="sad">
-                      <i class="fa fa-face-sad-tear"></i>
-                    </label>
-
-                    <input type="radio" name="mood" id="angry" value="angry">
-                    <label for="angry" id="angry">
-                      <i class="fa fa-face-angry"></i>
-                    </label>
-                    
-                  </div>
-
-                  <div class="seperator"></div>
-
-                </div>
-
-                <div class="anxiety">
-                  <h2 class="subtitle is-5">Energy Level</h2>
-
-                  <div class="containerR">
-
-                    <input id="energy-slide" class="slider" type="range" min="0" max="100" step="25">
-                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="energy-demo" class="center"></div>
+                  <div id="energy-demo-sat" class="center"></div>
                   
                 </div>
 
