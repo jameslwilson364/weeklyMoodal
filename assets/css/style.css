@@ -616,6 +616,53 @@ input[type="radio"]:checked + #angry {
 
 
 
+.toggle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    height: 40px;
+    font-size: xx-large;
+    align-content: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    padding: 35px 25px;
+    background-color:#61777d;
+    box-shadow: inset 0 0 10px;
+    color:white;
+}
+
+h4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    align-content: center;
+    
+}
+
+/*start Dark Mode Code*/
+.darker {
+    background-image: linear-gradient(to left, rgb(95, 95, 95), rgb(149, 149, 149), rgb(96, 96, 96), rgb(58, 58, 58) );
+
+}
+
+.dark {
+    background-image: linear-gradient(to top, rgb(5, 79, 119), rgb(12, 34, 65));
+
+}
+
+button.dark {
+    background-color: black;
+    color:yellow;
+}
+/*will need to add code for dark mode to remove is-warning class from links*/
+
+
+/*nothing but Media Screen below this point*/
+
 @media screen and (max-width: 576px) {
     .container {
         scale: 1;

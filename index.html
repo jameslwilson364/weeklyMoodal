@@ -16,9 +16,9 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
-  <body>
-    <header class="hero is-info has-text-centered">
-      <h1 class="heading"><span class="transparent" >Weekly </span>Moodal</h1>
+  <body class="darker">
+    <header class="hero is-info has-text-centered dark">
+      <h1 class="heading"><span class="transparent" >Weekly </span><i class="fa-solid fa-code"></i> <span class="transparent" >Moodal</span></h1>
       <img class="left head-image" src="/assets/images/Poodal.png"> <!--The Moodal Poodle!-->
     </header>
     <section class="section">
@@ -26,7 +26,7 @@
       <div class="container">
         <div class="columns main">
 
-          <div class="column card">
+          <div class="column card dark">
             <h2 id="day" class="subtitle is-4 has-text-centered">Sunday</h2>
             <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -1032,8 +1032,12 @@
       <button id="reset" class="button reset is-danger">Reset Week</button>
   </div>
 
-
-
+<!--this is for dark mode only-->
+  <div>
+    <h4> Dark/Light Mode </h4>
+    <button id="toggle" class="toggle dark"><i class="fa-solid fa-moon"></i>
+    </button>
+    </div>
 
     <!-- This is the Bulma MODAL Example 
     <section>
@@ -1050,7 +1054,7 @@
     <div class="links">
 
       <a href="https://jameslwilson364.github.io/Challenge-2-Wilson/">
-        <button id="james-link" class="button is-warning"><i class="fa-solid fa-code"></i>  James's Portfolio</button>
+        <button id="james-link" class="button is-warning dark"><i class="fa-solid fa-code"></i>  James's Portfolio</button>
         </a>
       
       <a href="https://cazthetraveler.github.io/Luis-Olmos-Portfolio/">
