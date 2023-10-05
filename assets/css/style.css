@@ -5,8 +5,12 @@
     --angry: rgb(244, 135, 135);
 }
 
-body {
+.backer {
     background-image: linear-gradient(to left, rgb(244, 159, 159), rgb(146, 211, 237), rgb(211, 245, 222), rgb(255, 255, 193) );
+    background-size: cover;
+}
+
+body {
     background-size: cover;
     height: 100%;
     font-family: 'Mooli';
@@ -631,21 +635,37 @@ input[type="radio"]:checked + #angry {
         scale: 1;
     }
 
-    .card {
-      width: min-content;
-      margin-bottom: 30px;
+    body {
+        width: 100%;
     }
 
+    .card {
+      width: 80%;
+      margin-bottom: 30px;
+    
+    }
+
+    
+
     .column {
-        width: 300px;
+        width: 100%;
+        margin-left: 8px;
     }
     .column:hover {
         scale:1;
     }
 
+    .hero {
+        height: 180px;
+    }
+
     .flip:hover {
         scale: 1;
         transform: none;
+    }
+
+    .mood {
+        scale: .85;
     }
 
     .reset {
