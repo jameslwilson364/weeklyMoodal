@@ -1,571 +1,328 @@
 // initial script file 7:46pm
 
-// variables to match the drawing
-
-// water intake stored as a variable
-// maybe we can do a visual where cups of water fill on the page as the user rolls over or clicks them???
-// plus/minus clicks (store the variable as a number)
-// var dailyWaterIntake = 0;
-// function onClickPlus() {
-//  clicks += 1;
-//  document.getElementById("water").innerHTML = clicks;
-//  };
-// function onClickMinus() {
-//  clicks -= 1;
-//  document.getElementById("water").innerHTML = clicks;
-//  };
-
 var currentDate = dayjs().format('dddd, MMMM DD, YYYY');
 // var currentDay = dayjs().format("");
 
-// function getDates() {
-// var currentDate = dayjs();
-// var sundayText = document.getElementById('date0');
-// var sundayFlipText = document.getElementById('day-saved0');
-// var sundayFlipDate = document.getElementById('date-saved0');
-// var mondayText = document.getElementById('date1');
-// var mondayFlipText = document.getElementById('day-saved1');
-// var mondayFlipDate = document.getElementById('date-saved1');
-// var tuesdayText = document.getElementById('date2');
-// var tuesdayFlipText = document.getElementById('day-saved2');
-// var tuesdayFlipDate = document.getElementById('date-saved2');
-// var wednesdayText = document.getElementById('date3');
-// var wednesdayFlipText = document.getElementById('day-saved3');
-// var wednesdayFlipDate = document.getElementById('date-saved3');
-// var thursdayText = document.getElementById('date4');
-// var thursdayFlipText = document.getElementById('day-saved4');
-// var thursdayFlipDate = document.getElementById('date-saved4');
-// var fridayText = document.getElementById('date5');
-// var fridayFlipText = document.getElementById('day-saved5');
-// var fridayFlipDate = document.getElementById('date-saved5');
-// var saturdayText = document.getElementById('date6');
-// var saturdayFlipText = document.getElementById('day-saved6');
-// var saturdayFlipDate = document.getElementById('date-saved6');
+function getDates() {
+var currentDate = dayjs();
+var sundayText = document.getElementById('date0');
+var sundayFlipText = document.getElementById('day-saved0');
+var sundayFlipDate = document.getElementById('date-saved0');
+var mondayText = document.getElementById('date1');
+var mondayFlipText = document.getElementById('day-saved1');
+var mondayFlipDate = document.getElementById('date-saved1');
+var tuesdayText = document.getElementById('date2');
+var tuesdayFlipText = document.getElementById('day-saved2');
+var tuesdayFlipDate = document.getElementById('date-saved2');
+var wednesdayText = document.getElementById('date3');
+var wednesdayFlipText = document.getElementById('day-saved3');
+var wednesdayFlipDate = document.getElementById('date-saved3');
+var thursdayText = document.getElementById('date4');
+var thursdayFlipText = document.getElementById('day-saved4');
+var thursdayFlipDate = document.getElementById('date-saved4');
+var fridayText = document.getElementById('date5');
+var fridayFlipText = document.getElementById('day-saved5');
+var fridayFlipDate = document.getElementById('date-saved5');
+var saturdayText = document.getElementById('date6');
+var saturdayFlipText = document.getElementById('day-saved6');
+var saturdayFlipDate = document.getElementById('date-saved6');
 
-// if (dayjs().day() === 0) {
-//   var sundayYep = currentDate;
-//   sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   sundayFlipText.textContent= (sundayYep.format('dddd'));
-//   sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   var mondayYep = dayjs(currentDate).add(1, 'day');
-//   mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   mondayFlipText.textContent= (mondayYep.format('dddd'));
-//   mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   var tuesdayYep = dayjs(currentDate).add(2, 'day');
-//   tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
-//   tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   var wednesdayYep = dayjs(currentDate).add(3, 'day');
-//   wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
-//   wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   var thursdayYep = dayjs(currentDate).add(4, 'day');
-//   thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   thursdayFlipText.textContent= (thursdayYep.format('dddd'));
-//   thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   var fridayYep = dayjs(currentDate).add(5, 'day');
-//   fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   fridayFlipText.textContent= (fridayYep.format('dddd'));
-//   fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   var saturdayYep = dayjs(currentDate).add(6, 'day');
-//   saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-//   saturdayFlipText.textContent= (saturdayYep.format('dddd'));
-//   saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-// }   else if (dayjs().day() === 1) {
-//   var sundayYep = dayjs(currentDate).add(-1, 'day');
-//   sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   sundayFlipText.textContent= (sundayYep.format('dddd'));
-//   sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   var mondayYep = currentDate;
-//   mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   mondayFlipText.textContent= (mondayYep.format('dddd'));
-//   mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   var tuesdayYep = dayjs(currentDate).add(1, 'day');
-//   tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
-//   tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   var wednesdayYep = dayjs(currentDate).add(2, 'day');
-//   wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
-//   wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   var thursdayYep = dayjs(currentDate).add(3, 'day');
-//   thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYYY'));
-//   thursdayFlipText.textContent= (thursdayYep.format('dddd'));
-//   thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   var fridayYep = dayjs(currentDate).add(4, 'day');
-//   fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   fridayFlipText.textContent= (fridayYep.format('dddd'));
-//   fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   var saturdayYep = dayjs(currentDate).add(5, 'day');
-//   saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-//   saturdayFlipText.textContent= (saturdayYep.format('dddd'));
-//   saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-// } else if (dayjs().day() === 2) {
-//   var sundayYep = dayjs(currentDate).add(-2, 'day');
-//   sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   sundayFlipText.textContent= (sundayYep.format('dddd'));
-//   sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   var mondayYep = dayjs(currentDate).add(-1, 'day');
-//   mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   mondayFlipText.textContent= (mondayYep.format('dddd'));
-//   mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   var tuesdayYep = currentDate;
-//   tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
-//   tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   var wednesdayYep = dayjs(currentDate).add(1, 'day');
-//   wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
-//   wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   var thursdayYep = dayjs(currentDate).add(2, 'day');
-//   thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   thursdayFlipText.textContent= (thursdayYep.format('dddd'));
-//   thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   var fridayYep = dayjs(currentDate).add(3, 'day');
-//   fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   fridayFlipText.textContent= (fridayYep.format('dddd'));
-//   fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   var saturdayYep = dayjs(currentDate).add(4, 'day');
-//   saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-//   saturdayFlipText.textContent= (saturdayYep.format('dddd'));
-//   saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-// }   else if (dayjs().day() === 3) {
-//   var sundayYep = dayjs(currentDate).add(-3, 'day').format('MMMM DD, YYYY');
-//   sundayText.textContent= (sundayYep);
-//   sundayFlipText.textContent= (sundayYep.format('dddd'));
-//   sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   var mondayYep = dayjs(currentDate).add(-2, 'day');
-//   mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   mondayFlipText.textContent= (mondayYep.format('dddd'));
-//   mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   var tuesdayYep = dayjs(currentDate).add(-1, 'day'); 
-//   tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
-//   tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   var wednesdayYep = currentDate;
-//   console.log(wednesdayYep);
-//   wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
-//   wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   var thursdayYep = dayjs(currentDate).add(1, 'day');
-//   thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   thursdayFlipText.textContent= (thursdayYep.format('dddd'));
-//   thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   var fridayYep = dayjs(currentDate).add(2, 'day');
-//   fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   fridayFlipText.textContent= (fridayYep.format('dddd'));
-//   fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   var saturdayYep = dayjs(currentDate).add(3, 'day');
-//   saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-//   saturdayFlipText.textContent= (saturdayYep.format('dddd'));
-//   saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-// }   else if (dayjs().day() === 4) {
-//   var sundayYep = dayjs(currentDate).add(-4, 'day');
-//   sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   sundayFlipText.textContent= (sundayYep.format('dddd'));
-//   sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   var mondayYep = dayjs(currentDate).add(-3, 'day');
-//   mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   mondayFlipText.textContent= (mondayYep.format('dddd'));
-//   mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   var tuesdayYep = dayjs(currentDate).add(-2, 'day'); 
-//   tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
-//   tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   var wednesdayYep =  dayjs(currentDate).add(-1, 'day'); 
-//   wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
-//   wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   var thursdayYep = currentDate;
-//   thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   thursdayFlipText.textContent= (thursdayYep.format('dddd'));
-//   thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   var fridayYep = dayjs(currentDate).add(1, 'day');
-//   fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   fridayFlipText.textContent= (fridayYep.format('dddd'));
-//   fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   var saturdayYep = dayjs(currentDate).add(2, 'day');
-//   saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-//   saturdayFlipText.textContent= (saturdayYep.format('dddd'));
-//   saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-// }   else if (dayjs().day() === 5) {
-//   var sundayYep = dayjs(currentDate).add(-5, 'day');
-//   sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   sundayFlipText.textContent= (sundayYep.format('dddd'));
-//   sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   var mondayYep = dayjs(currentDate).add(-4, 'day');
-//   mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   mondayFlipText.textContent= (mondayYep.format('dddd'));
-//   mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   var tuesdayYep = dayjs(currentDate).add(-3, 'day'); 
-//   tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
-//   tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   var wednesdayYep =  dayjs(currentDate).add(-2, 'day'); 
-//   wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
-//   wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   var thursdayYep = dayjs(currentDate).add(-1, 'day');
-//   thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   thursdayFlipText.textContent= (thursdayYep.format('dddd'));
-//   thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   var fridayYep = currentDate;
-//   fridayText.textContent= (fridayYep);
-//   fridayFlipText.textContent= (fridayYep.format('dddd'));
-//   fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   var saturdayYep = dayjs(currentDate).add(1, 'day');
-//   saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-//   saturdayFlipText.textContent= (saturdayYep.format('dddd'));
-//   saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-// }  else if (dayjs().day() === 6) {
-//   var sundayYep = dayjs(currentDate).add(-6, 'day');
-//   sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   sundayFlipText.textContent= (sundayYep.format('dddd'));
-//   sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
-//   var mondayYep = dayjs(currentDate).add(-5, 'day');
-//   mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   mondayFlipText.textContent= (mondayYep.format('dddd'));
-//   mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
-//   var tuesdayYep = dayjs(currentDate).add(-4, 'day'); 
-//   tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
-//   tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
-//   var wednesdayYep =  dayjs(currentDate).add(-3, 'day'); 
-//   wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYYY'));
-//   wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
-//   wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
-//   var thursdayYep = dayjs(currentDate).add(-2, 'day');
-//   thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   thursdayFlipText.textContent= (thursdayYep.format('dddd'));
-//   thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
-//   var fridayYep = dayjs(currentDate).add(-1, 'day'); 
-//   fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   fridayFlipText.textContent= (fridayYep.format('dddd'));
-//   fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
-//   var saturdayYep = currentDate;
-//   saturdayText.textContent= (saturdayYep);
-//   saturdayFlipText.textContent= (saturdayYep.format('dddd'));
-//   saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
-// }
-// }
-
-
-// getDates();
-
-// var allWater = [];
-// var allStress = [];
-// var allMood = [];
-// var allEnergy = [];
-// var allSleep = [];
-// var allDate =[];
-// var allDay = [];
-// var allTemp = [];
-// var allVideo = [];
-// var modalArray = [allDay, allDate, allMood, allTemp, allVideo, allWater, allStress,allSleep, allEnergy];
+if (dayjs().day() === 0) {
+  var sundayYep = currentDate;
+  sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  sundayFlipText.textContent= (sundayYep.format('dddd'));
+  sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = dayjs(currentDate).add(1, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  mondayFlipText.textContent= (mondayYep.format('dddd'));
+  mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = dayjs(currentDate).add(2, 'day');
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
+  tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep = dayjs(currentDate).add(3, 'day');
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
+  wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = dayjs(currentDate).add(4, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  thursdayFlipText.textContent= (thursdayYep.format('dddd'));
+  thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = dayjs(currentDate).add(5, 'day');
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  fridayFlipText.textContent= (fridayYep.format('dddd'));
+  fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = dayjs(currentDate).add(6, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+  saturdayFlipText.textContent= (saturdayYep.format('dddd'));
+  saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+}   else if (dayjs().day() === 1) {
+  var sundayYep = dayjs(currentDate).add(-1, 'day');
+  sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  sundayFlipText.textContent= (sundayYep.format('dddd'));
+  sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = currentDate;
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  mondayFlipText.textContent= (mondayYep.format('dddd'));
+  mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = dayjs(currentDate).add(1, 'day');
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
+  tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep = dayjs(currentDate).add(2, 'day');
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
+  wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = dayjs(currentDate).add(3, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYYY'));
+  thursdayFlipText.textContent= (thursdayYep.format('dddd'));
+  thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = dayjs(currentDate).add(4, 'day');
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  fridayFlipText.textContent= (fridayYep.format('dddd'));
+  fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = dayjs(currentDate).add(5, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+  saturdayFlipText.textContent= (saturdayYep.format('dddd'));
+  saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+} else if (dayjs().day() === 2) {
+  var sundayYep = dayjs(currentDate).add(-2, 'day');
+  sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  sundayFlipText.textContent= (sundayYep.format('dddd'));
+  sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = dayjs(currentDate).add(-1, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  mondayFlipText.textContent= (mondayYep.format('dddd'));
+  mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = currentDate;
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
+  tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep = dayjs(currentDate).add(1, 'day');
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
+  wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = dayjs(currentDate).add(2, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  thursdayFlipText.textContent= (thursdayYep.format('dddd'));
+  thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = dayjs(currentDate).add(3, 'day');
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  fridayFlipText.textContent= (fridayYep.format('dddd'));
+  fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = dayjs(currentDate).add(4, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+  saturdayFlipText.textContent= (saturdayYep.format('dddd'));
+  saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+}   else if (dayjs().day() === 3) {
+  var sundayYep = dayjs(currentDate).add(-3, 'day').format('MMMM DD, YYYY');
+  sundayText.textContent= (sundayYep);
+  sundayFlipText.textContent= (sundayYep.format('dddd'));
+  sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = dayjs(currentDate).add(-2, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  mondayFlipText.textContent= (mondayYep.format('dddd'));
+  mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = dayjs(currentDate).add(-1, 'day'); 
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
+  tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep = currentDate;
+  console.log(wednesdayYep);
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
+  wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = dayjs(currentDate).add(1, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  thursdayFlipText.textContent= (thursdayYep.format('dddd'));
+  thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = dayjs(currentDate).add(2, 'day');
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  fridayFlipText.textContent= (fridayYep.format('dddd'));
+  fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = dayjs(currentDate).add(3, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+  saturdayFlipText.textContent= (saturdayYep.format('dddd'));
+  saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+}   else if (dayjs().day() === 4) {
+  var sundayYep = dayjs(currentDate).add(-4, 'day');
+  sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  sundayFlipText.textContent= (sundayYep.format('dddd'));
+  sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = dayjs(currentDate).add(-3, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  mondayFlipText.textContent= (mondayYep.format('dddd'));
+  mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = dayjs(currentDate).add(-2, 'day'); 
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
+  tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep =  dayjs(currentDate).add(-1, 'day'); 
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
+  wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = currentDate;
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  thursdayFlipText.textContent= (thursdayYep.format('dddd'));
+  thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = dayjs(currentDate).add(1, 'day');
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  fridayFlipText.textContent= (fridayYep.format('dddd'));
+  fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = dayjs(currentDate).add(2, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+  saturdayFlipText.textContent= (saturdayYep.format('dddd'));
+  saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+}   else if (dayjs().day() === 5) {
+  var sundayYep = dayjs(currentDate).add(-5, 'day');
+  sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  sundayFlipText.textContent= (sundayYep.format('dddd'));
+  sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = dayjs(currentDate).add(-4, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  mondayFlipText.textContent= (mondayYep.format('dddd'));
+  mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = dayjs(currentDate).add(-3, 'day'); 
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
+  tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep =  dayjs(currentDate).add(-2, 'day'); 
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
+  wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = dayjs(currentDate).add(-1, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  thursdayFlipText.textContent= (thursdayYep.format('dddd'));
+  thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = currentDate;
+  fridayText.textContent= (fridayYep);
+  fridayFlipText.textContent= (fridayYep.format('dddd'));
+  fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = dayjs(currentDate).add(1, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+  saturdayFlipText.textContent= (saturdayYep.format('dddd'));
+  saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+}  else if (dayjs().day() === 6) {
+  var sundayYep = dayjs(currentDate).add(-6, 'day');
+  sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  sundayFlipText.textContent= (sundayYep.format('dddd'));
+  sundayFlipDate.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = dayjs(currentDate).add(-5, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  mondayFlipText.textContent= (mondayYep.format('dddd'));
+  mondayFlipDate.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = dayjs(currentDate).add(-4, 'day'); 
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
+  tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep =  dayjs(currentDate).add(-3, 'day'); 
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYYY'));
+  wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
+  wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = dayjs(currentDate).add(-2, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  thursdayFlipText.textContent= (thursdayYep.format('dddd'));
+  thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = dayjs(currentDate).add(-1, 'day'); 
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  fridayFlipText.textContent= (fridayYep.format('dddd'));
+  fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = currentDate;
+  saturdayText.textContent= (saturdayYep);
+  saturdayFlipText.textContent= (saturdayYep.format('dddd'));
+  saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+}
+}
 
 
+getDates();
 
-
-// //Slider Functions
-// var sliderSun = document.getElementById("stress-slide-sun");
-// var outputSun = document.getElementById("stress-demo-sun");
-
-// outputSun.innerHTML = sliderSun.value + "%";
-// sliderSun.oninput = function() {
-//   outputSun.innerHTML = this.value + "%";
-// };
-
-// var sliderASun = document.getElementById("energy-slide-sun");
-// var outputASun = document.getElementById("energy-demo-sun");
-
-// outputASun.innerHTML = sliderASun.value + "%";
-// sliderASun.oninput = function() {
-//   outputASun.innerHTML = this.value + "%";
-// };
-
-// var sliderMon = document.getElementById("stress-slide-mon");
-// var outputMon = document.getElementById("stress-demo-mon");
-
-// outputMon.innerHTML = sliderMon.value + "%";
-// sliderMon.oninput = function() {
-//   outputMon.innerHTML = this.value + "%";
-// };
-
-// var sliderAMon = document.getElementById("energy-slide-mon");
-// var outputAMon = document.getElementById("energy-demo-mon");
-
-// outputAMon.innerHTML = sliderAMon.value + "%";
-// sliderAMon.oninput = function() {
-//   outputAMon.innerHTML = this.value + "%";
-// };
-
-// var sliderTue = document.getElementById("stress-slide-tue");
-// var outputTue = document.getElementById("stress-demo-tue");
-
-// outputTue.innerHTML = sliderTue.value + "%";
-// sliderTue.oninput = function() {
-//   outputTue.innerHTML = this.value + "%";
-// };
-
-// var sliderATue = document.getElementById("energy-slide-tue");
-// var outputATue = document.getElementById("energy-demo-tue");
-
-// outputATue.innerHTML = sliderATue.value + "%";
-// sliderATue.oninput = function() {
-//   outputATue.innerHTML = this.value + "%";
-// };
-
-// var sliderWed = document.getElementById("stress-slide-wed");
-// var outputWed = document.getElementById("stress-demo-wed");
-
-// outputWed.innerHTML = sliderWed.value + "%";
-// sliderWed.oninput = function() {
-//   outputWed.innerHTML = this.value + "%";
-// };
-
-// var sliderAWed = document.getElementById("energy-slide-wed");
-// var outputAWed = document.getElementById("energy-demo-wed");
-
-// outputAWed.innerHTML = sliderAWed.value + "%";
-// sliderAWed.oninput = function() {
-//   outputAWed.innerHTML = this.value + "%";
-// };
-
-// var sliderThu = document.getElementById("stress-slide-thu");
-// var outputThu = document.getElementById("stress-demo-thu");
-
-// outputThu.innerHTML = sliderThu.value + "%";
-// sliderThu.oninput = function() {
-//   outputThu.innerHTML = this.value + "%";
-// };
-
-// var sliderAThu = document.getElementById("energy-slide-thu");
-// var outputAThu = document.getElementById("energy-demo-thu");
-
-// outputAThu.innerHTML = sliderAThu.value + "%";
-// sliderAThu.oninput = function() {
-//   outputAThu.innerHTML = this.value + "%";
-// };
-
-// var sliderFri = document.getElementById("stress-slide-fri");
-// var outputFri = document.getElementById("stress-demo-fri");
-
-// outputFri.innerHTML = sliderFri.value + "%";
-// sliderFri.oninput = function() {
-//   outputFri.innerHTML = this.value + "%";
-// };
-
-// var sliderAFri = document.getElementById("energy-slide-fri");
-// var outputAFri = document.getElementById("energy-demo-fri");
-
-// outputAFri.innerHTML = sliderAFri.value + "%";
-// sliderAFri.oninput = function() {
-//   outputAFri.innerHTML = this.value + "%";
-// };
-
-// var sliderSat = document.getElementById("stress-slide-sat");
-// var outputSat = document.getElementById("stress-demo-sat");
-
-// outputSat.innerHTML = sliderSat.value + "%";
-// sliderSat.oninput = function() {
-//   outputSat.innerHTML = this.value + "%";
-// };
-
-// var sliderASat = document.getElementById("energy-slide-sat");
-// var outputASat = document.getElementById("energy-demo-sat");
-
-// outputASat.innerHTML = sliderASat.value + "%";
-// sliderASat.oninput = function() {
-//   outputASat.innerHTML = this.value + "%";
-// };
-// // End Slider functions
-
-// var saveButton = $("#save");
-
-// saveButton.click(function(event) {
-//   event.preventDefault();
-
-//   var waterCount = $("#water-counter");
-//   var moodInput = $("input[name=mood]:radio:checked");
-//   var sleepCount = $('#hours-sleep').find(":selected");
+// reset button clears all localStorage 
+var resetButton = $('#reset');
+resetButton.click(function() {
   
-//   // added localStorage for each item on day 1
-//   console.log(waterCount.val());
-//   allWater.push(waterCount.val());
-//   localStorage.setItem("allWater", allWater);
-
-//   console.log(moodInput.val());
-//   allMood.push(moodInput.val());
-//   localStorage.setItem("allMood", allMood);
+  window.localStorage.clear();
+  location.reload(); //refreshes the page
   
-//   console.log(slider.value);
-//   allStress.push(slider.value);
-//   localStorage.setItem("StressIntake", allStress );
-
-//   console.log(sliderA.value);
-//   allEnergy.push(sliderA.value);
-//   localStorage.setItem("EnergyIntake", allEnergy);
-
-//   console.log(sleepCount.val());
-//   allSleep.push(sleepCount.val());
-//   localStorage.setItem("SleepIntake", allSleep);
-
-//   //added two functions before the createCard
-
-//   hideSave();
-//   createFrame();
-//   createCard();
-// });
+});
 
 
-// //10-03
-// function createCard() {
-//   //day and date
-//   var dayStamp = $("#day-saved");
-//   var dateStamp = $("#date-saved");
-
-//   dayStamp.text(currentDay);
-//   dateStamp.text(currentDate);
-
-
-//   //water display
-//   console.log(localStorage.getItem("allWater"));
-//   var waterDisplayFlip1 = $('#water-display');
-//   waterDisplayFlip1.text("Water: "+allWater[0]+ " units");
-
-//   //stress display
-//   console.log(localStorage.getItem("allStress"));
-//   var stressDisplayFlip1 = $('#stress-display');
-//   stressDisplayFlip1.text("Stress Level: "+allStress+"%");
-
-//   // sleep
-//   console.log(localStorage.getItem("allSleep"));
-//   var sleepDisplayFlip1 = $('#sleep-display');
-//   sleepDisplayFlip1.text("Slept: "+allSleep+" hours");
-
-//   // energy
-//   console.log(localStorage.getItem("allEnergy"));
-//   var energyDisplayFlip1 = $('#energy-display');
-//   energyDisplayFlip1.text("Energy Level: "+allEnergy+"%");
-
-//   //mood
-//   var blockMood = $("#block-mood");
-
-//   if (allMood == "happy") {
-//     blockMood.addClass("happy-back");
-//   } else if (allMood == "neutral") {
-//     blockMood.addClass("neutral-back");
-//   } else if (allMood == "sad") {
-//     blockMood.addClass("sad-back");
-//   }  else if (allMood == "angry") {
-//     blockMood.addClass("stressed-back");
-//   };
-
-// };
-
-// // reset button clears all localStorage 
-// var resetButton = $('#reset');
-// resetButton.click(function() {
-  
-//   window.localStorage.clear();
-  
-// });
-
-// // checkboxes for moods stored as a variable (do we want to have the user to be able to check multiple boxes)
-// // happy, sad, angry, neutral
-
-// // numeric value that corresponds to a slider bar stored as a number
-
-// // drop down for sleep ranges 
-// // drop down should include the following values stored as a variable
-// // 0-3 hours
-// // 4-6 hours
-// // 7-9 hours
-// // 10-12 hours
-// // I slept all day!
-
-// // api to pull in weather data for day one 
-// // day one value auto populates in each day's location field with weather data auto populated underneath
-// // allow the user to edit their location in each card
-
-
-
-// // submit button to capture all user inputs 
-// // check to see if user entered all fields
-// // treat the moods differently as a boolean value 
-// // function that scores the users inputs for a running tally
-// // function captures user inputs on the flip card and in localStorage
-// // localStorage arrays for each day
-// // edit button to refresh the current card and allow the user to reinput their data (also clears that card data from localStorage)
-// // when the final submit is clicked and all 7 cards have completed data sets (must check for it) the user is assigned a score value
-
-
-
-// // need to determine how to score those, weighted for mood??
-// // the user receives a summary modal that..
-// // how they did this week mentally
-// // how they did this week physically
-// // conditional recommendations for activities to help improve mental/physical health
-// // YouTube API for playlists
-// // YouTube API for videos
-
-// //possibly write a function to split the day of the week off to write this as a single function for all stress sliders
-
-
-// // var slider = document.getElementById("stress-slide");
-// // var output = document.getElementById("stress-demo");
-// // output.innerHTML = slider.value + "%"; // Display the default slider value
-
-
-// // // Update the current slider value (each time you drag the slider handle)
-// // slider.oninput = function() {
-// //   output.innerHTML = this.value + "%";
-// // };
-
-// //template literal try
-// function createFrame() {
-//   $(".main").append('<div id="flip" class="column card flip"><h2 id="day-saved" class="subtitle is-4 has-text-centered">Flip Day</h2><h2 id="date-saved" class="subtitle is-6 has-text-centered transparent">Flip Date</h2><div id="block-mood" class="block-mood"><p id="mood-flip"></p></div><div class="block-weather"><div class="weather"><p id="weather-flip"><i class="fa-regular fa-sun"></i></p><p id="temp-flip">Temp</p></div></div><div class="block-music"><div class="music"><p><i class="fa-brands fa-youtube make-bigger"></i></p><p id="video-title">Video Title</p><div><a id="video-link" class="has-text-centered"> YouTube Link</a></div></div></div><div class="block-water"><div class="water-display"><p id="water-display">Water ___ units</p></div></div><div class="block-stress"><div class="stress-display"><p id="stress-display">Stress Level:___%</p></div></div><div class="block-sleep"><div class="sleep-display"><p id="sleep-display">Slept ___ hours</p></div></div><div class="block-energy"><div class="energy-display"><p id="energy-display">Energy Level:___%</p></div></div>  </div>')
-//   //You may need to stringify this appended text and then you can save that into local storage.  then upon page refresh you can unstringify upon page run?  Possibly with the Create Card function instead so it will include all the dynamically created info?
-// }
-
-// var editButton = $("#edit");
-
-
-// function hideSave() {
-//   $( saveButton ).addClass( "hidden" );
-//   $( editButton ).removeClass ("hidden");
-  
-// };
-
-// function showSave() {
-  
-//   $( editButton ).addClass ("hidden");
-//   $( saveButton ).removeClass("hidden");
-// }
-
-// editButton.click(function(event) {
-//   event.preventDefault();
-//   //we will need to use pop method to remove the last values added to each array here before moving to the save option.  Otherwise those values will still be listed in the array.  1st example listed below:
-//   let popMood = allMood.pop();
-//   let popStress  = allStress.pop();
-//   let popWater = allWater.pop();
-//   let popSleep = allSleep.pop();
-//   let popEnergy = allEnergy.pop(); 
-//   $("form").trigger("reset");
-//   showSave();
-//   $("div").remove(".flip");
-// });
-
+//slider functions
+$('#sunday .energy-percent').html($("#sunday .energy-percent").siblings().children(".energy-slide").val() + "%");
+$('#sunday .stress-percent').html($("#sunday .stress-percent").siblings().children(".stress-slide").val() + "%");
 $(document).on('input', '.energy-slide', function() {
-  $('.energy-percent').html($(this).siblings().children(".energy-slide").val() + "%");
-}); //fix later
+  $('#sunday .energy-percent').html($("#sunday .energy-percent").siblings().children(".energy-slide").val() + "%");
+});
+$(document).on('input', '.stress-slide', function() {
+  $('#sunday .stress-percent').html($("#sunday .stress-percent").siblings().children(".stress-slide").val() + "%");
+});
+
+$('#monday .energy-percent').html($("#monday .energy-percent").siblings().children(".energy-slide").val() + "%");
+$('#monday .stress-percent').html($("#monday .stress-percent").siblings().children(".stress-slide").val() + "%");
+$(document).on('input', '.energy-slide', function() {
+  $('#monday .energy-percent').html($("#monday .energy-percent").siblings().children(".energy-slide").val() + "%");
+});
+$(document).on('input', '.stress-slide', function() {
+  $('#monday .stress-percent').html($("#monday .stress-percent").siblings().children(".stress-slide").val() + "%");
+});
+
+$('#tuesday .energy-percent').html($("#tuesday .energy-percent").siblings().children(".energy-slide").val() + "%");
+$('#tuesday .stress-percent').html($("#tuesday .stress-percent").siblings().children(".stress-slide").val() + "%");
+$(document).on('input', '.energy-slide', function() {
+  $('#tuesday .energy-percent').html($("#tuesday .energy-percent").siblings().children(".energy-slide").val() + "%");
+});
+$(document).on('input', '.stress-slide', function() {
+  $('#tuesday .stress-percent').html($("#tuesday .stress-percent").siblings().children(".stress-slide").val() + "%");
+});
+
+$('#wednesday .energy-percent').html($("#wednesday .energy-percent").siblings().children(".energy-slide").val() + "%");
+$('#wednesday .stress-percent').html($("#wednesday .stress-percent").siblings().children(".stress-slide").val() + "%");
+$(document).on('input', '.energy-slide', function() {
+  $('#wednesday .energy-percent').html($("#wednesday .energy-percent").siblings().children(".energy-slide").val() + "%");
+});
+$(document).on('input', '.stress-slide', function() {
+  $('#wednesday .stress-percent').html($("#wednesday .stress-percent").siblings().children(".stress-slide").val() + "%");
+});
+
+$('#thursday .energy-percent').html($("#thursday .energy-percent").siblings().children(".energy-slide").val() + "%");
+$('#thursday .stress-percent').html($("#thursday .stress-percent").siblings().children(".stress-slide").val() + "%");
+$(document).on('input', '.energy-slide', function() {
+  $('#thursday .energy-percent').html($("#thursday .energy-percent").siblings().children(".energy-slide").val() + "%");
+});
+$(document).on('input', '.stress-slide', function() {
+  $('#thursday .stress-percent').html($("#thursday .stress-percent").siblings().children(".stress-slide").val() + "%");
+});
+
+$('#friday .energy-percent').html($("#friday .energy-percent").siblings().children(".energy-slide").val() + "%");
+$('#friday .stress-percent').html($("#friday .stress-percent").siblings().children(".stress-slide").val() + "%");
+$(document).on('input', '.energy-slide', function() {
+  $('#friday .energy-percent').html($("#friday .energy-percent").siblings().children(".energy-slide").val() + "%");
+});
+$(document).on('input', '.stress-slide', function() {
+  $('#friday .stress-percent').html($("#friday .stress-percent").siblings().children(".stress-slide").val() + "%");
+});
+
+$('#saturday .energy-percent').html($("#saturday .energy-percent").siblings().children(".energy-slide").val() + "%");
+$('#saturday .stress-percent').html($("#saturday .stress-percent").siblings().children(".stress-slide").val() + "%");
+$(document).on('input', '.energy-slide', function() {
+  $('#saturday .energy-percent').html($("#saturday .energy-percent").siblings().children(".energy-slide").val() + "%");
+});
+$(document).on('input', '.stress-slide', function() {
+  $('#saturday .stress-percent').html($("#saturday .stress-percent").siblings().children(".stress-slide").val() + "%");
+});
+
+
+//SAVE BUTTON FUNCTIONALITY
 $(".save").click(function(event) {
   event.preventDefault();
   var inputArray = [];
+  var videoArray = [];
+  var thumbArray = [];
+
   var dayData = $(this).parent().parent().attr("id");
 
-  var flipSunday = $("#flip-sunday");
-  var formSunday = $("#sunday");
+  var flip = $(this).parent().parent().siblings(); //the flip
+  var form = $(this).parent().parent(); //the form
 
   var waterInput = $(this).siblings().children().children(".water-qty").val();
   var stressInput = $(this).siblings().children().children(".stress-slide").val();
@@ -573,31 +330,338 @@ $(".save").click(function(event) {
   var energyInput = $(this).siblings().children().children(".energy-slide").val();
   var sleepInput = $(this).siblings().children(".hours-sleep").find(":selected").val();
 
+  var waterDisplay = $(this).parent().parent().siblings().children().children().children(".water-display");
+  var stressDisplay = $(this).parent().parent().siblings().children().children().children(".stress-display");
+  var sleepDisplay = $(this).parent().parent().siblings().children().children().children(".sleep-display");
+  var energyDisplay = $(this).parent().parent().siblings().children().children().children(".energy-display");
+  var moodDisplay = $(this).parent().parent().siblings().children(".block-mood");
+
+  var setLink = $(this).parent().parent().siblings().children().children().children().children(".youtube-link");
+  var setImg = $(this).parent().parent().siblings().children(".block-music");
+
   inputArray.push(waterInput, stressInput, moodInput, energyInput, sleepInput);
   localStorage.setItem(dayData, JSON.stringify(inputArray));
 
-  flipSunday.css("display", "block");
-  formSunday.css("display", "none");
+  flip.css("display", "block");
+  form.css("display", "none");
+
+  if (moodInput == "happy") {
+    moodDisplay.addClass("happy-back");
+  } else if (moodInput == "neutral") {
+    moodDisplay.addClass("neutral-back");
+  } else if (moodInput == "sad") {
+    moodDisplay.addClass("sad-back");
+  } else if (moodInput == "angry") {
+    moodDisplay.addClass("stressed-back");
+  };
+
+  waterDisplay.text("Water: " + waterInput + " units");
+  stressDisplay.text("Stress Level: " + stressInput + "%");
+  sleepDisplay.text("Slept " + sleepInput + " hours");
+  energyDisplay.text("Energy Level: " + energyInput + "%");
+
+  //yt api stuff
+
+  var apiKey = "&key=AIzaSyBTgwqLQXrNGV8cBN_dax-0Sh54ihhk-_A";
+  var requestPlaylist = "https://youtube.googleapis.com/youtube/v3/playlists?max_results=20&part=snippet&channelId=UCwba4_oWoLr5T5Qeqx-YGNw" + apiKey;
+
+  fetch(requestPlaylist).then(function(response) {
+  return response.json();
+}).then(function(data) {
+  var playlist;
+
+for (var i = 0; i < data.items.length; i++) {
+if (data.items[i].snippet.title == "Mood:Happy") {
+  if (moodInput == "happy") {
+    playlist = data.items[i].id;
+  };
+} else if (data.items[i].snippet.title == "Mood:Neutral") {
+  if (moodInput == "neutral") {
+    playlist = data.items[i].id;
+  };
+} else if (data.items[i].snippet.title == "Mood:Sad") {
+  if (moodInput == "sad") {
+    playlist = data.items[i].id;
+  };
+}  else if (data.items[i].snippet.title == "Mood:Angry") {
+  if (moodInput == "angry") {
+    playlist = data.items[i].id;
+  };
+};
+}; //this for loop goes through the data of playlists and selects one based on MOOD
+
+var requestVideo = "https://youtube.googleapis.com/youtube/v3/playlistItems?max_results=20&part=snippet&playlistId=" + playlist + apiKey;
+
+fetch(requestVideo).then(function(response) {
+  return response.json();
+}).then(function(data) {
+
+  for (var i = 0; i < Math.floor(Math.random() * data.items.length + 1); i++) {
+      var video = data.items[i].snippet.resourceId.videoId;
+
+      setLink.attr("href", "https://www.youtube.com/watch?v=" + video + "&list=" + playlist);
+      setLink.attr("target", "_blank");
+      setImg.css("background-image", "url(" + data.items[i].snippet.thumbnails.medium.url + ")"); //pulls thumbnail and sets bg image           
+      };
+
+      videoArray.push(setLink.attr("href"));
+      thumbArray.push(setImg.css("background-image"));
+      localStorage.setItem(dayData + "-video", JSON.stringify(videoArray));
+      localStorage.setItem(dayData + "-thumbnail", JSON.stringify(thumbArray));
+
+  });
+});
 
 });
 
-var continueButton = $('#continue');
-var startButton = $('#starting');
-var modalEl = $('#modal');
-var modalBack = $(".modal-background");
+//EDIT BUTTON
+$(".edit").click(function(event) {
+  event.preventDefault();
 
+  var flip = $(this).parent(); //the flip
+  var form = $(this).parent().siblings(); //the form
 
-  $(startButton).click(function(event) {
-    event.preventDefault();
-   $( modalEl ).addClass ("is-active");
+  flip.css("display", "none");
+  form.css("display", "block");
+
 });
 
-$(modalBack).click(function(event) {
-  event.preventDefault();
-  $ (modalEl).removeClass("is-active");
-})
+//LOCAL STORAGE------------------------------------------------------------------
 
-$(continueButton).click(function(event) {
-  event.preventDefault();
-  $(modalEl).removeClass("is-active");
-})
+//SUNDAY
+var sundayString = localStorage.getItem("sunday");
+var sundayData = JSON.parse(sundayString);
+
+var sundayVidString = localStorage.getItem("sunday-video");
+var sundayVideoData = JSON.parse(sundayVidString);
+
+var sundayThumbString = localStorage.getItem("sunday-thumbnail");
+var sundayThumbData = JSON.parse(sundayThumbString);
+
+if (sundayString) {
+  $("#sunday").css("display", "none");
+  $("#flip-sunday").css("display", "block");
+
+  $("#flip-sunday .water-display").text("Water: " + sundayData[0] + " units");
+  $("#flip-sunday .stress-display").text("Stress Level: " + sundayData[1] + "%");
+
+  if (sundayData[2] == "happy") {
+    $("#flip-sunday .block-mood").addClass("happy-back");
+  } else if (sundayData[2] == "neutral") {
+    $("#flip-sunday .block-mood").addClass("neutral-back");
+  } else if (sundayData[2] == "sad") {
+    $("#flip-sunday .block-mood").addClass("sad-back");
+  } else if (sundayData[2] == "angry") {
+    $("#flip-sunday .block-mood").addClass("stressed-back");
+  };
+
+  $("#flip-sunday .energy-display").text("Energy Level: " + sundayData[3] + "%");
+  $("#flip-sunday .sleep-display").text("Slept " + sundayData[4] + " hours");
+
+  $("#flip-sunday .youtube-link").attr("href", sundayVideoData);
+  $("#flip-sunday .block-music").css("background-image", sundayThumbData);
+};
+
+//MONDAY
+var mondayString = localStorage.getItem("monday");
+var mondayData = JSON.parse(mondayString);
+
+var mondayVidString = localStorage.getItem("monday-video");
+var mondayVideoData = JSON.parse(mondayVidString);
+
+var mondayThumbString = localStorage.getItem("monday-thumbnail");
+var mondayThumbData = JSON.parse(mondayThumbString);
+
+if (mondayString) {
+  $("#monday").css("display", "none");
+  $("#flip-monday").css("display", "block");
+
+  $("#flip-monday .water-display").text("Water: " + mondayData[0] + " units");
+  $("#flip-monday .stress-display").text("Stress Level: " + mondayData[1] + "%");
+
+  if (mondayData[2] == "happy") {
+    $("#flip-monday .block-mood").addClass("happy-back");
+  } else if (mondayData[2] == "neutral") {
+    $("#flip-monday .block-mood").addClass("neutral-back");
+  } else if (mondayData[2] == "sad") {
+    $("#flip-monday .block-mood").addClass("sad-back");
+  } else if (mondayData[2] == "angry") {
+    $("#flip-monday .block-mood").addClass("stressed-back");
+  };
+
+  $("#flip-monday .energy-display").text("Energy Level: " + mondayData[3] + "%");
+  $("#flip-monday .sleep-display").text("Slept " + mondayData[4] + " hours");
+
+  $("#flip-monday .youtube-link").attr("href", mondayVideoData);
+  $("#flip-monday .block-music").css("background-image", mondayThumbData);
+};
+
+//TUESDAY
+var tuesdayString = localStorage.getItem("tuesday");
+var tuesdayData = JSON.parse(tuesdayString);
+
+var tuesdayVidString = localStorage.getItem("tuesday-video");
+var tuesdayVideoData = JSON.parse(tuesdayVidString);
+
+var tuesdayThumbString = localStorage.getItem("tuesday-thumbnail");
+var tuesdayThumbData = JSON.parse(tuesdayThumbString);
+
+if (tuesdayString) {
+  $("#tuesday").css("display", "none");
+  $("#flip-tuesday").css("display", "block");
+
+  $("#flip-tuesday .water-display").text("Water: " + tuesdayData[0] + " units");
+  $("#flip-tuesday .stress-display").text("Stress Level: " + tuesdayData[1] + "%");
+
+  if (tuesdayData[2] == "happy") {
+    $("#flip-tuesday .block-mood").addClass("happy-back");
+  } else if (tuesdayData[2] == "neutral") {
+    $("#flip-tuesday .block-mood").addClass("neutral-back");
+  } else if (tuesdayData[2] == "sad") {
+    $("#flip-tuesday .block-mood").addClass("sad-back");
+  } else if (tuesdayData[2] == "angry") {
+    $("#flip-tuesday .block-mood").addClass("stressed-back");
+  };
+
+  $("#flip-tuesday .energy-display").text("Energy Level: " + tuesdayData[3] + "%");
+  $("#flip-tuesday .sleep-display").text("Slept " + tuesdayData[4] + " hours");
+
+  $("#flip-tuesday .youtube-link").attr("href", tuesdayVideoData);
+  $("#flip-tuesday .block-music").css("background-image", tuesdayThumbData);
+};
+
+//WEDNESDAY
+var wednesdayString = localStorage.getItem("wednesday");
+var wednesdayData = JSON.parse(wednesdayString);
+
+var wednesdayVidString = localStorage.getItem("wednesday-video");
+var wednesdayVideoData = JSON.parse(wednesdayVidString);
+
+var wednesdayThumbString = localStorage.getItem("wednesday-thumbnail");
+var wednesdayThumbData = JSON.parse(wednesdayThumbString);
+
+if (wednesdayString) {
+  $("#wednesday").css("display", "none");
+  $("#flip-wednesday").css("display", "block");
+
+  $("#flip-wednesday .water-display").text("Water: " + wednesdayData[0] + " units");
+  $("#flip-wednesday .stress-display").text("Stress Level: " + wednesdayData[1] + "%");
+
+  if (wednesdayData[2] == "happy") {
+    $("#flip-wednesday .block-mood").addClass("happy-back");
+  } else if (wednesdayData[2] == "neutral") {
+    $("#flip-wednesday .block-mood").addClass("neutral-back");
+  } else if (wednesdayData[2] == "sad") {
+    $("#flip-wednesday .block-mood").addClass("sad-back");
+  } else if (wednesdayData[2] == "angry") {
+    $("#flip-wednesday .block-mood").addClass("stressed-back");
+  };
+
+  $("#flip-wednesday .energy-display").text("Energy Level: " + wednesdayData[3] + "%");
+  $("#flip-wednesday .sleep-display").text("Slept " + wednesdayData[4] + " hours");
+
+  $("#flip-wednesday .youtube-link").attr("href", wednesdayVideoData);
+  $("#flip-wednesday .block-music").css("background-image", wednesdayThumbData);
+};
+
+//THURSDAY
+var thursdayString = localStorage.getItem("thursday");
+var thursdayData = JSON.parse(thursdayString);
+
+var thursdayVidString = localStorage.getItem("thursday-video");
+var thursdayVideoData = JSON.parse(thursdayVidString);
+
+var thursdayThumbString = localStorage.getItem("thursday-thumbnail");
+var thursdayThumbData = JSON.parse(thursdayThumbString);
+
+if (thursdayString) {
+  $("#thursday").css("display", "none");
+  $("#flip-thursday").css("display", "block");
+
+  $("#flip-thursday .water-display").text("Water: " + thursdayData[0] + " units");
+  $("#flip-thursday .stress-display").text("Stress Level: " + thursdayData[1] + "%");
+
+  if (thursdayData[2] == "happy") {
+    $("#flip-thursday .block-mood").addClass("happy-back");
+  } else if (thursdayData[2] == "neutral") {
+    $("#flip-thursday .block-mood").addClass("neutral-back");
+  } else if (thursdayData[2] == "sad") {
+    $("#flip-thursday .block-mood").addClass("sad-back");
+  } else if (thursdayData[2] == "angry") {
+    $("#flip-thursday .block-mood").addClass("stressed-back");
+  };
+
+  $("#flip-thursday .energy-display").text("Energy Level: " + thursdayData[3] + "%");
+  $("#flip-thursday .sleep-display").text("Slept " + thursdayData[4] + " hours");
+
+  $("#flip-thursday .youtube-link").attr("href", thursdayVideoData);
+  $("#flip-thursday .block-music").css("background-image", thursdayThumbData);
+};
+
+//FRIDAY
+var fridayString = localStorage.getItem("friday");
+var fridayData = JSON.parse(fridayString);
+
+var fridayVidString = localStorage.getItem("friday-video");
+var fridayVideoData = JSON.parse(fridayVidString);
+
+var fridayThumbString = localStorage.getItem("friday-thumbnail");
+var fridayThumbData = JSON.parse(fridayThumbString);
+
+if (fridayString) {
+  $("#friday").css("display", "none");
+  $("#flip-friday").css("display", "block");
+
+  $("#flip-friday .water-display").text("Water: " + fridayData[0] + " units");
+  $("#flip-friday .stress-display").text("Stress Level: " + fridayData[1] + "%");
+
+  if (fridayData[2] == "happy") {
+    $("#flip-friday .block-mood").addClass("happy-back");
+  } else if (fridayData[2] == "neutral") {
+    $("#flip-friday .block-mood").addClass("neutral-back");
+  } else if (fridayData[2] == "sad") {
+    $("#flip-friday .block-mood").addClass("sad-back");
+  } else if (fridayData[2] == "angry") {
+    $("#flip-friday .block-mood").addClass("stressed-back");
+  };
+
+  $("#flip-friday .energy-display").text("Energy Level: " + fridayData[3] + "%");
+  $("#flip-friday .sleep-display").text("Slept " + fridayData[4] + " hours");
+
+  $("#flip-friday .youtube-link").attr("href", fridayVideoData);
+  $("#flip-friday .block-music").css("background-image", fridayThumbData);
+};
+
+//SATURDAY
+var saturdayString = localStorage.getItem("saturday");
+var saturdayData = JSON.parse(saturdayString);
+
+var saturdayVidString = localStorage.getItem("saturday-video");
+var saturdayVideoData = JSON.parse(saturdayVidString);
+
+var saturdayThumbString = localStorage.getItem("saturday-thumbnail");
+var saturdayThumbData = JSON.parse(saturdayThumbString);
+
+if (saturdayString) {
+  $("#saturday").css("display", "none");
+  $("#flip-saturday").css("display", "block");
+
+  $("#flip-saturday .water-display").text("Water: " + saturdayData[0] + " units");
+  $("#flip-saturday .stress-display").text("Stress Level: " + saturdayData[1] + "%");
+
+  if (saturdayData[2] == "happy") {
+    $("#flip-saturday .block-mood").addClass("happy-back");
+  } else if (saturdayData[2] == "neutral") {
+    $("#flip-saturday .block-mood").addClass("neutral-back");
+  } else if (saturdayData[2] == "sad") {
+    $("#flip-saturday .block-mood").addClass("sad-back");
+  } else if (saturdayData[2] == "angry") {
+    $("#flip-saturday .block-mood").addClass("stressed-back");
+  };
+
+  $("#flip-saturday .energy-display").text("Energy Level: " + saturdayData[3] + "%");
+  $("#flip-saturday .sleep-display").text("Slept " + saturdayData[4] + " hours");
+
+  $("#flip-saturday .youtube-link").attr("href", saturdayVideoData);
+  $("#flip-saturday .block-music").css("background-image", saturdayThumbData);
+};

@@ -20,18 +20,14 @@
     <header class="hero is-info has-text-centered">
       <h1 class="heading"><span class="transparent" >Weekly </span>Moodal</h1>
       <img class="left head-image" src="./assets/images/Poodal.png"> <!--The Moodal Poodle!-->
-   
     </header>
-      <div class="float">
-        <button id="starting" class="button">Starting Modal</button>
-        <button id="ending" class="button">Weekly Modal</button>
-      </div>
     <section class="section">
 
       <div class="container">
         <div class="columns main">
 
-          <div class="column card" id="sunday">
+          <div class="column card">
+            <div class="day-form"  id="sunday">
             <h2 id="day0" class="subtitle is-4 has-text-centered">Sunday</h2>
             <h2 id="date0" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -55,7 +51,149 @@
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="stress-demo-sun" class="center"></div>
+                  <div class="center stress-percent"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <div class="mood">
+                  <h2 class="subtitle is-5">Mood</h2>
+                  <div class="container columns containB">
+                    
+                    <label>
+                      <input type="radio" name="mood" value="happy">
+                      <i class="fa fa-face-smile"></i>
+                    </label>
+
+                    <label>
+                      <input type="radio" name="mood" value="neutral">
+                      <i class="fa fa-face-meh"></i>
+                    </label>
+
+                    <label>
+                      <input type="radio" name="mood" value="sad">
+                      <i class="fa fa-face-sad-tear"></i>
+                    </label>
+
+                    <label>
+                      <input type="radio" name="mood" value="angry">
+                      <i class="fa fa-face-angry"></i>
+                    </label>
+                    
+                  </div>
+
+                  <div class="seperator"></div>
+
+                </div>
+
+                <div class="energy">
+                  <h2 class="subtitle is-5">Energy Level</h2>
+
+                  <div class="containerR">
+
+                    <input class="slider energy-slide" type="range" min="0" max="100" step="25">
+                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                <div class="center energy-percent"></div>
+                  
+                </div>
+
+                <div class="seperator"></div>
+
+                <!--This is the non-bulma Drop Down menu-->
+              <div class="hours">
+                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                <select name="hours-sleep" class="hours-sleep">
+                  <div class="content">
+                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
+                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
+                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
+                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
+                  </div>
+                </select>
+              </div>
+
+
+              <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
+
+              </form>
+              </div>
+                        <!-- "FLIPSIDE" -->
+
+          <div id="flip-sunday" class="flip">
+            <h2 id="day-saved0" class="subtitle is-4 has-text-centered">Flip Day</h2>
+            <h2 id="date-saved0" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
+            <div class="block-mood"></div>
+            <div class="block-weather">
+                <div class="weather">
+                    <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
+                    <p id="temp-flip">Temp</p>
+                </div>
+            </div>
+            <div class="block-music">
+                <div class="music">
+                    <p><i class="fa-brands fa-youtube make-bigger"></i></p>
+                    <div>
+                        <a class="youtube-link has-text-centered" href=""> YouTube Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="block-water">
+              <div class="water">
+                <p class="water-display"></p>
+              </div>
+              </div>
+            <div class="block-stress">
+                <div class="stress">
+                  <p class="stress-display"></p>
+                </div>
+              </div>
+              <div class="block-sleep">
+                <div class="sleep">
+                  <p class="sleep-display"></p>
+                </div>
+              </div>
+              <div class="block-energy">
+                <div class="energy">
+                  <p class="energy-display"></p>
+                </div>
+              </div>
+
+            <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
+          </div>
+
+          </div>
+
+          <!-- MONDAY -->
+
+          <div class="column card">
+            <div class="day-form" id="monday">
+            <h2 id="day1" class="subtitle is-4 has-text-centered">Monday</h2>
+            <h2 id="date1" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
+              <form id="form-main" class="userForm face">
+                
+                <div class="water">
+                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
+                  <div class="containerR">
+                    <p><i class="fa-solid fa-bottle-water"></i></p>
+                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                  </div>
+                </div>
+
+                <div class="seperator"></div>
+                
+                <div class="stress">
+                  <h2 class="subtitle is-5">Stress Level</h2>
+
+                  <div class="containerR">
+
+                    <input class="slide stress-slide" type="range" min="0" max="100" step="10">
+                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                    
+                  </div>
+                  <div class="center stress-percent"></div>
                   
                 </div>
 
@@ -121,19 +259,15 @@
 
 
                 <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
-                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
 
               </form>
-          </div>
+              </div>
+                        <!-- "FLIPSIDE" -->
 
-          <!-- "FLIPSIDE" -->
-
-          <div id="flip-sunday" class="column card flip">
-            <h2 id="day-saved0" class="subtitle is-4 has-text-centered">Flip Day</h2>
-            <h2 id="date-saved0" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
-            <div class="block-mood">
-                <p id="mood-flip"></p>
-            </div>
+          <div id="flip-monday" class="flip">
+            <h2 id="day-saved1" class="subtitle is-4 has-text-centered">Flip Day</h2>
+            <h2 id="date-saved1" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
+            <div class="block-mood"></div>
             <div class="block-weather">
                 <div class="weather">
                     <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
@@ -143,183 +277,41 @@
             <div class="block-music">
                 <div class="music">
                     <p><i class="fa-brands fa-youtube make-bigger"></i></p>
-                    <p id="video-title">Video Title</p>
                     <div>
-                        <a id="" class="has-text-centered"> YouTube Link</a>
+                        <a class="youtube-link has-text-centered"> YouTube Link</a>
                     </div>
                 </div>
             </div>
             <div class="block-water">
-              <div class="water-display">
-                <p id="water-display">Water ___ units</p>
+              <div class="water">
+                <p class="water-display"></p>
               </div>
               </div>
             <div class="block-stress">
-                <div class="stress-display">
-                  <p id="stress-display">Stress Level:___%</p>
-                </div>
-              </div>
-              <div class="block-sleep">
-                <div class="sleep-display">
-                  <p id="sleep-display">Slept ___ hours</p>
-                </div>
-              </div>
-              <div class="block-energy">
-                <div class="energy-display">
-                  <p id="energy-display">Energy Level:___%</p>
-                </div>
-              </div>
-
-            <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
-          </div>
-
-<!--MONDAY STARTS HERE-->
-
-          <div class="column card" id="monday">
-            <h2 id="day1" class="subtitle is-4 has-text-centered">Monday</h2>
-            <h2 id="date1" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
-              <form id="form-main" class="userForm face">
-                
-                <div class="water">
-                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
-                  <div class="containerR">
-                    <p><i class="fa-solid fa-bottle-water"></i></p>
-                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
-                  </div>
-                </div>
-
-                <div class="seperator"></div>
-                
                 <div class="stress">
-                  <h2 class="subtitle is-5">Stress Level</h2>
-
-                  <div class="containerR">
-
-                    <input class="slide stress-slide" type="range" min="0" max="100" step="10">
-                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="stress-demo-mon" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <div class="mood">
-                  <h2 class="subtitle is-5">Mood</h2>
-                  <div class="container columns containB">
-                    
-                    <label>
-                      <input type="radio" name="mood" value="happy">
-                      <i class="fa fa-face-smile"></i>
-                    </label>
-
-                    <label>
-                      <input type="radio" name="mood" value="neutral">
-                      <i class="fa fa-face-meh"></i>
-                    </label>
-
-                    <label>
-                      <input type="radio" name="mood" value="sad">
-                      <i class="fa fa-face-sad-tear"></i>
-                    </label>
-
-                    <label>
-                      <input type="radio" name="mood" value="angry">
-                      <i class="fa fa-face-angry"></i>
-                    </label>
-                    
-                  </div>
-
-                  <div class="seperator"></div>
-
-                </div>
-
-                <div class="energy">
-                  <h2 class="subtitle is-5">Energy Level</h2>
-
-                  <div class="containerR">
-
-                    <input class="slider energy-slide" type="range" min="0" max="100" step="25">
-                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div class="center energy-percent"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <!--This is the non-bulma Drop Down menu-->
-              <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" class="hours-sleep">
-                  <div class="content">
-                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
-                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
-                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
-                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
-                  </div>
-                </select>
-              </div>
-
-
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
-                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
-
-              </form>
-          </div>
-
-          <!-- "FLIPSIDE" -->
-
-          <div id="flip-monday" class="column card flip">
-            <h2 id="day-saved0" class="subtitle is-4 has-text-centered">Flip Day</h2>
-            <h2 id="date-saved0" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
-            <div class="block-mood">
-                <p id="mood-flip"></p>
-            </div>
-            <div class="block-weather">
-                <div class="weather">
-                    <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
-                    <p id="temp-flip">Temp</p>
-                </div>
-            </div>
-            <div class="block-music">
-                <div class="music">
-                    <p><i class="fa-brands fa-youtube make-bigger"></i></p>
-                    <p id="video-title">Video Title</p>
-                    <div>
-                        <a id="" class="has-text-centered"> YouTube Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="block-water">
-              <div class="water-display">
-                <p id="water-display">Water ___ units</p>
-              </div>
-              </div>
-            <div class="block-stress">
-                <div class="stress-display">
-                  <p id="stress-display">Stress Level:___%</p>
+                  <p class="stress-display"></p>
                 </div>
               </div>
               <div class="block-sleep">
-                <div class="sleep-display">
-                  <p id="sleep-display">Slept ___ hours</p>
+                <div class="sleep">
+                  <p class="sleep-display"></p>
                 </div>
               </div>
               <div class="block-energy">
-                <div class="energy-display">
-                  <p id="energy-display">Energy Level:___%</p>
+                <div class="energy">
+                  <p class="energy-display"></p>
                 </div>
               </div>
 
             <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
           </div>
 
-<!--TUESDAY STARTS HERE-->
+          </div>
 
-          <div class="column card" id="tuesday">
+          <!-- TUESDAY -->
+
+          <div class="column card">
+            <div class="day-form" id="tuesday">
             <h2 id="day2" class="subtitle is-4 has-text-centered">Tuesday</h2>
             <h2 id="date2" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -343,7 +335,7 @@
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="stress-demo-tue" class="center"></div>
+                  <div class="center stress-percent"></div>
                   
                 </div>
 
@@ -388,7 +380,7 @@
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="energy-demo-tue" class="center"></div>
+                <div class="center energy-percent"></div>
                   
                 </div>
 
@@ -408,20 +400,16 @@
               </div>
 
 
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
-                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
+                <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
 
               </form>
-          </div>
+              </div>
+                        <!-- "FLIPSIDE" -->
 
-          <!-- "FLIPSIDE" -->
-
-          <div id="flip-tuesday" class="column card flip">
-            <h2 id="day-saved0" class="subtitle is-4 has-text-centered">Flip Day</h2>
-            <h2 id="date-saved0" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
-            <div class="block-mood">
-                <p id="mood-flip"></p>
-            </div>
+          <div id="flip-tuesday" class="flip">
+            <h2 id="day-saved2" class="subtitle is-4 has-text-centered">Flip Day</h2>
+            <h2 id="date-saved2" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
+            <div class="block-mood"></div>
             <div class="block-weather">
                 <div class="weather">
                     <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
@@ -431,183 +419,183 @@
             <div class="block-music">
                 <div class="music">
                     <p><i class="fa-brands fa-youtube make-bigger"></i></p>
-                    <p id="video-title">Video Title</p>
                     <div>
-                        <a id="" class="has-text-centered"> YouTube Link</a>
+                        <a class="youtube-link has-text-centered"> YouTube Link</a>
                     </div>
                 </div>
             </div>
             <div class="block-water">
-              <div class="water-display">
-                <p id="water-display">Water ___ units</p>
+              <div class="water">
+                <p class="water-display"></p>
               </div>
               </div>
             <div class="block-stress">
-                <div class="stress-display">
-                  <p id="stress-display">Stress Level:___%</p>
-                </div>
-              </div>
-              <div class="block-sleep">
-                <div class="sleep-display">
-                  <p id="sleep-display">Slept ___ hours</p>
-                </div>
-              </div>
-              <div class="block-energy">
-                <div class="energy-display">
-                  <p id="energy-display">Energy Level:___%</p>
-                </div>
-              </div>
-
-            <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
-          </div>
-
-<!--WEDNESDAY STARTS HERE-->
-
-          <div class="column card" id="wednesday">
-            <h2 id="day3" class="subtitle is-4 has-text-centered">Wednesday</h2>
-            <h2 id="date3" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
-              <form id="form-main" class="userForm face">
-                
-                <div class="water">
-                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
-                  <div class="containerR">
-                    <p><i class="fa-solid fa-bottle-water"></i></p>
-                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
-                  </div>
-                </div>
-
-                <div class="seperator"></div>
-                
                 <div class="stress">
-                  <h2 class="subtitle is-5">Stress Level</h2>
-
-                  <div class="containerR">
-
-                    <input class="slide stress-slide" type="range" min="0" max="100" step="10">
-                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="stress-demo-wed" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <div class="mood">
-                  <h2 class="subtitle is-5">Mood</h2>
-                  <div class="container columns containB">
-                    
-                    <label>
-                      <input type="radio" name="mood" value="happy">
-                      <i class="fa fa-face-smile"></i>
-                    </label>
-
-                    <label>
-                      <input type="radio" name="mood" value="neutral">
-                      <i class="fa fa-face-meh"></i>
-                    </label>
-
-                    <label>
-                      <input type="radio" name="mood" value="sad">
-                      <i class="fa fa-face-sad-tear"></i>
-                    </label>
-
-                    <label>
-                      <input type="radio" name="mood" value="angry">
-                      <i class="fa fa-face-angry"></i>
-                    </label>
-                    
-                  </div>
-
-                  <div class="seperator"></div>
-
-                </div>
-
-                <div class="energy">
-                  <h2 class="subtitle is-5">Energy Level</h2>
-
-                  <div class="containerR">
-
-                    <input class="slider energy-slide" type="range" min="0" max="100" step="25">
-                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="energy-demo-wed" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <!--This is the non-bulma Drop Down menu-->
-              <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" class="hours-sleep">
-                  <div class="content">
-                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
-                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
-                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
-                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
-                  </div>
-                </select>
-              </div>
-
-
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
-                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
-
-              </form>
-          </div>
-
-          <!-- "FLIPSIDE" -->
-
-          <div id="flip-wednesday" class="column card flip">
-            <h2 id="day-saved0" class="subtitle is-4 has-text-centered">Flip Day</h2>
-            <h2 id="date-saved0" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
-            <div class="block-mood">
-                <p id="mood-flip"></p>
-            </div>
-            <div class="block-weather">
-                <div class="weather">
-                    <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
-                    <p id="temp-flip">Temp</p>
-                </div>
-            </div>
-            <div class="block-music">
-                <div class="music">
-                    <p><i class="fa-brands fa-youtube make-bigger"></i></p>
-                    <p id="video-title">Video Title</p>
-                    <div>
-                        <a id="" class="has-text-centered"> YouTube Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="block-water">
-              <div class="water-display">
-                <p id="water-display">Water ___ units</p>
-              </div>
-              </div>
-            <div class="block-stress">
-                <div class="stress-display">
-                  <p id="stress-display">Stress Level:___%</p>
+                  <p class="stress-display"></p>
                 </div>
               </div>
               <div class="block-sleep">
-                <div class="sleep-display">
-                  <p id="sleep-display">Slept ___ hours</p>
+                <div class="sleep">
+                  <p class="sleep-display"></p>
                 </div>
               </div>
               <div class="block-energy">
-                <div class="energy-display">
-                  <p id="energy-display">Energy Level:___%</p>
+                <div class="energy">
+                  <p class="energy-display"></p>
                 </div>
               </div>
 
             <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
           </div>
 
-<!--THURSDAY STARTS HERE-->
+          </div>
 
-          <div class="column card" id="thursday">
+                  <!-- WEDNESDAY -->
+
+                    <div class="column card">
+                      <div class="day-form" id="wednesday">
+                      <h2 id="day3" class="subtitle is-4 has-text-centered">Wednesday</h2>
+                      <h2 id="date3" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
+                        <form id="form-main" class="userForm face">
+                          
+                          <div class="water">
+                            <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
+                            <div class="containerR">
+                              <p><i class="fa-solid fa-bottle-water"></i></p>
+                              <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                            </div>
+                          </div>
+          
+                          <div class="seperator"></div>
+                          
+                          <div class="stress">
+                            <h2 class="subtitle is-5">Stress Level</h2>
+          
+                            <div class="containerR">
+          
+                              <input class="slide stress-slide" type="range" min="0" max="100" step="10">
+                              <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                              
+                            </div>
+                            <div class="center stress-percent"></div>
+                            
+                          </div>
+          
+                          <div class="seperator"></div>
+          
+                          <div class="mood">
+                            <h2 class="subtitle is-5">Mood</h2>
+                            <div class="container columns containB">
+                              
+                              <label>
+                                <input type="radio" name="mood" value="happy">
+                                <i class="fa fa-face-smile"></i>
+                              </label>
+          
+                              <label>
+                                <input type="radio" name="mood" value="neutral">
+                                <i class="fa fa-face-meh"></i>
+                              </label>
+          
+                              <label>
+                                <input type="radio" name="mood" value="sad">
+                                <i class="fa fa-face-sad-tear"></i>
+                              </label>
+          
+                              <label>
+                                <input type="radio" name="mood" value="angry">
+                                <i class="fa fa-face-angry"></i>
+                              </label>
+                              
+                            </div>
+          
+                            <div class="seperator"></div>
+          
+                          </div>
+          
+                          <div class="energy">
+                            <h2 class="subtitle is-5">Energy Level</h2>
+          
+                            <div class="containerR">
+          
+                              <input class="slider energy-slide" type="range" min="0" max="100" step="25">
+                              <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
+                              
+                            </div>
+                          <div class="center energy-percent"></div>
+                            
+                          </div>
+          
+                          <div class="seperator"></div>
+          
+                          <!--This is the non-bulma Drop Down menu-->
+                        <div class="hours">
+                          <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                          <select name="hours-sleep" class="hours-sleep">
+                            <div class="content">
+                            <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
+                            <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
+                            <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
+                            <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
+                            </div>
+                          </select>
+                        </div>
+          
+          
+                          <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
+          
+                        </form>
+                        </div>
+                                  <!-- "FLIPSIDE" -->
+          
+                    <div id="flip-wednesday" class="flip">
+                      <h2 id="day-saved3" class="subtitle is-4 has-text-centered">Flip Day</h2>
+                      <h2 id="date-saved3" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
+                      <div class="block-mood"></div>
+                      <div class="block-weather">
+                          <div class="weather">
+                              <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
+                              <p id="temp-flip">Temp</p>
+                          </div>
+                      </div>
+                      <div class="block-music">
+                          <div class="music">
+                              <p><i class="fa-brands fa-youtube make-bigger"></i></p>
+                              <div>
+                                  <a class="youtube-link has-text-centered"> YouTube Link</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="block-water">
+                        <div class="water">
+                          <p class="water-display"></p>
+                        </div>
+                        </div>
+                      <div class="block-stress">
+                          <div class="stress">
+                            <p class="stress-display"></p>
+                          </div>
+                        </div>
+                        <div class="block-sleep">
+                          <div class="sleep">
+                            <p class="sleep-display"></p>
+                          </div>
+                        </div>
+                        <div class="block-energy">
+                          <div class="energy">
+                            <p class="energy-display"></p>
+                          </div>
+                        </div>
+          
+                      <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
+                    </div>
+          
+                    </div>
+
+          <!-- THURSDAY -->
+
+          <div class="column card">
+            <div class="day-form" id="thursday">
             <h2 id="day4" class="subtitle is-4 has-text-centered">Thursday</h2>
             <h2 id="date4" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -631,7 +619,7 @@
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="stress-demo-thu" class="center"></div>
+                  <div class="center stress-percent"></div>
                   
                 </div>
 
@@ -676,7 +664,7 @@
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="energy-demo-thu" class="center"></div>
+                <div class="center energy-percent"></div>
                   
                 </div>
 
@@ -696,20 +684,16 @@
               </div>
 
 
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
-                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
+                <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
 
               </form>
-          </div>
+              </div>
+                        <!-- "FLIPSIDE" -->
 
-                    <!-- "FLIPSIDE" -->
-
-          <div id="flip-thursday" class="column card flip">
-            <h2 id="day-saved0" class="subtitle is-4 has-text-centered">Flip Day</h2>
-            <h2 id="date-saved0" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
-            <div class="block-mood">
-                <p id="mood-flip"></p>
-            </div>
+          <div id="flip-thursday" class="flip">
+            <h2 id="day-saved4" class="subtitle is-4 has-text-centered">Flip Day</h2>
+            <h2 id="date-saved4" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
+            <div class="block-mood"></div>
             <div class="block-weather">
                 <div class="weather">
                     <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
@@ -719,182 +703,183 @@
             <div class="block-music">
                 <div class="music">
                     <p><i class="fa-brands fa-youtube make-bigger"></i></p>
-                    <p id="video-title">Video Title</p>
                     <div>
-                        <a id="" class="has-text-centered"> YouTube Link</a>
+                        <a class="youtube-link has-text-centered"> YouTube Link</a>
                     </div>
                 </div>
             </div>
             <div class="block-water">
-              <div class="water-display">
-                <p id="water-display">Water ___ units</p>
+              <div class="water">
+                <p class="water-display"></p>
               </div>
               </div>
             <div class="block-stress">
-                <div class="stress-display">
-                  <p id="stress-display">Stress Level:___%</p>
-                </div>
-              </div>
-              <div class="block-sleep">
-                <div class="sleep-display">
-                  <p id="sleep-display">Slept ___ hours</p>
-                </div>
-              </div>
-              <div class="block-energy">
-                <div class="energy-display">
-                  <p id="energy-display">Energy Level:___%</p>
-                </div>
-              </div>
-
-            <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
-          </div>
-
-<!--FRIDAY STARTS HERE-->
-
-          <div class="column card" id="friday">
-            <h2 id="day5" class="subtitle is-4 has-text-centered">Friday</h2>
-            <h2 id="date5" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
-              <form id="form-main" class="userForm face">
-                
-                <div class="water">
-                  <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
-                  <div class="containerR">
-                    <p><i class="fa-solid fa-bottle-water"></i></p>
-                    <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
-                  </div>
-                </div>
-
-                <div class="seperator"></div>
-                
                 <div class="stress">
-                  <h2 class="subtitle is-5">Stress Level</h2>
-
-                  <div class="containerR">
-
-                    <input class="slide stress-slide" type="range" min="0" max="100" step="10">
-                    <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="stress-demo-fri" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <div class="mood">
-                  <h2 class="subtitle is-5">Mood</h2>
-                  <div class="container columns containB">
-                    
-                    <label>
-                      <input type="radio" name="mood" value="happy">
-                      <i class="fa fa-face-smile"></i>
-                    </label>
-
-                    <label>
-                      <input type="radio" name="mood" value="neutral">
-                      <i class="fa fa-face-meh"></i>
-                    </label>
-
-                    <label>
-                      <input type="radio" name="mood" value="sad">
-                      <i class="fa fa-face-sad-tear"></i>
-                    </label>
-
-                    <label>
-                      <input type="radio" name="mood" value="angry">
-                      <i class="fa fa-face-angry"></i>
-                    </label>
-                    
-                  </div>
-
-                  <div class="seperator"></div>
-
-                </div>
-
-                <div class="energy">
-                  <h2 class="subtitle is-5">Energy Level</h2>
-
-                  <div class="containerR">
-
-                    <input class="slider energy-slide" type="range" min="0" max="100" step="25">
-                    <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
-                    
-                  </div>
-                  <div id="energy-demo-fri" class="center"></div>
-                  
-                </div>
-
-                <div class="seperator"></div>
-
-                <!--This is the non-bulma Drop Down menu-->
-              <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" class="hours-sleep">
-                  <div class="content">
-                  <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
-                  <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
-                  <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
-                  <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
-                  </div>
-                </select>
-              </div>
-
-
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
-                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
-
-              </form>
-          </div>
-
-          <!-- "FLIPSIDE" -->
-
-          <div id="flip-friday" class="column card flip">
-            <h2 id="day-saved0" class="subtitle is-4 has-text-centered">Flip Day</h2>
-            <h2 id="date-saved0" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
-            <div class="block-mood">
-                <p id="mood-flip"></p>
-            </div>
-            <div class="block-weather">
-                <div class="weather">
-                    <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
-                    <p id="temp-flip">Temp</p>
-                </div>
-            </div>
-            <div class="block-music">
-                <div class="music">
-                    <p><i class="fa-brands fa-youtube make-bigger"></i></p>
-                    <p id="video-title">Video Title</p>
-                    <div>
-                        <a id="" class="has-text-centered"> YouTube Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="block-water">
-              <div class="water-display">
-                <p id="water-display">Water ___ units</p>
-              </div>
-              </div>
-            <div class="block-stress">
-                <div class="stress-display">
-                  <p id="stress-display">Stress Level:___%</p>
+                  <p class="stress-display"></p>
                 </div>
               </div>
               <div class="block-sleep">
-                <div class="sleep-display">
-                  <p id="sleep-display">Slept ___ hours</p>
+                <div class="sleep">
+                  <p class="sleep-display"></p>
                 </div>
               </div>
               <div class="block-energy">
-                <div class="energy-display">
-                  <p id="energy-display">Energy Level:___%</p>
+                <div class="energy">
+                  <p class="energy-display"></p>
                 </div>
               </div>
 
             <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
           </div>
 
-<!--SATURDAY STARTS HERE-->
-          <div class="column card" id="saturday">
+          </div>
+
+                    <!-- FRIDAY -->
+
+                    <div class="column card">
+                      <div class="day-form" id="friday">
+                      <h2 id="day5" class="subtitle is-4 has-text-centered">Friday</h2>
+                      <h2 id="date5" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
+                        <form id="form-main" class="userForm face">
+                          
+                          <div class="water">
+                            <h2 class="subtitle is-5" style="color: white" >Glasses of Water</h2>
+                            <div class="containerR">
+                              <p><i class="fa-solid fa-bottle-water"></i></p>
+                              <input id="water-counter" type="number" class="water-qty" name="quantity" min="1" max="20" placeholder="0">
+                            </div>
+                          </div>
+          
+                          <div class="seperator"></div>
+                          
+                          <div class="stress">
+                            <h2 class="subtitle is-5">Stress Level</h2>
+          
+                            <div class="containerR">
+          
+                              <input class="slide stress-slide" type="range" min="0" max="100" step="10">
+                              <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
+                              
+                            </div>
+                            <div class="center stress-percent"></div>
+                            
+                          </div>
+          
+                          <div class="seperator"></div>
+          
+                          <div class="mood">
+                            <h2 class="subtitle is-5">Mood</h2>
+                            <div class="container columns containB">
+                              
+                              <label>
+                                <input type="radio" name="mood" value="happy">
+                                <i class="fa fa-face-smile"></i>
+                              </label>
+          
+                              <label>
+                                <input type="radio" name="mood" value="neutral">
+                                <i class="fa fa-face-meh"></i>
+                              </label>
+          
+                              <label>
+                                <input type="radio" name="mood" value="sad">
+                                <i class="fa fa-face-sad-tear"></i>
+                              </label>
+          
+                              <label>
+                                <input type="radio" name="mood" value="angry">
+                                <i class="fa fa-face-angry"></i>
+                              </label>
+                              
+                            </div>
+          
+                            <div class="seperator"></div>
+          
+                          </div>
+          
+                          <div class="energy">
+                            <h2 class="subtitle is-5">Energy Level</h2>
+          
+                            <div class="containerR">
+          
+                              <input class="slider energy-slide" type="range" min="0" max="100" step="25">
+                              <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
+                              
+                            </div>
+                          <div class="center energy-percent"></div>
+                            
+                          </div>
+          
+                          <div class="seperator"></div>
+          
+                          <!--This is the non-bulma Drop Down menu-->
+                        <div class="hours">
+                          <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                          <select name="hours-sleep" class="hours-sleep">
+                            <div class="content">
+                            <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
+                            <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
+                            <option id="6-hour" class="font-adjust" value="6-8">6-8 Hours</option>
+                            <option id="8-hour" class="font-adjust" value="8+"> 8+ Hours</option>
+                            </div>
+                          </select>
+                        </div>
+          
+          
+                          <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
+          
+                        </form>
+                        </div>
+                                  <!-- "FLIPSIDE" -->
+          
+                    <div id="flip-friday" class="flip">
+                      <h2 id="day-saved5" class="subtitle is-4 has-text-centered">Flip Day</h2>
+                      <h2 id="date-saved5" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
+                      <div class="block-mood"></div>
+                      <div class="block-weather">
+                          <div class="weather">
+                              <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
+                              <p id="temp-flip">Temp</p>
+                          </div>
+                      </div>
+                      <div class="block-music">
+                          <div class="music">
+                              <p><i class="fa-brands fa-youtube make-bigger"></i></p>
+                              <div>
+                                  <a class="youtube-link has-text-centered"> YouTube Link</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="block-water">
+                        <div class="water">
+                          <p class="water-display"></p>
+                        </div>
+                        </div>
+                      <div class="block-stress">
+                          <div class="stress">
+                            <p class="stress-display"></p>
+                          </div>
+                        </div>
+                        <div class="block-sleep">
+                          <div class="sleep">
+                            <p class="sleep-display"></p>
+                          </div>
+                        </div>
+                        <div class="block-energy">
+                          <div class="energy">
+                            <p class="energy-display"></p>
+                          </div>
+                        </div>
+          
+                      <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
+                    </div>
+          
+                    </div>
+
+                          <!-- SATURDAY -->
+
+          <div class="column card">
+            <div class="day-form" id="saturday">
             <h2 id="day6" class="subtitle is-4 has-text-centered">Saturday</h2>
             <h2 id="date6" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -918,7 +903,7 @@
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="stress-demo-sat" class="center"></div>
+                  <div class="center stress-percent"></div>
                   
                 </div>
 
@@ -963,7 +948,7 @@
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="energy-demo-sat" class="center"></div>
+                <div class="center energy-percent"></div>
                   
                 </div>
 
@@ -983,20 +968,16 @@
               </div>
 
 
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
-                <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
+                <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
 
               </form>
-          </div>
+              </div>
+                        <!-- "FLIPSIDE" -->
 
-          <!-- "FLIPSIDE" -->
-
-          <div id="flip-saturday" class="column card flip">
-            <h2 id="day-saved0" class="subtitle is-4 has-text-centered">Flip Day</h2>
-            <h2 id="date-saved0" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
-            <div class="block-mood">
-                <p id="mood-flip"></p>
-            </div>
+          <div id="flip-saturday" class="flip">
+            <h2 id="day-saved6" class="subtitle is-4 has-text-centered">Flip Day</h2>
+            <h2 id="date-saved6" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
+            <div class="block-mood"></div>
             <div class="block-weather">
                 <div class="weather">
                     <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
@@ -1006,39 +987,36 @@
             <div class="block-music">
                 <div class="music">
                     <p><i class="fa-brands fa-youtube make-bigger"></i></p>
-                    <p id="video-title">Video Title</p>
                     <div>
-                        <a id="" class="has-text-centered"> YouTube Link</a>
+                        <a class="youtube-link has-text-centered"> YouTube Link</a>
                     </div>
                 </div>
             </div>
             <div class="block-water">
-              <div class="water-display">
-                <p id="water-display">Water ___ units</p>
+              <div class="water">
+                <p class="water-display"></p>
               </div>
               </div>
             <div class="block-stress">
-                <div class="stress-display">
-                  <p id="stress-display">Stress Level:___%</p>
+                <div class="stress">
+                  <p class="stress-display"></p>
                 </div>
               </div>
               <div class="block-sleep">
-                <div class="sleep-display">
-                  <p id="sleep-display">Slept ___ hours</p>
+                <div class="sleep">
+                  <p class="sleep-display"></p>
                 </div>
               </div>
               <div class="block-energy">
-                <div class="energy-display">
-                  <p id="energy-display">Energy Level:___%</p>
+                <div class="energy">
+                  <p class="energy-display"></p>
                 </div>
               </div>
 
             <button id="edit-flip" class="edit button is-link is-light"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
           </div>
 
-        </div>
-      </div>
-
+          </div>
 
 
     <!--everything before the following two divs will show as a Bulma column-->
@@ -1053,62 +1031,22 @@
 
 
 
-    <!-- This is the Starting Modal-->
+    <!-- This is the Bulma MODAL Example 
     <section>
-      <div id="modal" class="modal">
-        <div id="modal-background" class="modal-background"></div>
-        <div class="modal-content">
-          <img class="modal-image" src="/assets/images/weeklyMoodal-Logov1.png">
-          <div class="field">
-            <label class="label subtitle is-3 start">Enter Your Name:</label>
-            <div class="control">
-              <input id="userName" class="input modal-field" type="text" placeholder="Text input">
+        <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+               Any other Bulma elements you want
             </div>
+            <button class="modal-close is-large" aria-label="close"></button>
           </div>
-          <div class="field">
-            <label class="label subtitle is-3 start">Enter Your Current City:</label>
-            <h2 class="subtitle is-6" style="color:white;">For Weather Info Only!</h2>
-            <div class="control">
-              <input id="userLocation" class="input modal-field" type="text" placeholder="Text input">
-            </div>
-          </div>
-          <button id="continue" class="continue">Continue</button>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-      </div>
-    </section>
-<!--This is the Weekly Wrap Modal-->
-    <section>
-      <div id="modal-wrap" class="modal">
-        <div id="modal-background" class="modal-background"></div>
-        <div class="modal-content">
-          <div class="subtitle is-4";>Your Weekly Moodal!</div>
-            <div class="video-wrap">
-              <img class="video-display" src="/assets/images/youtube-test.png">
-            </div>
-            <div class="mood-wrap">
-
-            </div>
-
-            <div class="weather-wrap">
-
-            </div>
-
-            <div class="Stat-wrap">
-
-            </div>
-
-          <button id="close" class="continue">Close</button>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-      </div>
-    </section>
+    </section>-->
 
     <!--links to contributer Portfolios-->
     <div class="links">
 
       <a href="https://jameslwilson364.github.io/Challenge-2-Wilson/">
-        <button id="james-link" class="button is-warning"><i class="fa-solid fa-code"></i>  James' Portfolio</button>
+        <button id="james-link" class="button is-warning"><i class="fa-solid fa-code"></i>  James's Portfolio</button>
         </a>
       
       <a href="https://cazthetraveler.github.io/Luis-Olmos-Portfolio/">
