@@ -446,6 +446,7 @@ section.section {
 
 .flip {
     width: 200px;
+    display:none;
 }
 
 

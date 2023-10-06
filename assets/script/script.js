@@ -563,11 +563,20 @@ $(".save").click(function(event) {
   event.preventDefault();
   var inputArray = [];
   var dayData = $(this).parent().parent().attr("id");
+
+  var flipSunday = $("#flip-sunday");
+  var formSunday = $("#sunday");
+
   var waterInput = $(this).siblings().children().children(".water-qty").val();
   var stressInput = $(this).siblings().children().children(".stress-slide").val();
   var moodInput = $(this).siblings().children().children().children("input[name=mood]:radio:checked").val();
   var energyInput = $(this).siblings().children().children(".energy-slide").val();
   var sleepInput = $(this).siblings().children(".hours-sleep").find(":selected").val();
+
   inputArray.push(waterInput, stressInput, moodInput, energyInput, sleepInput);
   localStorage.setItem(dayData, JSON.stringify(inputArray));
+
+  flipSunday.css("display", "block");
+  formSunday.css("display", "none");
+
 });
