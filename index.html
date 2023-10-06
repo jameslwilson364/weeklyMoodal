@@ -20,7 +20,12 @@
     <header class="hero is-info has-text-centered">
       <h1 class="heading"><span class="transparent" >Weekly </span>Moodal</h1>
       <img class="left head-image" src="./assets/images/Poodal.png"> <!--The Moodal Poodle!-->
+   
     </header>
+      <div class="float">
+        <button id="starting" class="button">Starting Modal</button>
+        <button id="ending" class="button">Weekly Modal</button>
+      </div>
     <section class="section">
 
       <div class="container">
@@ -1048,16 +1053,29 @@
 
 
 
-    <!-- This is the Bulma MODAL Example 
+    <!-- This is the Starting Modal-->
     <section>
-        <div class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-               Any other Bulma elements you want
+      <div id="modal" class="modal">
+        <div id="modal-background" class="modal-background"></div>
+        <div class="modal-content">
+          <img class="modal-image" src="/assets/images/weeklyMoodal-Logov1.png">
+          <div class="field">
+            <label class="label subtitle is-3 start">Enter Your Name:</label>
+            <div class="control">
+              <input id="userName" class="input modal-field" type="text" placeholder="Text input">
             </div>
-            <button class="modal-close is-large" aria-label="close"></button>
           </div>
-    </section>-->
+          <div class="field">
+            <label class="label subtitle is-3 start">Enter Your Current City:</label>
+            <div class="control">
+              <input id="userLocation" class="input modal-field" type="text" placeholder="Text input">
+            </div>
+          </div>
+          <button id="continue" class="continue">Continue</button>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+    </section>
 
     <!--links to contributer Portfolios-->
     <div class="links">
