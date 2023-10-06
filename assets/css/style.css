@@ -11,7 +11,10 @@
 }
 
 body {
-    background-size: cover;
+    background-image: url(/assets/images/balloons-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:top;
     height: 100%;
     font-family: 'Mooli';
     width: 100%;
@@ -88,7 +91,7 @@ section.section {
     background-color: #c0e9f5;
     border-radius: 15px;
     display: flex;
-    width: 70%;
+    width: 40%;
     margin: auto;
     justify-content: center;
 }
@@ -673,6 +676,11 @@ input[type="radio"]:checked + .fa-face-angry {
 
     body {
         width: 100%;
+        background-image: url(/assets/images/balloons-back-mobile.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        
     }
 
     .card {
@@ -692,7 +700,7 @@ input[type="radio"]:checked + .fa-face-angry {
     }
 
     .hero {
-        height: 180px;
+        height: 160px;
     }
 
     .flip:hover {
@@ -721,9 +729,15 @@ input[type="radio"]:checked + .fa-face-angry {
         padding: 5px 15px;
     }
 
+    .links {
+        display: flex;
+        flex-direction: column;
+    }
+
     .links button {
         font-size: small;
         width: min-content;
+        margin: 5px;
     }
 
     .head-image {
