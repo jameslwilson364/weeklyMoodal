@@ -11,10 +11,7 @@
 }
 
 body {
-    background-image: url(/assets/images/balloons-back.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position:top;
+    background-size: cover;
     height: 100%;
     font-family: 'Mooli';
     width: 100%;
@@ -50,15 +47,6 @@ section.section {
     
 }
 
-.modal-image {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    max-block-size: 300px;
-    margin-bottom: 0;
-    
-}
-
 .column {
     margin: 10px;
     background-image: linear-gradient(to top, rgb(10, 141, 211), rgb(68, 105, 156));
@@ -66,7 +54,7 @@ section.section {
     border: 5px solid white;
     justify-content: center;
     border-radius: 15px;
-    min-width: 180px;
+    min-width: 200px;
     
 }
 
@@ -81,42 +69,7 @@ section.section {
     scale: 1.2;
 }
 
-.start {
-    color: white;
-    text-align: center;
-    
-}
 
-.modal-field {
-    background-color: #c0e9f5;
-    border-radius: 15px;
-    display: flex;
-    width: 40%;
-    margin: auto;
-    justify-content: center;
-}
-
-.continue {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    width: 25%;
-    border-radius: 15px;
-    height: 40px;
-    margin-top: 25px;
-    color: white;
-    font-size: larger;
-    font-weight: 500;
-    background-color: rgb(24, 99, 174);
-}
-
-
-
-.start {
-
-}
 
 .column h2 {
     color: aliceblue;
@@ -667,6 +620,9 @@ input[type="radio"]:checked + .fa-face-angry {
     scale:1;
 }
 
+.fa-youtube {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
 
 
 @media screen and (max-width: 576px) {
@@ -676,11 +632,6 @@ input[type="radio"]:checked + .fa-face-angry {
 
     body {
         width: 100%;
-        background-image: url(/assets/images/balloons-back-mobile.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        
     }
 
     .card {
@@ -700,7 +651,7 @@ input[type="radio"]:checked + .fa-face-angry {
     }
 
     .hero {
-        height: 160px;
+        height: 180px;
     }
 
     .flip:hover {
@@ -729,15 +680,9 @@ input[type="radio"]:checked + .fa-face-angry {
         padding: 5px 15px;
     }
 
-    .links {
-        display: flex;
-        flex-direction: column;
-    }
-
     .links button {
         font-size: small;
         width: min-content;
-        margin: 5px;
     }
 
     .head-image {
