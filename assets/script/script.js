@@ -249,6 +249,7 @@ if (dayjs().day() === 0) {
 }
 }
 
+
 getDates();
 
 var allWater = [];
@@ -554,3 +555,4 @@ editButton.click(function(event) {
   showSave();
   $("div").remove(".flip");
 });
+
