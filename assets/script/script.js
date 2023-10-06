@@ -249,6 +249,7 @@ if (dayjs().day() === 0) {
 }
 }
 
+
 getDates();
 
 var allWater = [];
@@ -553,4 +554,20 @@ editButton.click(function(event) {
   $("form").trigger("reset");
   showSave();
   $("div").remove(".flip");
+});
+
+$(document).on('input', '.energy-slide', function() {
+  $('.energy-percent').html($(this).siblings().children(".energy-slide").val() + "%");
+}); //fix later
+$(".save").click(function(event) {
+  event.preventDefault();
+  var inputArray = [];
+  var dayData = $(this).parent().parent().attr("id");
+  var waterInput = $(this).siblings().children().children(".water-qty").val();
+  var stressInput = $(this).siblings().children().children(".stress-slide").val();
+  var moodInput = $(this).siblings().children().children().children("input[name=mood]:radio:checked").val();
+  var energyInput = $(this).siblings().children().children(".energy-slide").val();
+  var sleepInput = $(this).siblings().children(".hours-sleep").find(":selected").val();
+  inputArray.push(waterInput, stressInput, moodInput, energyInput, sleepInput);
+  localStorage.setItem(dayData, JSON.stringify(inputArray));
 });
