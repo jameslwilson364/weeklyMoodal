@@ -19,14 +19,14 @@
   <body>
     <header class="hero is-info has-text-centered">
       <h1 class="heading"><span class="transparent" >Weekly </span>Moodal</h1>
-      <img class="left head-image" src="/assets/images/Poodal.png"> <!--The Moodal Poodle!-->
+      <img class="left head-image" src="./assets/images/Poodal.png"> <!--The Moodal Poodle!-->
     </header>
     <section class="section">
 
       <div class="container">
         <div class="columns main">
 
-          <div class="column card">
+          <div class="column card" id="sunday">
             <h2 id="day" class="subtitle is-4 has-text-centered">Sunday</h2>
             <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -46,7 +46,7 @@
 
                   <div class="containerR">
 
-                    <input id="stress-slide-sun" class="slide" type="range" min="0" max="100" step="10">
+                    <input class="slide stress-slide" type="range" min="0" max="100" step="10">
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -60,23 +60,23 @@
                   <h2 class="subtitle is-5">Mood</h2>
                   <div class="container columns containB">
                     
-                    <input type="radio" name="mood" id="happy" value="happy">
-                    <label for="happy" id="happy">
+                    <label>
+                      <input type="radio" name="mood" value="happy">
                       <i class="fa fa-face-smile"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="neutral" value="neutral">
-                    <label for="neutral" id="neutral">
+                    <label>
+                      <input type="radio" name="mood" value="neutral">
                       <i class="fa fa-face-meh"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="sad" value="sad">
-                    <label for="sad" id="sad">
+                    <label>
+                      <input type="radio" name="mood" value="sad">
                       <i class="fa fa-face-sad-tear"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="angry" value="angry">
-                    <label for="angry" id="angry">
+                    <label>
+                      <input type="radio" name="mood" value="angry">
                       <i class="fa fa-face-angry"></i>
                     </label>
                     
@@ -91,11 +91,11 @@
 
                   <div class="containerR">
 
-                    <input id="energy-slide-sun" class="slider" type="range" min="0" max="100" step="25">
+                    <input class="slider energy-slide" type="range" min="0" max="100" step="25">
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="energy-demo-sun" class="center"></div>
+                <div class="center energy-percent"></div>
                   
                 </div>
 
@@ -104,7 +104,7 @@
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
                 <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" id="hours-sleep">
+                <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
                   <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
@@ -115,14 +115,14 @@
               </div>
 
 
-                <button id="save" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
+                <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
                 <button id="edit" class="edit button is-link is-light hidden"><i class="fa-solid fa-pen-to-square" style="color: #1148a6;"></i></button> 
 
               </form>
           </div>
 <!--MONDAY STARTS HERE-->
 
-          <div class="column card">
+          <div class="column card" id="monday">
             <h2 id="day" class="subtitle is-4 has-text-centered">Monday</h2>
             <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -142,7 +142,7 @@
 
                   <div class="containerR">
 
-                    <input id="stress-slide-mon" class="slide" type="range" min="0" max="100" step="10">
+                    <input class="slide stress-slide" type="range" min="0" max="100" step="10">
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -156,23 +156,23 @@
                   <h2 class="subtitle is-5">Mood</h2>
                   <div class="container columns containB">
                     
-                    <input type="radio" name="mood" id="happy" value="happy">
-                    <label for="happy" id="happy">
+                    <label>
+                      <input type="radio" name="mood" value="happy">
                       <i class="fa fa-face-smile"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="neutral" value="neutral">
-                    <label for="neutral" id="neutral">
+                    <label>
+                      <input type="radio" name="mood" value="neutral">
                       <i class="fa fa-face-meh"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="sad" value="sad">
-                    <label for="sad" id="sad">
+                    <label>
+                      <input type="radio" name="mood" value="sad">
                       <i class="fa fa-face-sad-tear"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="angry" value="angry">
-                    <label for="angry" id="angry">
+                    <label>
+                      <input type="radio" name="mood" value="angry">
                       <i class="fa fa-face-angry"></i>
                     </label>
                     
@@ -187,11 +187,11 @@
 
                   <div class="containerR">
 
-                    <input id="energy-slide-mon" class="slider" type="range" min="0" max="100" step="25">
+                    <input class="slider energy-slide" type="range" min="0" max="100" step="25">
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
-                  <div id="energy-demo-mon" class="center"></div>
+                  <div class="center energy-percent"></div>
                   
                 </div>
 
@@ -200,7 +200,7 @@
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
                 <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" id="hours-sleep">
+                <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
                   <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
@@ -218,7 +218,7 @@
           </div>
 <!--TUESDAY STARTS HERE-->
 
-          <div class="column card">
+          <div class="column card" id="tuesday">
             <h2 id="day" class="subtitle is-4 has-text-centered">Tuesday</h2>
             <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -238,7 +238,7 @@
 
                   <div class="containerR">
 
-                    <input id="stress-slide-tue" class="slide" type="range" min="0" max="100" step="10">
+                    <input class="slide stress-slide" type="range" min="0" max="100" step="10">
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -252,23 +252,23 @@
                   <h2 class="subtitle is-5">Mood</h2>
                   <div class="container columns containB">
                     
-                    <input type="radio" name="mood" id="happy" value="happy">
-                    <label for="happy" id="happy">
+                    <label>
+                      <input type="radio" name="mood" value="happy">
                       <i class="fa fa-face-smile"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="neutral" value="neutral">
-                    <label for="neutral" id="neutral">
+                    <label>
+                      <input type="radio" name="mood" value="neutral">
                       <i class="fa fa-face-meh"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="sad" value="sad">
-                    <label for="sad" id="sad">
+                    <label>
+                      <input type="radio" name="mood" value="sad">
                       <i class="fa fa-face-sad-tear"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="angry" value="angry">
-                    <label for="angry" id="angry">
+                    <label>
+                      <input type="radio" name="mood" value="angry">
                       <i class="fa fa-face-angry"></i>
                     </label>
                     
@@ -283,7 +283,7 @@
 
                   <div class="containerR">
 
-                    <input id="energy-slide-tue" class="slider" type="range" min="0" max="100" step="25">
+                    <input class="slider energy-slide" type="range" min="0" max="100" step="25">
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -296,7 +296,7 @@
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
                 <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" id="hours-sleep">
+                <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
                   <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
@@ -314,7 +314,7 @@
           </div>
 <!--WEDNESDAY STARTS HERE-->
 
-          <div class="column card">
+          <div class="column card" id="wednesday">
             <h2 id="day" class="subtitle is-4 has-text-centered">Wednesday</h2>
             <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -334,7 +334,7 @@
 
                   <div class="containerR">
 
-                    <input id="stress-slide-wed" class="slide" type="range" min="0" max="100" step="10">
+                    <input class="slide stress-slide" type="range" min="0" max="100" step="10">
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -348,23 +348,23 @@
                   <h2 class="subtitle is-5">Mood</h2>
                   <div class="container columns containB">
                     
-                    <input type="radio" name="mood" id="happy" value="happy">
-                    <label for="happy" id="happy">
+                    <label>
+                      <input type="radio" name="mood" value="happy">
                       <i class="fa fa-face-smile"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="neutral" value="neutral">
-                    <label for="neutral" id="neutral">
+                    <label>
+                      <input type="radio" name="mood" value="neutral">
                       <i class="fa fa-face-meh"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="sad" value="sad">
-                    <label for="sad" id="sad">
+                    <label>
+                      <input type="radio" name="mood" value="sad">
                       <i class="fa fa-face-sad-tear"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="angry" value="angry">
-                    <label for="angry" id="angry">
+                    <label>
+                      <input type="radio" name="mood" value="angry">
                       <i class="fa fa-face-angry"></i>
                     </label>
                     
@@ -379,7 +379,7 @@
 
                   <div class="containerR">
 
-                    <input id="energy-slide-wed" class="slider" type="range" min="0" max="100" step="25">
+                    <input class="slider energy-slide" type="range" min="0" max="100" step="25">
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -392,7 +392,7 @@
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
                 <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" id="hours-sleep">
+                <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
                   <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
@@ -410,7 +410,7 @@
           </div>
 <!--THURSDAY STARTS HERE-->
 
-          <div class="column card">
+          <div class="column card" id="thursday">
             <h2 id="day" class="subtitle is-4 has-text-centered">Thursday</h2>
             <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -430,7 +430,7 @@
 
                   <div class="containerR">
 
-                    <input id="stress-slide-thu" class="slide" type="range" min="0" max="100" step="10">
+                    <input class="slide stress-slide" type="range" min="0" max="100" step="10">
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -444,23 +444,23 @@
                   <h2 class="subtitle is-5">Mood</h2>
                   <div class="container columns containB">
                     
-                    <input type="radio" name="mood" id="happy" value="happy">
-                    <label for="happy" id="happy">
+                    <label>
+                      <input type="radio" name="mood" value="happy">
                       <i class="fa fa-face-smile"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="neutral" value="neutral">
-                    <label for="neutral" id="neutral">
+                    <label>
+                      <input type="radio" name="mood" value="neutral">
                       <i class="fa fa-face-meh"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="sad" value="sad">
-                    <label for="sad" id="sad">
+                    <label>
+                      <input type="radio" name="mood" value="sad">
                       <i class="fa fa-face-sad-tear"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="angry" value="angry">
-                    <label for="angry" id="angry">
+                    <label>
+                      <input type="radio" name="mood" value="angry">
                       <i class="fa fa-face-angry"></i>
                     </label>
                     
@@ -475,7 +475,7 @@
 
                   <div class="containerR">
 
-                    <input id="energy-slide-thu" class="slider" type="range" min="0" max="100" step="25">
+                    <input class="slider energy-slide" type="range" min="0" max="100" step="25">
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -488,7 +488,7 @@
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
                 <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" id="hours-sleep">
+                <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
                   <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
@@ -507,7 +507,7 @@
 
 <!--FRIDAY STARTS HERE-->
 
-          <div class="column card">
+          <div class="column card" id="friday">
             <h2 id="day" class="subtitle is-4 has-text-centered">Friday</h2>
             <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -527,7 +527,7 @@
 
                   <div class="containerR">
 
-                    <input id="stress-slide-fri" class="slide" type="range" min="0" max="100" step="10">
+                    <input class="slide stress-slide" type="range" min="0" max="100" step="10">
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -541,23 +541,23 @@
                   <h2 class="subtitle is-5">Mood</h2>
                   <div class="container columns containB">
                     
-                    <input type="radio" name="mood" id="happy" value="happy">
-                    <label for="happy" id="happy">
+                    <label>
+                      <input type="radio" name="mood" value="happy">
                       <i class="fa fa-face-smile"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="neutral" value="neutral">
-                    <label for="neutral" id="neutral">
+                    <label>
+                      <input type="radio" name="mood" value="neutral">
                       <i class="fa fa-face-meh"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="sad" value="sad">
-                    <label for="sad" id="sad">
+                    <label>
+                      <input type="radio" name="mood" value="sad">
                       <i class="fa fa-face-sad-tear"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="angry" value="angry">
-                    <label for="angry" id="angry">
+                    <label>
+                      <input type="radio" name="mood" value="angry">
                       <i class="fa fa-face-angry"></i>
                     </label>
                     
@@ -572,7 +572,7 @@
 
                   <div class="containerR">
 
-                    <input id="energy-slide-fri" class="slider" type="range" min="0" max="100" step="25">
+                    <input class="slider energy-slide" type="range" min="0" max="100" step="25">
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -585,7 +585,7 @@
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
                 <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" id="hours-sleep">
+                <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
                   <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
@@ -602,7 +602,7 @@
               </form>
           </div>
 <!--SATURDAY STARTS HERE-->
-          <div class="column card">
+          <div class="column card" id="saturday">
             <h2 id="day" class="subtitle is-4 has-text-centered">Saturday</h2>
             <h2 id="date" class="subtitle is-6 has-text-centered" style="color:rgb(193, 226, 246)">Date</h2>
               <form id="form-main" class="userForm face">
@@ -622,7 +622,7 @@
 
                   <div class="containerR">
 
-                    <input id="stress-slide-sat" class="slide" type="range" min="0" max="100" step="10">
+                    <input class="slide stress-slide" type="range" min="0" max="100" step="10">
                     <!--This stress-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -636,23 +636,23 @@
                   <h2 class="subtitle is-5">Mood</h2>
                   <div class="container columns containB">
                     
-                    <input type="radio" name="mood" id="happy" value="happy">
-                    <label for="happy" id="happy">
+                    <label>
+                      <input type="radio" name="mood" value="happy">
                       <i class="fa fa-face-smile"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="neutral" value="neutral">
-                    <label for="neutral" id="neutral">
+                    <label>
+                      <input type="radio" name="mood" value="neutral">
                       <i class="fa fa-face-meh"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="sad" value="sad">
-                    <label for="sad" id="sad">
+                    <label>
+                      <input type="radio" name="mood" value="sad">
                       <i class="fa fa-face-sad-tear"></i>
                     </label>
 
-                    <input type="radio" name="mood" id="angry" value="angry">
-                    <label for="angry" id="angry">
+                    <label>
+                      <input type="radio" name="mood" value="angry">
                       <i class="fa fa-face-angry"></i>
                     </label>
                     
@@ -667,7 +667,7 @@
 
                   <div class="containerR">
 
-                    <input id="energy-slide-sat" class="slider" type="range" min="0" max="100" step="25">
+                    <input class="slider energy-slide" type="range" min="0" max="100" step="25">
                     <!--This energy-demo is where the value of the slider will be displayed once JS is built.-->
                     
                   </div>
@@ -680,7 +680,7 @@
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
                 <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
-                <select name="hours-sleep" id="hours-sleep">
+                <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
                   <option id="4-hour" class="font-adjust" value="4-6">4-6 Hours</option>
@@ -1066,6 +1066,6 @@
 <!--scripts for JavaScript, jQuery, and dayJS linked here-->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="assets/script/script.js"></script>
+    <script src="./assets/script/script.js"></script>
   </body>
 </html>

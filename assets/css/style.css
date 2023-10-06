@@ -585,22 +585,22 @@ input[type="radio"] {
     scale: 1.2;
 }
 
-input[type="radio"]:checked + #happy {
+input[type="radio"]:checked + .fa-face-smile {
     scale: 1.2;
     color: var(--happy);
 }
 
-input[type="radio"]:checked + #neutral {
+input[type="radio"]:checked + .fa-face-meh {
     scale: 1.2;
     color: var(--nuetral);
 }
 
-input[type="radio"]:checked + #sad {
+input[type="radio"]:checked + .fa-face-sad-tear {
     scale: 1.2;
     color: var(--sad);
 }
 
-input[type="radio"]:checked + #angry {
+input[type="radio"]:checked + .fa-face-angry {
     scale: 1.2;
     color: var(--angry);
 }
