@@ -15,11 +15,130 @@
 //  document.getElementById("water").innerHTML = clicks;
 //  };
 
-var currentDate = dayjs().format('MMMM DD, YYYY');
-var currentDay = dayjs().format("dddd");
+var currentDate = dayjs().format('dddd, MMMM DD, YYYY');
+// var currentDay = dayjs().format("");
 
-var day = $("#day");
-var date = $("#date");
+function getDates() {
+var currentDate = dayjs().format('dddd, MMMM DD, YYYY');
+var sundayText = document.getElementById('date0');
+var mondayText = document.getElementById('date1');
+var tuesdayText = document.getElementById('date2');
+var wednesdayText = document.getElementById('date3');
+var thursdayText = document.getElementById('date4');
+var fridayText = document.getElementById('date5');
+var saturdayText = document.getElementById('date6');
+
+if (dayjs().day() === 0) {
+  var sundayYep = currentDate;
+  sundayText.textContent= (sundayYep);
+  var mondayYep = dayjs(currentDate).add(1, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = dayjs(currentDate).add(2, 'day');
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep = dayjs(currentDate).add(3, 'day');
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = dayjs(currentDate).add(4, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = dayjs(currentDate).add(5, 'day');
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = dayjs(currentDate).add(6, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+}   else if (dayjs().day() === 1) {
+  var sundayYep = dayjs(currentDate).add(-1, 'day');
+  sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = currentDate;
+  mondayText.textContent= (mondayYep);
+  var tuesdayYep = dayjs(currentDate).add(1, 'day');
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep = dayjs(currentDate).add(2, 'day');
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = dayjs(currentDate).add(3, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYYY'));
+  var fridayYep = dayjs(currentDate).add(4, 'day');
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = dayjs(currentDate).add(5, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+} else if (dayjs().day() === 2) {
+  var sundayYep = dayjs(currentDate).add(-2, 'day');
+  sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = dayjs(currentDate).add(-1, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = currentDate;
+  tuesdayText.textContent= (tuesdayYep);
+  var wednesdayYep = dayjs(currentDate).add(1, 'day');
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = dayjs(currentDate).add(2, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = dayjs(currentDate).add(3, 'day');
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = dayjs(currentDate).add(4, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+}   else if (dayjs().day() === 3) {
+  var sundayYep = dayjs(currentDate).add(-3, 'day').format('MMMM DD, YYYY');
+  console.log(sundayYep);
+  sundayText.textContent= (sundayYep);
+  var mondayYep = dayjs(currentDate).add(-2, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = dayjs(currentDate).add(-1, 'day'); 
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep = currentDate;
+  console.log(wednesdayYep);
+  wednesdayText.textContent= (wednesdayYep);
+  var thursdayYep = dayjs(currentDate).add(1, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = dayjs(currentDate).add(2, 'day');
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = dayjs(currentDate).add(3, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+}   else if (dayjs().day() === 4) {
+  var sundayYep = dayjs(currentDate).add(-4, 'day');
+  sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = dayjs(currentDate).add(-3, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = dayjs(currentDate).add(-2, 'day'); 
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep =  dayjs(currentDate).add(-1, 'day'); 
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = currentDate;
+  thursdayText.textContent= (thursdayYep);
+  var fridayYep = dayjs(currentDate).add(1, 'day');
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = dayjs(currentDate).add(2, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+}   else if (dayjs().day() === 5) {
+  var sundayYep = dayjs(currentDate).add(-5, 'day');
+  sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = dayjs(currentDate).add(-4, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = dayjs(currentDate).add(-3, 'day'); 
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep =  dayjs(currentDate).add(-2, 'day'); 
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
+  var thursdayYep = dayjs(currentDate).add(-1, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = currentDate;
+  fridayText.textContent= (fridayYep);
+  var saturdayYep = dayjs(currentDate).add(1, 'day');
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+}  else if (dayjs().day() === 6) {
+  var sundayYep = dayjs(currentDate).add(-6, 'day');
+  sundayText.textContent= (sundayYep.format('MMMM DD, YYYY'));
+  var mondayYep = dayjs(currentDate).add(-5, 'day');
+  mondayText.textContent= (mondayYep.format('MMMM DD, YYYY'));
+  var tuesdayYep = dayjs(currentDate).add(-4, 'day'); 
+  tuesdayText.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
+  var wednesdayYep =  dayjs(currentDate).add(-3, 'day'); 
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYYY'));
+  var thursdayYep = dayjs(currentDate).add(-2, 'day');
+  thursdayText.textContent= (thursdayYep.format('MMMM DD, YYYY'));
+  var fridayYep = dayjs(currentDate).add(-1, 'day'); 
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
+  var saturdayYep = currentDate;
+  saturdayText.textContent= (saturdayYep);
+}
+}
+
+getDates();
 
 var allWater = [];
 var allStress = [];
