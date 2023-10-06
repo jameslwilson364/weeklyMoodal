@@ -74,6 +74,7 @@ section.section {
 .column h2 {
     color: aliceblue;
     font-weight: 700;
+    font-size: small;
 }
 
 .left {
