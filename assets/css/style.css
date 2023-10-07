@@ -128,6 +128,10 @@ section.section {
     background-color: rgb(24, 99, 174);
 }
 
+.weather-location {
+    width: 80px;
+   
+}
 
 .right {
     position: fixed;
@@ -224,6 +228,13 @@ section.section {
     text-align: center;
 }
 
+.float {
+    position: absolute;
+    left: 0;
+    margin-top: -50px;
+    padding: 0;
+    z-index: 2;
+}
 
 .save {
     display: flex;
@@ -264,6 +275,11 @@ section.section {
 
 .is-warning {
     width: 10%;
+}
+
+.link-text {
+    font-size: x-small;
+    font-family: 'dosis';
 }
 
 
@@ -631,7 +647,7 @@ option {
     background-repeat: no-repeat;
     background-position:top;
     background-size: cover;
-    margin-top: -50px;
+   
     width: 100%;
     height: 100%;
 }
@@ -784,16 +800,21 @@ footer {
 @media screen and (max-width: 576px) {
     .container {
         scale: 1;
+        margin: auto;
     }
 
     body {
         width: 100%;
-
+        margin: auto;
+        margin-left: -10px;
+        
+        
         
     }
 
     .card {
       width: 80%;
+      margin: auto;
       margin-bottom: 30px;
     
     }
@@ -827,15 +848,18 @@ footer {
     }
 
     .column {
-        width: 80%;
-        margin-left: 8px;
+        width: 70%;
+        animation: ;
+        
     }
     .column:hover {
         scale:1;
     }
 
     .hero {
+    
         height: 160px;
+        top: 0;
     }
 
     .flip:hover {
@@ -884,7 +908,20 @@ footer {
     }
 
     section.section {
-        margin: 20px;
-        padding: 20px;
+        display: flex;
+        scale: 1;
+        margin-top: 25px;
+
+    }
+
+    .weather-location {
+        width: 50px;
+        margin-left: 15px;
+        margin-top: -150px;
+    }
+
+    .link-text {
+        visibility: hidden;
+        
     }
 }

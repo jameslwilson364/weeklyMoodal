@@ -19,20 +19,21 @@
   <body>
     <header class="hero is-info has-text-centered">
       <h1 class="heading"><span class="transparent" >Weekly </span>Moodal</h1>
-      <img class="left head-image" src="./assets/images/Poodal.png"> <!--The Moodal Poodle!-->
     </header>
 
-    
+    <!--Weather location button-->
     <div class="float">
-      <button id="starting" class="button">Starting Modal</button>
-      <button id="ending" class="button">Weekly Modal</button>
+      <a id="starting" >
+        <img class="weather-location" src="./assets/images/weather-location.png"><span class="link-text">Forget to set your location?</span>
+      </a>
+      <button id="ending" class="button">test -will hide</button>
     </div>
    
 
     <section class="section short">
 
-      <div class="container">
-        <div class="columns main">
+      <div id="container" class="container">
+        <div id="innercontainer" class="columns main">
 
           <div class="column card">
             <div class="day-form"  id="sunday">
@@ -1066,12 +1067,15 @@
 <!--This is the Weekly Wrap Modal-->
   <section>
     <div id="modal-wrap" class="modal">
-      <div id="modal-background balloon" class="modal-background end-back"></div>
+      <div id="modal-background" class="modal-background end-back"></div>
+      
       <div class="modal-content">
+        <div class="balloons">
         <div class="subtitle is-3 end-title" style="color:blue">Your Weekly Moodal!</div>
         <div class="row">
         <div class="mood-wrap block-mood">
-        </div>
+      </div>
+        
 
         <div class="video-wrap">
             <img class="video-display" src="/assets/images/youtube-test.png">
@@ -1124,6 +1128,24 @@
 
       </div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div id="modal-conditional" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+          <div class="sorry">
+            <img src="./assets/images/sorry.png">
+            <h2 class="subititle is-5">Your City or Location was invalid.</h2>
+            <h2 class="subititle is-6">Please try your search again:</h2>
+            <div class="control">
+              <input id="userLocation" class="input modal-field" type="text" placeholder="Text input">
+            </div>
+          </div>
+        <button id="sorry" class="continue">Submit!</button>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
     </div>
   </section>
 
