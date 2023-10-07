@@ -666,24 +666,47 @@ if (saturdayString) {
   $("#flip-saturday .block-music").css("background-image", saturdayThumbData);
 };
 
+//////////////////////modal buttons and functions
 
+var xButton = $(".modal-close");
 var continueButton = $('#continue');
 var startButton = $('#starting');
 var modalEl = $('#modal');
 var modalBack = $(".modal-background");
+var endButton = $('#ending');
+var modalEndEl = $('#modal-wrap');
 
 
   $(startButton).click(function(event) {
     event.preventDefault();
    $( modalEl ).addClass ("is-active");
+   $(xButton).removeClass("hidden");
 });
 
 $(modalBack).click(function(event) {
   event.preventDefault();
   $ (modalEl).removeClass("is-active");
+  $ (modalEndEl).removeClass("is-active");
+  $ (xButton).toggleClass("hidden");
 })
 
 $(continueButton).click(function(event) {
   event.preventDefault();
   $(modalEl).removeClass("is-active");
+  $ (xButton).toggleClass("hidden");
 })
+
+$(xButton).click(function(event) {
+  event.preventDefault();
+  $(modalEl).removeClass("is-active");
+  $(modalEndEl).removeClass("is-active");
+  $ (xButton).addClass("hidden");
+})
+
+$(endButton).click(function(event) {
+  event.preventDefault();
+ $( modalEndEl ).addClass ("is-active");
+ $(xButton).removeClass("hidden");
+});
+
+//////////end Modal functions
