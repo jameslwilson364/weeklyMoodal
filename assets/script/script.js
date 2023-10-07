@@ -665,3 +665,25 @@ if (saturdayString) {
   $("#flip-saturday .youtube-link").attr("href", saturdayVideoData);
   $("#flip-saturday .block-music").css("background-image", saturdayThumbData);
 };
+
+
+var continueButton = $('#continue');
+var startButton = $('#starting');
+var modalEl = $('#modal');
+var modalBack = $(".modal-background");
+
+
+  $(startButton).click(function(event) {
+    event.preventDefault();
+   $( modalEl ).addClass ("is-active");
+});
+
+$(modalBack).click(function(event) {
+  event.preventDefault();
+  $ (modalEl).removeClass("is-active");
+})
+
+$(continueButton).click(function(event) {
+  event.preventDefault();
+  $(modalEl).removeClass("is-active");
+})
