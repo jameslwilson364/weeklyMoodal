@@ -216,7 +216,7 @@ if (dayjs().day() === 0) {
   tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
   tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
   var wednesdayYep =  dayjs(currentDate).add(-3, 'day'); 
-  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYYY'));
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
   wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
   wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
   var thursdayYep = dayjs(currentDate).add(-2, 'day');
