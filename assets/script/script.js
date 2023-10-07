@@ -195,7 +195,7 @@ if (dayjs().day() === 0) {
   thursdayFlipText.textContent= (thursdayYep.format('dddd'));
   thursdayFlipDate.textContent= (thursdayYep.format('MMMM DD, YYYY'));
   var fridayYep = currentDate;
-  fridayText.textContent= (fridayYep);
+  fridayText.textContent= (fridayYep.format('MMMM DD, YYYY'));
   fridayFlipText.textContent= (fridayYep.format('dddd'));
   fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
   var saturdayYep = dayjs(currentDate).add(1, 'day');
@@ -228,7 +228,7 @@ if (dayjs().day() === 0) {
   fridayFlipText.textContent= (fridayYep.format('dddd'));
   fridayFlipDate.textContent= (fridayYep.format('MMMM DD, YYYY'));
   var saturdayYep = currentDate;
-  saturdayText.textContent= (saturdayYep);
+  saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
   saturdayFlipText.textContent= (saturdayYep.format('dddd'));
   saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
 }
