@@ -129,7 +129,7 @@ section.section {
 }
 
 .weather-location {
-    width: 80px;
+    width: 130px;
    
 }
 
@@ -647,7 +647,7 @@ option {
     background-repeat: no-repeat;
     background-position:top;
     background-size: cover;
-   
+    position: absolute;
     width: 100%;
     height: 100%;
 }
@@ -719,9 +719,15 @@ option {
     text-align: center;
 }
 
+.row2 {
+    display: flex;
+    flex-direction: row;
+}
+
 .weather-text {
     font-weight: 600;
     color: #0b1ff6;
+    font-size: larger;
 }
 
 .hidden {
@@ -772,6 +778,15 @@ input[type="radio"]:checked + .fa-face-sad-tear {
 input[type="radio"]:checked + .fa-face-angry {
     scale: 1.2;
     color: var(--angry);
+}
+
+.sorry {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
 }
 
 .transparent {

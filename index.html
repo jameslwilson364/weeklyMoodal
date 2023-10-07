@@ -22,11 +22,13 @@
     </header>
 
     <!--Weather location button-->
-    <div class="float">
+    <div class="float row2">
       <a id="starting" >
-        <img class="weather-location" src="./assets/images/weather-location.png"><span class="link-text">Forget to set your location?</span>
+        <img class="weather-location" src="./assets/images/weather-location.png">
+        <h5 class="link-text">Forget to set your location?</h5>
       </a>
-      <button id="ending" class="button">test -will hide</button>
+      <button id="ending" class="button">test -hide</button>
+      <button id="mistake" class="button">conditional - hide</button>
     </div>
    
 
@@ -1047,12 +1049,6 @@
       <div class="modal-content">
         <img class="modal-image" src="/assets/images/weeklyMoodal-Logov1.png">
         <div class="field">
-          <label class="label subtitle is-6 start">Enter Your Name:</label>
-          <div class="control">
-            <input id="userName" class="input modal-field" type="text" placeholder="Text input">
-          </div>
-        </div>
-        <div class="field">
           <label class="label subtitle is-6 start">Enter Your Current City:</label>
           <h2 class="subtitle is-6" style="color:white;">For Weather Info Only!</h2>
           <div class="control">
@@ -1070,10 +1066,11 @@
       <div id="modal-background" class="modal-background end-back"></div>
       
       <div class="modal-content">
-        <div class="balloons">
+        <div class="balloons"></div>
         <div class="subtitle is-3 end-title" style="color:blue">Your Weekly Moodal!</div>
         <div class="row">
         <div class="mood-wrap block-mood">
+        
       </div>
         
 
@@ -1137,14 +1134,14 @@
       <div class="modal-content">
           <div class="sorry">
             <img src="./assets/images/sorry.png">
-            <h2 class="subititle is-5">Your City or Location was invalid.</h2>
-            <h2 class="subititle is-6">Please try your search again:</h2>
+            <h2 class="subititle is-5 text-is-centered" style="color:white">Your City or Location was invalid.</h2>
+            <h2 class="subititle is-6" style="color:white">Please try your search again:</h2>
             <div class="control">
               <input id="userLocation" class="input modal-field" type="text" placeholder="Text input">
             </div>
           </div>
-        <button id="sorry" class="continue">Submit!</button>
-      </div>
+          <button id="continue" class="continue">Continue</button>
+        </div>
       <button class="modal-close is-large" aria-label="close"></button>
     </div>
   </section>
