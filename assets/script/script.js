@@ -411,6 +411,7 @@ fetch(requestVideo).then(function(response) {
 
   });
 });
+  weatherGrab();
 
 });
 
@@ -740,6 +741,7 @@ $(endButton).click(function(event) {
 // weatherGrab
 function weatherGrab () {
   var userLocationInput = document.getElementById('userLocation');
+  console.log();
   var currentLocation = userLocationInput.value;
   // var flip2 = $(this).parent().parent().siblings();
   // var forecastCurrentCity = $(this).parent().parent().siblings().children(".block-weather");
