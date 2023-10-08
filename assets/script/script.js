@@ -738,6 +738,7 @@ $(endButton).click(function(event) {
 });
 
 //////////end Modal functions
+var storedWeather = JSON.parse(localStorage.getItem("Weather Code")) || [];
 // weatherGrab
 function weatherGrab () {
   var userLocationInput = document.getElementById('userLocation');
@@ -750,7 +751,7 @@ function weatherGrab () {
   var forecastWeatherFlip = $('.weather');
   console.log(forecastCurrentCity);
   var targetDate = dayjs(currentDate).unix();
-  var storedWeather = JSON.parse(localStorage.getItem("Weather Code")) || [];
+  // var storedWeather = JSON.parse(localStorage.getItem("Weather Code")) || [];
   console.log(targetDate);
 
   // fetch request
@@ -804,4 +805,222 @@ function weatherGrab () {
 }
 
 // weather local storage
-// console.log(localStorage.getItem);
+
+function weatherLocalStorage() {
+  var blockWeatherSunday = $('#block-weather-sunday');
+  var weatherSunday = $('#weather-Sunday');
+  if (storedWeather[0] == 800) {
+  blockWeatherSunday.attr("style","background-image:url(./assets/images/sunny.png)");
+  weatherSunday.hide();
+  
+} else if (storedWeather[0] > 800 && storedWeather[0] < 805) {
+  blockWeatherSunday.attr("style","background-image:url(./assets/images/cloudy.png)");
+  weatherSunday.hide();
+  
+} else if (storedWeather[0] > 499 && storedWeather[0] < 521) {
+  blockWeatherSunday.attr("style","background-image:url(./assets/images/rain.png)");
+  weatherSunday.hide();
+  
+} else if (storedWeather[0] > 199 && storedWeather[0] < 233) {
+  blockWeatherSunday.attr("style","background-image:url(./assets/images/storm.png)");
+  weatherSunday.hide();
+  
+} else if (storedWeather[0] > 599 && storedWeather[0] < 623) {
+  blockWeatherSunday.attr("style","background-image:url(./assets/images/snow.png)");
+  weatherSunday.hide();
+  
+} else if (storedWeather[0] === 741) {
+  blockWeatherSunday.attr("style","background-image:url(./assets/images/fog.png)");
+  weatherSunday.hide();
+  
+} else {
+  blockWeatherSunday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+}
+
+// monday weather
+var blockWeatherMonday = $('#block-weather-monday');
+var weatherMonday = $('#weather-Monday');
+if (storedWeather[1] == 800) {
+  blockWeatherMonday.attr("style","background-image:url(./assets/images/sunny.png)");
+  weatherMonday.hide();
+  
+} else if (storedWeather[1] > 800 && storedWeather[1] < 805) {
+  blockWeatherMonday.attr("style","background-image:url(./assets/images/cloudy.png)");
+  weatherMonday.hide();
+  
+} else if (storedWeather[1] > 499 && storedWeather[1] < 521) {
+  blockWeatherMonday.attr("style","background-image:url(./assets/images/rain.png)");
+  weatherMonday.hide();
+  
+} else if (storedWeather[1] > 199 && storedWeather[1] < 233) {
+  blockWeatherMonday.attr("style","background-image:url(./assets/images/storm.png)");
+  weatherMonday.hide();
+  
+} else if (storedWeather[1] > 599 && storedWeather[1] < 623) {
+  blockWeatherMonday.attr("style","background-image:url(./assets/images/snow.png)");
+  weatherMonday.hide();
+  
+} else if (storedWeather[1] === 741) {
+  blockWeatherMonday.attr("style","background-image:url(./assets/images/fog.png)");
+  weatherMonday.hide();
+  
+} else {
+  blockWeatherMonday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+}
+
+// tuesday weather
+var blockWeatherTuesday = $('#block-weather-tuesday');
+var weatherTuesday = $('#weather-Tuesday');
+if (storedWeather[2] == 800) {
+  blockWeatherTuesday.attr("style","background-image:url(./assets/images/sunny.png)");
+  weatherTuesday.hide();
+  
+} else if (storedWeather[2] > 800 && storedWeather[2] < 805) {
+  blockWeatherTuesday.attr("style","background-image:url(./assets/images/cloudy.png)");
+  weatherTuesday.hide();
+  
+} else if (storedWeather[2] > 499 && storedWeather[2] < 521) {
+  blockWeatherTuesday.attr("style","background-image:url(./assets/images/rain.png)");
+  weatherTuesday.hide();
+  
+} else if (storedWeather[2] > 199 && storedWeather[2] < 233) {
+  blockWeatherTuesday.attr("style","background-image:url(./assets/images/storm.png)");
+  weatherTuesday.hide();
+  
+} else if (storedWeather[2] > 599 && storedWeather[2] < 623) {
+  blockWeatherTuesday.attr("style","background-image:url(./assets/images/snow.png)");
+  weatherTuesday.hide();
+  
+} else if (storedWeather[2] === 741) {
+  blockWeatherTuesday.attr("style","background-image:url(./assets/images/fog.png)");
+  weatherTuesday.hide();
+  
+} else {
+  blockWeatherTuesday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+}
+
+// wednesday weather
+var blockWeatherWednesday = $('#block-weather-wednesday');
+var weatherWednesday = $('#weather-Wednesday');
+if (storedWeather[3] == 800) {
+  blockWeatherWednesday.attr("style","background-image:url(./assets/images/sunny.png)");
+  weatherWednesday.hide();
+  
+} else if (storedWeather[3] > 800 && storedWeather[3] < 805) {
+  blockWeatherWednesday.attr("style","background-image:url(./assets/images/cloudy.png)");
+  weatherWednesday.hide();
+  
+} else if (storedWeather[3] > 499 && storedWeather[3] < 521) {
+  blockWeatherWednesday.attr("style","background-image:url(./assets/images/rain.png)");
+  weatherWednesday.hide();
+  
+} else if (storedWeather[3] > 199 && storedWeather[3] < 233) {
+  blockWeatherWednesday.attr("style","background-image:url(./assets/images/storm.png)");
+  weatherWednesday.hide();
+  
+} else if (storedWeather[3] > 599 && storedWeather[3] < 623) {
+  blockWeatherWednesday.attr("style","background-image:url(./assets/images/snow.png)");
+  weatherWednesday.hide();
+  
+} else if (storedWeather[3] === 741) {
+  blockWeatherTuesday.attr("style","background-image:url(./assets/images/fog.png)");
+  weatherWednesday.hide();
+  
+} else {
+  blockWeatherWednesday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+}
+
+// thursday weather
+var blockWeatherThursday = $('#block-weather-thursday');
+var weatherThursday = $('#weather-Thursday');
+if (storedWeather[4] == 800) {
+  blockWeatherThursday.attr("style","background-image:url(./assets/images/sunny.png)");
+  weatherThursday.hide();
+  
+} else if (storedWeather[4] > 800 && storedWeather[4] < 805) {
+  blockWeatherThursday.attr("style","background-image:url(./assets/images/cloudy.png)");
+  weatherThursday.hide();
+  
+} else if (storedWeather[4] > 499 && storedWeather[4] < 521) {
+  blockWeatherThursday.attr("style","background-image:url(./assets/images/rain.png)");
+  weatherThursday.hide();
+  
+} else if (storedWeather[4] > 199 && storedWeather[4] < 233) {
+  blockWeatherThursday.attr("style","background-image:url(./assets/images/storm.png)");
+  weatherThursday.hide();
+  
+} else if (storedWeather[4] > 599 && storedWeather[4] < 623) {
+  blockWeatherThursday.attr("style","background-image:url(./assets/images/snow.png)");
+  weatherThursday.hide();
+  
+} else if (storedWeather[4] === 741) {
+  blockWeatherThursday.attr("style","background-image:url(./assets/images/fog.png)");
+  weatherThursday.hide();
+  
+} else {
+  blockWeatherThursday.attr("style","background-image:url(./assets/images/weatherback.png)");     
+}
+
+// friday weather
+var blockWeatherFriday = $('#block-weather-friday');
+var weatherFriday = $('#weather-Friday');
+if (storedWeather[5] == 800) {
+  blockWeatherFriday.attr("style","background-image:url(./assets/images/sunny.png)");
+  weatherFriday.hide();
+  
+} else if (storedWeather[5] > 800 && storedWeather[5] < 805) {
+  blockWeatherFriday.attr("style","background-image:url(./assets/images/cloudy.png)");
+  weatherFriday.hide();
+  
+} else if (storedWeather[5] > 499 && storedWeather[5] < 521) {
+  blockWeatherFriday.attr("style","background-image:url(./assets/images/rain.png)");
+  weatherFriday.hide();
+  
+} else if (storedWeather[5] > 199 && storedWeather[5] < 233) {
+  blockWeatherFriday.attr("style","background-image:url(./assets/images/storm.png)");
+  weatherFriday.hide();
+  
+} else if (storedWeather[5] > 599 && storedWeather[5] < 623) {
+  blockWeatherFriday.attr("style","background-image:url(./assets/images/snow.png)");
+  weatherFriday.hide();
+  
+} else if (storedWeather[5] === 741) {
+  blockWeatherFriday.attr("style","background-image:url(./assets/images/fog.png)");
+  weatherFriday.hide();
+  
+} else {
+  blockWeatherFriday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+}
+
+// saturday weather
+var blockWeatherSaturday = $('#block-weather-saturday');
+var weatherSaturday = $('#weather-Saturday');
+if (storedWeather[6] == 800) {
+  blockWeatherSaturday.attr("style","background-image:url(./assets/images/sunny.png)");
+  weatherSaturday.hide();
+  
+} else if (storedWeather[6] > 800 && storedWeather[6] < 805) {
+  blockWeatherSaturday.attr("style","background-image:url(./assets/images/cloudy.png)");
+  weatherSaturday.hide();
+  
+} else if (storedWeather[6] > 499 && storedWeather[6] < 521) {
+  blockWeatherSaturday.attr("style","background-image:url(./assets/images/rain.png)");
+  weatherSaturday.hide();
+  
+} else if (storedWeather[6] > 199 && storedWeather[6] < 233) {
+  blockWeatherSaturday.attr("style","background-image:url(./assets/images/storm.png)");
+  weatherSaturday.hide();
+  
+} else if (storedWeather[6] > 599 && storedWeather[6] < 623) {
+  blockWeatherSaturday.attr("style","background-image:url(./assets/images/snow.png)");
+  weatherSaturday.hide();
+  
+} else if (storedWeather[6] === 741) {
+  blockWeatherSaturday.attr("style","background-image:url(./assets/images/fog.png)");
+  weatherSaturday.hide();
+  
+} else {
+  blockWeatherSaturday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+}
+}
+weatherLocalStorage();
