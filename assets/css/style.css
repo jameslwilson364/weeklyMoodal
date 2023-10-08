@@ -92,9 +92,9 @@ section.section {
 }
 
 .left {
-    position: fixed;
+    position: absolute;
     top:0;
-    max-block-size: 80px;
+    
 }
 
 .start {
@@ -108,6 +108,15 @@ section.section {
     border-radius: 15px;
     display: flex;
     width: 40%;
+    margin: auto;
+    justify-content: center;
+}
+
+.modal-field2 {
+    background-color: #c0e9f5;
+    border-radius: 15px;
+    display: flex;
+    width: 80%;
     margin: auto;
     justify-content: center;
 }
@@ -128,8 +137,27 @@ section.section {
     background-color: rgb(24, 99, 174);
 }
 
+.continue2 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100px;
+    border-radius: 15px;
+    height: 40px;
+    margin-top: 25px;
+    color: white;
+    font-size: larger;
+    font-weight: 500;
+    background-color: rgb(24, 99, 174);
+}
+
 .weather-location {
-    width: 130px;
+    width: 120px;
+    margin-left: 20px;
+    filter:brightness(85%);
+    margin-top: 10px;
    
 }
 
@@ -230,11 +258,10 @@ section.section {
 
 .float {
     position: absolute;
-    left: 0;
-    margin-top: -50px;
-    padding: 0;
-    z-index: 2;
+    right: 0;
+    
 }
+
 
 .save {
     display: flex;
@@ -278,8 +305,9 @@ section.section {
 }
 
 .link-text {
-    font-size: x-small;
+    font-size: small;
     font-family: 'dosis';
+    margin-left: 40px;
 }
 
 
@@ -634,12 +662,16 @@ option {
     width: 70%;
 }
 
-
+.margin-5 {
+    margin: 10px
+}
 
 .modal-content {
     width: 100%;
     height: 100%;
 }
+
+.modal-field
 
 .ballons {
     background-image: url(/assets/images/balloons-back.png);
@@ -827,6 +859,18 @@ footer {
         
     }
 
+    .text {
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .column {
+        justify-content: center;
+        margin: auto;
+    }
+
     .card {
       width: 80%;
       margin: auto;
@@ -850,6 +894,7 @@ footer {
 
     .row {
         flex-direction: column;
+        justify-content: center;
     }
 
     .modal-background {
@@ -882,8 +927,30 @@ footer {
         transform: none;
     }
 
+    .video-wrap {
+        margin: auto;
+        text-align: center;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+    }
+
     .mood {
         scale: .85;
+        margin-bottom: 30px;
+    }
+
+    .left {
+        margin-top: 50px;
+    }
+
+    .mood-wrap {
+        width: 200px;
+    }
+
+    .weather-wrap {
+        width: 200px;
     }
 
     .reset {
