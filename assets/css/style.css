@@ -351,6 +351,10 @@ section.section {
     background-image:url(../images/stressed-png.png);
 }
 
+.clear-sky {
+    background-image:url(../images/sunny.png);
+}
+
 .block-weather {
     background-image:url(../images/weatherback.jpg);
     background-size: cover;

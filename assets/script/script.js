@@ -1,6 +1,7 @@
 // initial script file 7:46pm
 
 var currentDate = dayjs().format('dddd, MMMM DD, YYYY');
+// console.log(dayjs(currentDate).unix());
 // var currentDay = dayjs().format("");
 
 function getDates() {
@@ -216,7 +217,7 @@ if (dayjs().day() === 0) {
   tuesdayFlipText.textContent= (tuesdayYep.format('dddd'));
   tuesdayFlipDate.textContent= (tuesdayYep.format('MMMM DD, YYYY'));
   var wednesdayYep =  dayjs(currentDate).add(-3, 'day'); 
-  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYYY'));
+  wednesdayText.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
   wednesdayFlipText.textContent= (wednesdayYep.format('dddd'));
   wednesdayFlipDate.textContent= (wednesdayYep.format('MMMM DD, YYYY'));
   var thursdayYep = dayjs(currentDate).add(-2, 'day');
@@ -231,6 +232,7 @@ if (dayjs().day() === 0) {
   saturdayText.textContent= (saturdayYep.format('MMMM DD, YYYY'));
   saturdayFlipText.textContent= (saturdayYep.format('dddd'));
   saturdayFlipDate.textContent= (saturdayYep.format('MMMM DD, YYYY'));
+  
 }
 }
 
@@ -410,7 +412,9 @@ fetch(requestVideo).then(function(response) {
       localStorage.setItem(dayData + "-thumbnail", JSON.stringify(thumbArray));
 
   });
+  weatherGrab();
 });
+
 
 });
 
@@ -710,3 +714,51 @@ $(endButton).click(function(event) {
 });
 
 //////////end Modal functions
+
+// weatherGrab
+function weatherGrab () {
+  var userLocationInput = document.getElementById('userLocation');
+  var currentLocation = userLocationInput.value;
+  // var forecastCurrentCity = $(this).parent().parent().siblings().children(".block-weather");
+  // var forecastCurrentCity = $(this).parent().parent().siblings().children().children().children(".temp-flip");
+  var forecastCurrentCity = $('.block-weather');
+  var forecastWeatherFlip = $('.weather-flip');
+  var forecastTempFlip = $('.temp-flip');
+  console.log(forecastCurrentCity);
+  var targetDate = dayjs(currentDate).unix();
+  console.log(targetDate);
+
+  fetch('https://api.openweathermap.org/data/2.5/weather?q='+currentLocation+',us&APPID=e59d5aba827db96109ea6ce009719b60&units=imperial&dt='+targetDate)
+      .then(function (response) {
+          console.log(response);
+          if (response.ok != true) {
+              return;
+          } else {
+          return response.json();
+          }
+      })
+      .then(function (data) {
+          
+          // currentLocation = data.city.name;
+          console.log(data);
+          console.log(currentLocation);
+          console.log(data.weather[0].description);
+          // Current Day
+          if (data.weather[0].id == 800) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/sunny.png");
+          } else if (data.weather[0].id > 800 && data.weather[0].id < 805) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/cloudy.png");
+              forecastTempFlip.textContent = ("");
+          } else if (data.weather[0].id > 499 && data.weather[0].id < 521) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/rain.png");
+          } else if (data.weather[0].id > 199 && data.weather[0].id < 233) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/storm.png");
+          } else if (data.weather[0].id > 599 && data.weather[0].id < 623) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/snow.png");
+          } else if (data.weather[0].id === 741) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/fog.png");
+          } else {
+              forecastCurrentCity.textContent = ("You got some weird weather");   
+          }
+});
+}
