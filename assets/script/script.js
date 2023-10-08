@@ -737,3 +737,69 @@ $(endButton).click(function(event) {
 });
 
 //////////end Modal functions
+// weatherGrab
+function weatherGrab () {
+  var userLocationInput = document.getElementById('userLocation');
+  var currentLocation = userLocationInput.value;
+  // var flip2 = $(this).parent().parent().siblings();
+  // var forecastCurrentCity = $(this).parent().parent().siblings().children(".block-weather");
+  // var forecastTempFlip = $(this).parent().parent().siblings().children().children().children().children(".temp-flip");
+  var forecastCurrentCity = $('.block-weather');
+  var forecastWeatherFlip = $('.weather');
+  console.log(forecastCurrentCity);
+  var targetDate = dayjs(currentDate).unix();
+  var storedWeather = JSON.parse(localStorage.getItem("Weather Code")) || [];
+  console.log(targetDate);
+
+  // fetch request
+  fetch('https://api.openweathermap.org/data/2.5/weather?q='+currentLocation+',us&APPID=e59d5aba827db96109ea6ce009719b60&units=imperial&dt='+targetDate)
+      .then(function (response) {
+          console.log(response);
+          if (response.ok != true) {
+              return;
+          } else {
+          return response.json();
+          }
+      })
+      .then(function (data) {
+          console.log(data);
+          console.log(currentLocation);
+          console.log(data.weather[0].description);
+          var dailyWeather = (data.weather[0].id);
+          console.log(dailyWeather);
+          storedWeather.push(dailyWeather);
+          localStorage.setItem("Weather Code", JSON.stringify(storedWeather));
+
+          // Current Day
+          if (dailyWeather == 800) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/sunny.png)");
+              forecastWeatherFlip.hide();
+              
+          } else if (dailyWeather > 800 && data.weather[0].id < 805) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/cloudy.png)");
+              forecastWeatherFlip.hide();
+              
+          } else if (dailyWeather > 499 && data.weather[0].id < 521) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/rain.png)");
+              forecastWeatherFlip.hide();
+              
+          } else if (dailyWeather > 199 && data.weather[0].id < 233) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/storm.png)");
+              forecastWeatherFlip.hide();
+              
+          } else if (dailyWeather > 599 && data.weather[0].id < 623) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/snow.png)");
+              forecastWeatherFlip.hide();
+              
+          } else if (dailyWeather === 741) {
+              forecastCurrentCity.attr("style","background-image:url(./assets/images/fog.png)");
+              forecastWeatherFlip.hide();
+              
+          } else {
+              forecastCurrentCity.textContent = ("You got some weird weather");   
+          }
+});
+}
+
+// weather local storage
+// console.log(localStorage.getItem);
