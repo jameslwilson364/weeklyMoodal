@@ -92,9 +92,9 @@ section.section {
 }
 
 .left {
-    position: fixed;
+    position: absolute;
     top:0;
-    max-block-size: 80px;
+    
 }
 
 .start {
@@ -108,6 +108,15 @@ section.section {
     border-radius: 15px;
     display: flex;
     width: 40%;
+    margin: auto;
+    justify-content: center;
+}
+
+.modal-field2 {
+    background-color: #c0e9f5;
+    border-radius: 15px;
+    display: flex;
+    width: 80%;
     margin: auto;
     justify-content: center;
 }
@@ -128,6 +137,29 @@ section.section {
     background-color: rgb(24, 99, 174);
 }
 
+.continue2 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100px;
+    border-radius: 15px;
+    height: 40px;
+    margin-top: 25px;
+    color: white;
+    font-size: larger;
+    font-weight: 500;
+    background-color: rgb(24, 99, 174);
+}
+
+.weather-location {
+    width: 120px;
+    margin-left: 20px;
+    filter:brightness(85%);
+    margin-top: 10px;
+   
+}
 
 .right {
     position: fixed;
@@ -224,6 +256,12 @@ section.section {
     text-align: center;
 }
 
+.float {
+    position: absolute;
+    right: 0;
+    
+}
+
 
 .save {
     display: flex;
@@ -264,6 +302,12 @@ section.section {
 
 .is-warning {
     width: 10%;
+}
+
+.link-text {
+    font-size: small;
+    font-family: 'dosis';
+    margin-left: 40px;
 }
 
 
@@ -618,12 +662,16 @@ option {
     width: 70%;
 }
 
-
+.margin-5 {
+    margin: 10px
+}
 
 .modal-content {
     width: 100%;
     height: 100%;
 }
+
+.modal-field
 
 .ballons {
     background-image: url(/assets/images/balloons-back.png);
@@ -631,7 +679,7 @@ option {
     background-repeat: no-repeat;
     background-position:top;
     background-size: cover;
-    margin-top: -50px;
+    position: absolute;
     width: 100%;
     height: 100%;
 }
@@ -703,9 +751,15 @@ option {
     text-align: center;
 }
 
+.row2 {
+    display: flex;
+    flex-direction: row;
+}
+
 .weather-text {
     font-weight: 600;
     color: #0b1ff6;
+    font-size: larger;
 }
 
 .hidden {
@@ -758,6 +812,15 @@ input[type="radio"]:checked + .fa-face-angry {
     color: var(--angry);
 }
 
+.sorry {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+}
+
 .transparent {
     opacity: 70%;
     font-weight: 200;
@@ -784,16 +847,33 @@ footer {
 @media screen and (max-width: 576px) {
     .container {
         scale: 1;
+        margin: auto;
     }
 
     body {
         width: 100%;
-
+        margin: auto;
+        margin-left: -10px;
         
+        
+        
+    }
+
+    .text {
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .column {
+        justify-content: center;
+        margin: auto;
     }
 
     .card {
       width: 80%;
+      margin: auto;
       margin-bottom: 30px;
     
     }
@@ -814,6 +894,7 @@ footer {
 
     .row {
         flex-direction: column;
+        justify-content: center;
     }
 
     .modal-background {
@@ -827,15 +908,18 @@ footer {
     }
 
     .column {
-        width: 80%;
-        margin-left: 8px;
+        width: 70%;
+        animation: ;
+        
     }
     .column:hover {
         scale:1;
     }
 
     .hero {
+    
         height: 160px;
+        top: 0;
     }
 
     .flip:hover {
@@ -843,8 +927,30 @@ footer {
         transform: none;
     }
 
+    .video-wrap {
+        margin: auto;
+        text-align: center;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+    }
+
     .mood {
         scale: .85;
+        margin-bottom: 30px;
+    }
+
+    .left {
+        margin-top: 50px;
+    }
+
+    .mood-wrap {
+        width: 200px;
+    }
+
+    .weather-wrap {
+        width: 200px;
     }
 
     .reset {
@@ -884,7 +990,20 @@ footer {
     }
 
     section.section {
-        margin: 20px;
-        padding: 20px;
+        display: flex;
+        scale: 1;
+        margin-top: 25px;
+
+    }
+
+    .weather-location {
+        width: 50px;
+        margin-left: 15px;
+        margin-top: -150px;
+    }
+
+    .link-text {
+        visibility: hidden;
+        
     }
 }

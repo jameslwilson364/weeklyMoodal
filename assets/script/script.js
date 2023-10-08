@@ -669,12 +669,17 @@ if (saturdayString) {
 //////////////////////modal buttons and functions
 
 var xButton = $(".modal-close");
-var continueButton = $('#continue');
+var continueButton = $(".continue");
+var updateButton = $(".continue2")
 var startButton = $('#starting');
+var conditionalButton = $('#mistake');
+var closeButton = $('#close')
 var modalEl = $('#modal');
 var modalBack = $(".modal-background");
 var endButton = $('#ending');
 var modalEndEl = $('#modal-wrap');
+var modalSorryEl = $('#modal-conditional');
+
 
 
   $(startButton).click(function(event) {
@@ -693,13 +698,35 @@ $(modalBack).click(function(event) {
 $(continueButton).click(function(event) {
   event.preventDefault();
   $(modalEl).removeClass("is-active");
+  $(modalEndEl).removeClass("is-active");
   $ (xButton).toggleClass("hidden");
 })
+
+$(updateButton).click(function(event){
+  event.preventDefault();
+  $(modalSorryEl).removeClass("is-active");
+  $(xButton).toggleClass("hidden");
+})
+
+$(conditionalButton).click(function(event) {
+  event.preventDefault();
+ $( modalSorryEl ).addClass ("is-active");
+ $(xButton).removeClass("hidden");
+});
 
 $(xButton).click(function(event) {
   event.preventDefault();
   $(modalEl).removeClass("is-active");
   $(modalEndEl).removeClass("is-active");
+  $(modalSorryEl).removeClass("is-active");
+  $ (xButton).addClass("hidden");
+})
+
+$(closeButton).click(function(event) {
+  event.preventDefault();
+  $(modalEl).removeClass("is-active");
+  $(modalEndEl).removeClass("is-active");
+  $(modalSorryEl).removeClass("is-active");
   $ (xButton).addClass("hidden");
 })
 

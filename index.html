@@ -18,21 +18,31 @@
   </head>
   <body>
     <header class="hero is-info has-text-centered">
+
       <h1 class="heading"><span class="transparent" >Weekly </span>Moodal</h1>
-      <img class="left head-image" src="./assets/images/Poodal.png"> <!--The Moodal Poodle!-->
     </header>
 
-    
+    <!--Weather location button-->
+
+    <div class="left">
+      <a id="starting" >
+        <img class="weather-location" src="./assets/images/weather-location3.png">
+        <h5 class="link-text"></h5>
+      </a>
+    </div>
+
     <div class="float">
-      <button id="starting" class="button">Starting Modal</button>
-      <button id="ending" class="button">Weekly Modal</button>
+
+      <button id="ending" class="button" type="submit">weekly - hide</button>
+      <button id="mistake" class="button" type="continue">conditional - hide</button>
+  
     </div>
    
 
     <section class="section short">
 
-      <div class="container">
-        <div class="columns main">
+      <div id="container" class="container">
+        <div id="innercontainer" class="columns main">
 
           <div class="column card">
             <div class="day-form"  id="sunday">
@@ -1041,21 +1051,15 @@
 
    <!-- This is the Starting Modal-->
    <section>
-    <div id="modal" class="modal">
+    <div id="modal" class="modal is-active">
       <div id="modal-background" class="modal-background"></div>
       <div class="modal-content">
         <img class="modal-image" src="/assets/images/weeklyMoodal-Logov1.png">
         <div class="field">
-          <label class="label subtitle is-6 start">Enter Your Name:</label>
-          <div class="control">
-            <input id="userName" class="input modal-field" type="text" placeholder="Text input">
-          </div>
-        </div>
-        <div class="field">
           <label class="label subtitle is-6 start">Enter Your Current City:</label>
           <h2 class="subtitle is-6" style="color:white;">For Weather Info Only!</h2>
           <div class="control">
-            <input id="userLocation" class="input modal-field" type="text" placeholder="Text input">
+            <input id="userLocation" class="input modal-field" type="text" placeholder="City Name">
           </div>
         </div>
         <button id="continue" class="continue">Continue</button>
@@ -1066,12 +1070,15 @@
 <!--This is the Weekly Wrap Modal-->
   <section>
     <div id="modal-wrap" class="modal">
-      <div id="modal-background balloon" class="modal-background end-back"></div>
+      <div id="modal-background" class="modal-background end-back"></div>
+      
       <div class="modal-content">
-        <div class="subtitle is-3 end-title" style="color:blue">Your Weekly Moodal!</div>
+        <div class="subtitle is-3 end-title text" style="color:blue">Your Weekly Moodal!</div>
         <div class="row">
         <div class="mood-wrap block-mood">
-        </div>
+        
+      </div>
+        
 
         <div class="video-wrap">
             <img class="video-display" src="/assets/images/youtube-test.png">
@@ -1124,6 +1131,24 @@
 
       </div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div id="modal-conditional" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+          <div class="sorry">
+            <img src="./assets/images/sorry.png">
+            <h2 class="subititle is-5 text-is-centered" style="color:white">Your City or Location was invalid.</h2>
+            <h2 class="subititle is-6 margin-5" style="color:white">Please try your search again:</h2>
+            <div class="control">
+              <input id="userLocation" class="input modal-field2" type="text" placeholder="City Name">
+            </div>
+          </div>
+          <button id="update" class="continue2">Continue</button>
+        </div>
+      <button class="modal-close is-large" aria-label="close"></button>
     </div>
   </section>
 
