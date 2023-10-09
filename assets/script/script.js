@@ -762,7 +762,11 @@ function weatherGrab () {
       .then(function (response) {
           console.log(response);
           if (response.ok != true) {
-              return;
+            var modal = $('#modal');
+            modal.addClass('is-active');
+            var userCity = $('#userCity');
+            userCity.text("Please re-enter your city");
+            return;
           } else {
           return response.json();
           }
