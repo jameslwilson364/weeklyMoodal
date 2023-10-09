@@ -996,6 +996,53 @@ if (storedWeather[6] == 800) {
 } else {
   blockWeatherSaturday.attr("style","background-image:url(./assets/images/weatherback.jpg)");   
 }
+
+// weather average for the week
+var weatherFinal = $('#weather-final');
+var weatherFinalText = $('#weather-final-text');
+console.log(storedWeather.length);
+
+if (storedWeather.length === 7) {
+  var weatherCount = {};
+  storedWeather.forEach(function(number){
+    weatherCount[number] = (weatherCount[number] || 0) + 1;
+  });
+  console.log(weatherCount);
+  var weatherMostCommon = null;
+  var weatherOccurrences = 0;
+  for (var number in weatherCount) {
+    if (weatherCount[number] > weatherOccurrences) {
+      weatherOccurrences = weatherCount[number];
+      weatherMostCommon = number;
+    }
+  }
+  if (weatherOccurrences > storedWeather.length / 2) {
+    console.log(weatherMostCommon);
+    if (weatherMostCommon == 800) {
+      weatherFinal.attr("style","background-image:url(./assets/images/sunny.png)");
+      weatherFinalText.hide();
+    } else if (weatherMostCommon > 800 && weatherMostCommon < 805) {
+      weatherFinal.attr("style","background-image:url(./assets/images/cloudy.png)");
+      weatherFinalText.hide();
+    } else if (weatherMostCommon > 499 && weatherMostCommon < 521) {
+      weatherFinal.attr("style","background-image:url(./assets/images/rain.png)");
+      weatherFinalText.hide();
+    } else if (weatherMostCommon > 199 && weatherMostCommon < 233) {
+      weatherFinal.attr("style","background-image:url(./assets/images/storm.png)");
+      weatherFinalText.hide();
+    } else if (weatherMostCommon > 599 && weatherMostCommon < 623) {
+      weatherFinal.attr("style","background-image:url(./assets/images/snow.png)");
+      weatherFinalText.hide();
+    } else if (weatherMostCommon === 741) {
+      weatherFinal.attr("style","background-image:url(./assets/images/fog.png)");
+      weatherFinalText.hide();
+    }else {
+      weatherFinal.attr("style","background-image:url(./assets/images/weatherback.jpg)");
+      weatherFinalText.hide();
+    } 
+  } 
+
+}
 }
 
 
