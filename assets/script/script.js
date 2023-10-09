@@ -412,6 +412,7 @@ fetch(requestVideo).then(function(response) {
   });
 });
   weatherGrab();
+  checkTrue();
 
 });
 
@@ -834,7 +835,7 @@ function weatherLocalStorage() {
   weatherSunday.hide();
   
 } else {
-  blockWeatherSunday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+  blockWeatherSunday.attr("style","background-image:url(./assets/images/weatherback.jpg)");   
 }
 
 // monday weather
@@ -865,7 +866,7 @@ if (storedWeather[1] == 800) {
   weatherMonday.hide();
   
 } else {
-  blockWeatherMonday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+  blockWeatherMonday.attr("style","background-image:url(./assets/images/weatherback.jpg)");   
 }
 
 // tuesday weather
@@ -896,7 +897,7 @@ if (storedWeather[2] == 800) {
   weatherTuesday.hide();
   
 } else {
-  blockWeatherTuesday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+  blockWeatherTuesday.attr("style","background-image:url(./assets/images/weatherback.jpg)");   
 }
 
 // wednesday weather
@@ -927,7 +928,7 @@ if (storedWeather[3] == 800) {
   weatherWednesday.hide();
   
 } else {
-  blockWeatherWednesday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+  blockWeatherWednesday.attr("style","background-image:url(./assets/images/weatherback.jpg)");   
 }
 
 // thursday weather
@@ -958,7 +959,7 @@ if (storedWeather[4] == 800) {
   weatherThursday.hide();
   
 } else {
-  blockWeatherThursday.attr("style","background-image:url(./assets/images/weatherback.png)");     
+  blockWeatherThursday.attr("style","background-image:url(./assets/images/weatherback.jpg)");     
 }
 
 // friday weather
@@ -989,7 +990,7 @@ if (storedWeather[5] == 800) {
   weatherFriday.hide();
   
 } else {
-  blockWeatherFriday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+  blockWeatherFriday.attr("style","background-image:url(./assets/images/weatherback.jpg)");   
 }
 
 // saturday weather
@@ -1020,7 +1021,37 @@ if (storedWeather[6] == 800) {
   weatherSaturday.hide();
   
 } else {
-  blockWeatherSaturday.attr("style","background-image:url(./assets/images/weatherback.png)");   
+  blockWeatherSaturday.attr("style","background-image:url(./assets/images/weatherback.jpg)");   
 }
 }
 weatherLocalStorage();
+
+//checks for any data in the local storage
+function checkTrue() {
+  if (localStorage.getItem("sunday") && localStorage.getItem("monday") && localStorage.getItem("tuesday") && localStorage.getItem("wednesday") && localStorage.getItem("thursday") && localStorage.getItem("friday") && localStorage.getItem("saturday")) {
+    finalModal(); //then pulls the final stats
+  };
+};
+
+function finalModal() {
+  modalEndEl.addClass ("is-active");
+  xButton.removeClass("hidden");
+
+  //water total
+  var finalWater = parseInt(sundayData[0]) + parseInt(mondayData[0]) + parseInt(tuesdayData[0]) + parseInt(wednesdayData[0]) + parseInt(thursdayData[0]) + parseInt(fridayData[0]) + parseInt(saturdayData[0]);
+  var finalWaterEl = $("#final-water-count");
+  finalWaterEl.text(finalWater);
+
+  //stress average
+  var finalStress = (parseInt(sundayData[1]) + parseInt(mondayData[1]) + parseInt(tuesdayData[1]) + parseInt(wednesdayData[1]) + parseInt(thursdayData[1]) + parseInt(fridayData[1]) + parseInt(saturdayData[1])) / 7;
+  var finalStressEl = $("#final-stress-level");
+  finalStressEl.text(Math.round(finalStress) + "%");
+
+  //energy average
+  var finalEnergy = (parseInt(sundayData[3]) + parseInt(mondayData[3]) + parseInt(tuesdayData[3]) + parseInt(wednesdayData[3]) + parseInt(thursdayData[3]) + parseInt(fridayData[3]) + parseInt(saturdayData[3])) / 7;
+  var finalEnergyEl = $("#final-energy-level");
+  finalEnergyEl.text(Math.round(finalEnergy) + "%");
+
+  //sleep pattern
+
+};
