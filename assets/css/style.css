@@ -129,7 +129,7 @@ section.section {
     align-content: center;
     align-items: center;
     width: 125px;
-    border-radius: 15px;
+   
     height: 40px;
     margin-top: 25px;
     color: white;
@@ -328,7 +328,7 @@ section.section {
 
 .link-text {
     font-size: small;
-    font-family: 'dosis';
+    font-family: 'space grotesk';
     margin-left: 40px;
 }
 
