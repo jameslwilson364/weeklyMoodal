@@ -48,7 +48,7 @@ section.section {
 .card {
     transform-style: preserve-3d;
     transform-origin: center right;
-    transition: transform 1s;
+    transition: ease-out 0.45s;
     box-shadow: 5px 5px 10px grey;
     
 }
@@ -127,7 +127,7 @@ section.section {
     justify-content: center;
     align-content: center;
     align-items: center;
-    width: 25%;
+    width: 125px;
     border-radius: 15px;
     height: 40px;
     margin-top: 25px;
@@ -156,9 +156,13 @@ section.section {
 .weather-location {
     width: 120px;
     margin-left: 20px;
-    filter:brightness(85%);
     margin-top: 10px;
    
+}
+
+.weather-location:hover {
+    scale: 1.1;
+    transition :ease-in 0.3s;
 }
 
 .right {
@@ -183,6 +187,12 @@ section.section {
     color: #fff;
     font-size: 50px;
     width: 75px;
+}
+
+.control {
+    width: 50%;
+    justify-content: center;
+    margin: auto;
 }
 
 .control-options {
@@ -537,6 +547,7 @@ section.section {
 .flip {
     width: 200px;
     display:none;
+    transition: ease-in 0.45s;
 }
 
 .short {
@@ -585,7 +596,7 @@ section.section {
 }
 
 .seperator {
-    margin: 20px 0;
+    margin: 26px 0;
     width: 100%;
     height: 1px;
     background-color: rgb(171, 212, 251);
@@ -626,6 +637,8 @@ section.section {
 .make-bigger {
     font-size: 50px;
 }
+
+
 
 .hours {
     display: flex;
@@ -685,9 +698,17 @@ option {
 }
 
 .end-title {
-    margin-top: 50px;
-    color: white;
+    margin: 50px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 115, 255);
     font-weight: 600;
+    justify-content: center;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'delicious handrawn';
+    align-items: center;
+    align-content: center;
+    height: 130px;
 }
 
 .video-wrap {
@@ -695,14 +716,36 @@ option {
     flex-wrap: wrap;
     max-block-size: 250px;
     width: 33%;
+    margin-bottom: 50px;
 }
 
 .video-display {
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     justify-content: center;
     width: 250px;
+    height: 250px;
+    box-shadow: 0 10px 10px -5px black;
+
 }
+
+.small-pic {
+    width: 100px;
+    margin-bottom: 0;
+}
+
+
+
+.medium-pic {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    width: 200px;
+}
+
+
 
 .mood-wrap {
     width: 20%;
@@ -738,8 +781,9 @@ option {
 }
 
 .end-back {
-    background-image: linear-gradient(to left, rgb(244, 159, 159), rgb(146, 211, 237), rgb(211, 245, 222), rgb(255, 255, 193) );
-
+background-image: url(../images/final-moodal-v2.png);
+background-size: cover;
+background-position: center;
 }
 
 .row {
@@ -818,7 +862,7 @@ input[type="radio"]:checked + .fa-face-angry {
     text-align: center;
     justify-content: center;
     flex-direction: column;
-    width: 300px;
+    width: 500px;
 }
 
 .transparent {
@@ -832,6 +876,26 @@ input[type="radio"]:checked + .fa-face-angry {
 
 .fa-youtube {
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    
+    
+  
+}
+
+.fa-youtube:hover {
+    scale: 1.1;
+    transform: 0.25s;
+}
+
+.youtube-link {
+    display: flex;
+    justify-content: center;
+ margin:80px;
+ font-size: xx-large;
+}
+
+.make-biggest {
+    font-size: 80px;
+    color: red;
 }
 
 footer {
@@ -842,6 +906,10 @@ footer {
 .foot-image {
     max-block-size: 150px;
     visibility: hidden;
+}
+
+.modal-field2 {
+    width: 100%;
 }
 
 @media screen and (max-width: 576px) {
@@ -869,12 +937,14 @@ footer {
     .column {
         justify-content: center;
         margin: auto;
+        margin-bottom: 10px;
     }
 
     .card {
       width: 80%;
       margin: auto;
       margin-bottom: 30px;
+      transition: ease-out 0.45s;
     
     }
 
@@ -883,13 +953,19 @@ footer {
         
     }
 
-    .continue {
-        font-size: medium;
-    }
+  
 
     .modal-content {
         height: 100%;
         font-size: large;
+    }
+
+    .modal-field {
+        width: 200px;
+    }
+
+    .modal-field2 {
+        width: 200px;
     }
 
     .row {
@@ -909,7 +985,7 @@ footer {
 
     .column {
         width: 70%;
-        animation: ;
+        
         
     }
     .column:hover {
@@ -917,7 +993,7 @@ footer {
     }
 
     .hero {
-    
+        width: 100%;
         height: 160px;
         top: 0;
     }
@@ -927,13 +1003,24 @@ footer {
         transform: none;
     }
 
+    .end-title {
+        display: flex;
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+
     .video-wrap {
         margin: auto;
         text-align: center;
         margin-top: 30px;
+        margin-bottom: 30px;
         display: flex;
         justify-content: center;
         width: 200px;
+    }
+
+    .modal-wrap {
+        scale: .75;
     }
 
     .mood {
@@ -959,6 +1046,12 @@ footer {
         margin-top: 0px;
         margin-bottom: 45px;
     }
+
+    .small-pic {
+        margin-top: -20px;
+    }
+
+ 
 
     .edit {
         font-size: larger;
@@ -997,13 +1090,21 @@ footer {
     }
 
     .weather-location {
-        width: 50px;
+        width: 75px;
         margin-left: 15px;
-        margin-top: -150px;
+        
+    }
+
+    .video-display {
+        margin-bottom: 20px;
     }
 
     .link-text {
         visibility: hidden;
         
+    }
+
+    .sorry {
+        width: 300px;
     }
 }

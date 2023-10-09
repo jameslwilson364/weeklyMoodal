@@ -702,6 +702,7 @@ $(continueButton).click(function(event) {
   $(modalEl).removeClass("is-active");
   $(modalEndEl).removeClass("is-active");
   $ (xButton).toggleClass("hidden");
+  
 })
 
 $(updateButton).click(function(event){
@@ -1055,3 +1056,47 @@ function finalModal() {
   //sleep pattern
 
 };
+
+
+
+// start screenshot code here:
+// Get the modal element
+// Get the modal element
+function capture() {
+  var modal = $('#modal-wrap');
+
+// Create a canvas element
+var canvas = document.createElement('canvas');
+
+// Set the canvas size to the size of the modal
+canvas.width = modal.width();
+canvas.height = modal.height();
+
+// Get the canvas context
+var ctx = canvas.getContext('2d');
+
+// Render the modal to the canvas
+html2canvas(modal, {
+  canvas: canvas,
+  onrendered: function() {
+    // Create a new tab
+    var newTab = window.open();
+
+    // Set the new tab's document body to the canvas
+    newTab.document.body.innerHTML = canvas.toDataURL();
+  }
+});
+}
+
+// audio
+$('.button').on('click', function () { 
+  var obj = document.createElement('audio');
+  obj.src = '../assets/audio/click2.wav'; 
+  obj.play(); 
+});
+
+$('#close').on('click', function() {
+  var obj = document.createElement('audio');
+  obj.src = '../assets/audio/click.wav';
+  obj.play();
+})
