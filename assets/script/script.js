@@ -730,6 +730,7 @@ $(closeButton).click(function(event) {
   $(modalEl).removeClass("is-active");
   $(modalEndEl).removeClass("is-active");
   $(modalSorryEl).removeClass("is-active");
+  $(endButton).removeClass("hidden");
   $ (xButton).addClass("hidden");
 })
 
