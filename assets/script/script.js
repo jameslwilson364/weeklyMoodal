@@ -1094,3 +1094,9 @@ $('.button').on('click', function () {
   obj.src = '../assets/audio/click2.wav'; 
   obj.play(); 
 });
+
+$('#close').on('click', function() {
+  var obj = document.createElement('audio');
+  obj.src = '../assets/audio/click.wav';
+  obj.play();
+})

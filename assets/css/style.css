@@ -783,6 +783,7 @@ option {
 .end-back {
 background-image: url(../images/final-moodal-v2.png);
 background-size: cover;
+background-position: center;
 }
 
 .row {
