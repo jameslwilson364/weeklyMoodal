@@ -33,8 +33,8 @@
 
     <div class="float">
 
-      <button id="ending" class="button" type="submit">weekly - hide</button>
-      <button id="mistake" class="button" type="continue">conditional - hide</button>
+      <button id="ending" class="button" type="submit" >weekly - hide</button>
+      <button id="mistake" class="button" type="continue" style="display:none">conditional - hide</button>
   
     </div>
    
@@ -80,22 +80,22 @@
                   <div class="container columns containB">
                     
                     <label>
-                      <input type="radio" name="mood" value="happy">
+                      <input type="radio" name="mood" value="happy" required="required">
                       <i class="fa fa-face-smile"></i>
                     </label>
 
                     <label>
-                      <input type="radio" name="mood" value="neutral">
+                      <input type="radio" name="mood" value="neutral" required="required">
                       <i class="fa fa-face-meh"></i>
                     </label>
 
                     <label>
-                      <input type="radio" name="mood" value="sad">
+                      <input type="radio" name="mood" value="sad" required="required">
                       <i class="fa fa-face-sad-tear"></i>
                     </label>
 
                     <label>
-                      <input type="radio" name="mood" value="angry">
+                      <input type="radio" name="mood" value="angry" required="required">
                       <i class="fa fa-face-angry"></i>
                     </label>
                     
@@ -122,7 +122,7 @@
 
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                <label for="hours-sleep" ><h2 class="subtitle is-5 make-bigger" >Hours of Sleep</h2></label>
                 <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
@@ -132,6 +132,8 @@
                   </div>
                 </select>
               </div>
+
+              <div class="seperator"></div>
 
 
               <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
@@ -144,20 +146,21 @@
             <h2 id="day-saved0" class="subtitle is-4 has-text-centered">Flip Day</h2>
             <h2 id="date-saved0" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
             <div class="block-mood"></div>
-            <div class="block-weather" id="block-weather-sunday">
-                <div class="weather" id="weather-Sunday">
-                    <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
-                    <p id="temp-flip">Temp</p>
-                </div>
-            </div>
+
             <div class="block-music">
                 <div class="music">
-                    <p><i class="fa-brands fa-youtube make-bigger"></i></p>
+                    <p></p>
                     <div>
-                        <a class="youtube-link has-text-centered" href=""> YouTube Link</a>
+                        <a class="youtube-link has-text-centered" href=""><i class="fa-brands fa-youtube make-bigger"></i></a>
                     </div>
                 </div>
             </div>
+            <div class="block-weather" id="block-weather-sunday">
+              <div class="weather" id="weather-Sunday">
+                  <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
+                  <p id="temp-flip">Temp</p>
+              </div>
+          </div>
             <div class="block-water">
               <div class="water">
                 <p class="water-display"></p>
@@ -264,7 +267,7 @@
 
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                <label for="hours-sleep" ><h2 Class="subtitle is-5" >Hours of Sleep</h2></label>
                 <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
@@ -274,6 +277,8 @@
                   </div>
                 </select>
               </div>
+
+              <div class="seperator"></div>
 
 
                 <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
@@ -286,20 +291,21 @@
             <h2 id="day-saved1" class="subtitle is-4 has-text-centered">Flip Day</h2>
             <h2 id="date-saved1" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
             <div class="block-mood"></div>
-            <div class="block-weather" id="block-weather-monday">
-                <div class="weather" id="weather-Monday">
-                    <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
-                    <p id="temp-flip">Temp</p>
-                </div>
-            </div>
+
             <div class="block-music">
                 <div class="music">
-                    <p><i class="fa-brands fa-youtube make-bigger"></i></p>
+                    <p></p>
                     <div>
-                        <a class="youtube-link has-text-centered"> YouTube Link</a>
+                        <a class="youtube-link has-text-centered"> <i class="fa-brands fa-youtube make-bigger"></i></a>
                     </div>
                 </div>
             </div>
+            <div class="block-weather" id="block-weather-monday">
+              <div class="weather" id="weather-Monday">
+                  <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
+                  <p id="temp-flip">Temp</p>
+              </div>
+          </div>
             <div class="block-water">
               <div class="water">
                 <p class="water-display"></p>
@@ -406,7 +412,7 @@
 
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                <label for="hours-sleep"  ><h2 Class="subtitle is-5">Hours of Sleep</h2></label>
                 <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
@@ -416,6 +422,8 @@
                   </div>
                 </select>
               </div>
+
+              <div class="seperator"></div>
 
 
                 <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
@@ -428,20 +436,21 @@
             <h2 id="day-saved2" class="subtitle is-4 has-text-centered">Flip Day</h2>
             <h2 id="date-saved2" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
             <div class="block-mood"></div>
-            <div class="block-weather" id="block-weather-tuesday">
-                <div class="weather" id="weather-Tuesday">
-                    <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
-                    <p id="temp-flip">Temp</p>
-                </div>
-            </div>
+
             <div class="block-music">
                 <div class="music">
-                    <p><i class="fa-brands fa-youtube make-bigger"></i></p>
+                    <p></p>
                     <div>
-                        <a class="youtube-link has-text-centered"> YouTube Link</a>
+                        <a class="youtube-link has-text-centered"> <i class="fa-brands fa-youtube make-bigger"></i></a>
                     </div>
                 </div>
             </div>
+            <div class="block-weather" id="block-weather-tuesday">
+              <div class="weather" id="weather-Tuesday">
+                  <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
+                  <p id="temp-flip">Temp</p>
+              </div>
+          </div>
             <div class="block-water">
               <div class="water">
                 <p class="water-display"></p>
@@ -548,7 +557,7 @@
           
                           <!--This is the non-bulma Drop Down menu-->
                         <div class="hours">
-                          <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                          <label for="hours-sleep" ><h2 Class="subtitle is-5" >Hours of Sleep</h2></label>
                           <select name="hours-sleep" class="hours-sleep">
                             <div class="content">
                             <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
@@ -558,7 +567,8 @@
                             </div>
                           </select>
                         </div>
-          
+                        <div class="seperator"></div>
+
           
                           <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
           
@@ -570,20 +580,21 @@
                       <h2 id="day-saved3" class="subtitle is-4 has-text-centered">Flip Day</h2>
                       <h2 id="date-saved3" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
                       <div class="block-mood"></div>
-                      <div class="block-weather" id="block-weather-wednesday">
-                          <div class="weather" id="weather-Wednesday">
-                              <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
-                              <p id="temp-flip">Temp</p>
-                          </div>
-                      </div>
+
                       <div class="block-music">
                           <div class="music">
-                              <p><i class="fa-brands fa-youtube make-bigger"></i></p>
+                              <p></p>
                               <div>
-                                  <a class="youtube-link has-text-centered"> YouTube Link</a>
+                                  <a class="youtube-link has-text-centered"> <i class="fa-brands fa-youtube make-bigger"></i></a>
                               </div>
                           </div>
                       </div>
+                      <div class="block-weather" id="block-weather-wednesday">
+                        <div class="weather" id="weather-Wednesday">
+                            <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
+                            <p id="temp-flip">Temp</p>
+                        </div>
+                    </div>
                       <div class="block-water">
                         <div class="water">
                           <p class="water-display"></p>
@@ -690,7 +701,7 @@
 
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                <label for="hours-sleep" ><h2 Class="subtitle is-5" >Hours of Sleep</h2></label>
                 <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
@@ -700,6 +711,7 @@
                   </div>
                 </select>
               </div>
+              <div class="seperator"></div>
 
 
                 <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
@@ -712,20 +724,21 @@
             <h2 id="day-saved4" class="subtitle is-4 has-text-centered">Flip Day</h2>
             <h2 id="date-saved4" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
             <div class="block-mood"></div>
-            <div class="block-weather" id="block-weather-thursday">
-                <div class="weather" id="weather-Thursday">
-                    <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
-                    <p id="temp-flip">Temp</p>
-                </div>
-            </div>
+
             <div class="block-music">
                 <div class="music">
-                    <p><i class="fa-brands fa-youtube make-bigger"></i></p>
+                    <p></p>
                     <div>
-                        <a class="youtube-link has-text-centered"> YouTube Link</a>
+                        <a class="youtube-link has-text-centered"> <i class="fa-brands fa-youtube make-bigger"></i></a>
                     </div>
                 </div>
             </div>
+            <div class="block-weather" id="block-weather-thursday">
+              <div class="weather" id="weather-Thursday">
+                  <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
+                  <p id="temp-flip">Temp</p>
+              </div>
+          </div>
             <div class="block-water">
               <div class="water">
                 <p class="water-display"></p>
@@ -832,7 +845,7 @@
           
                           <!--This is the non-bulma Drop Down menu-->
                         <div class="hours">
-                          <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                          <label for="hours-sleep" ><h2 Class="subtitle is-5" >Hours of Sleep</h2></label>
                           <select name="hours-sleep" class="hours-sleep">
                             <div class="content">
                             <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
@@ -842,7 +855,8 @@
                             </div>
                           </select>
                         </div>
-          
+                        <div class="seperator"></div>
+
           
                           <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
           
@@ -854,20 +868,21 @@
                       <h2 id="day-saved5" class="subtitle is-4 has-text-centered">Flip Day</h2>
                       <h2 id="date-saved5" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
                       <div class="block-mood"></div>
-                      <div class="block-weather" id="block-weather-friday">
-                          <div class="weather" id="weather-Friday">
-                              <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
-                              <p id="temp-flip">Temp</p>
-                          </div>
-                      </div>
+
                       <div class="block-music">
                           <div class="music">
-                              <p><i class="fa-brands fa-youtube make-bigger"></i></p>
+                              <p></p>
                               <div>
-                                  <a class="youtube-link has-text-centered"> YouTube Link</a>
+                                  <a class="youtube-link has-text-centered"> <i class="fa-brands fa-youtube make-bigger"></i></a>
                               </div>
                           </div>
                       </div>
+                      <div class="block-weather" id="block-weather-friday">
+                        <div class="weather" id="weather-Friday">
+                            <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
+                            <p id="temp-flip">Temp</p>
+                        </div>
+                    </div>
                       <div class="block-water">
                         <div class="water">
                           <p class="water-display"></p>
@@ -974,7 +989,7 @@
 
                 <!--This is the non-bulma Drop Down menu-->
               <div class="hours">
-                <label for="hours-sleep" Class="subtitle is-5" ><h2>Hours of Sleep</h2></label>
+                <label for="hours-sleep"  ><h2 Class="subtitle is-5">Hours of Sleep</h2></label>
                 <select name="hours-sleep" class="hours-sleep">
                   <div class="content">
                   <option id="0-hour" class="font-adjust" value="0-4">0-4 Hours</option>
@@ -984,6 +999,7 @@
                   </div>
                 </select>
               </div>
+              <div class="seperator"></div>
 
 
                 <button id="save" type="button" class="save button is-link is-light"><i class="fa-regular fa-floppy-disk" style="color: #1148a6;"></i></button>
@@ -996,20 +1012,21 @@
             <h2 id="day-saved6" class="subtitle is-4 has-text-centered">Flip Day</h2>
             <h2 id="date-saved6" class="subtitle is-6 has-text-centered transparent">Flip Date</h2>
             <div class="block-mood"></div>
-            <div class="block-weather" id="block-weather-saturday">
-                <div class="weather" id="weather-Saturday">
-                    <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
-                    <p id="temp-flip">Temp</p>
-                </div>
-            </div>
+
             <div class="block-music">
                 <div class="music">
-                    <p><i class="fa-brands fa-youtube make-bigger"></i></p>
+                    <p></p>
                     <div>
-                        <a class="youtube-link has-text-centered"> YouTube Link</a>
+                        <a class="youtube-link has-text-centered"> <i class="fa-brands fa-youtube make-bigger"></i></a>
                     </div>
                 </div>
             </div>
+            <div class="block-weather" id="block-weather-saturday">
+              <div class="weather" id="weather-Saturday">
+                  <p id="weather-flip"><i class="fa-regular fa-sun"></i></p>
+                  <p id="temp-flip">Temp</p>
+              </div>
+          </div>
             <div class="block-water">
               <div class="water">
                 <p class="water-display"></p>
@@ -1063,6 +1080,7 @@
           </div>
         </div>
         <button id="continue" class="continue">Continue</button>
+        <img src="./assets/images/happy-balloon.png" alt="happy balloon" class="medium-pic">
       </div>
       <button class="modal-close is-large" aria-label="close"></button>
     </div>
@@ -1073,17 +1091,26 @@
       <div id="modal-background" class="modal-background end-back"></div>
       
       <div class="modal-content">
-        <div class="subtitle is-3 end-title text" style="color:blue">Your Weekly Moodal!</div>
+        <div class="end-title">
+          <img class="small-pic small-pic2" src="./assets/images/Poodal.png">
+          Your Weekly Moodal!
+          <img class="small-pic" src="./assets/images/happy-balloon.png"></div>
         <div class="row">
         <div class="mood-wrap block-mood">
         
       </div>
         
 
+
+      
         <div class="video-wrap">
-            <img class="video-display" src="/assets/images/youtube-test.png">
+          <div class="video-display">
+              <p></p>
+              <div class="youtube-link has-text-centered center">
+                  <a> <i class="fa-brands fa-youtube make-biggest"></i></a>
+              </div>
           </div>
-          
+      </div>
 
           <div class="weather-wrap">
             <h3 class="subtitle is-3 weather-text">Avg Temp &deg;</h3>
@@ -1173,12 +1200,15 @@
     <footer>
       <img class="foot-image" src="./assets/images/Poodal.png">
     </footer>
-<!--scripts for JavaScript, jQuery, and dayJS linked here-->
+<!--scripts for JavaScript, jQuery, and dayJS html2canvas linked here-->
 <script
 src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
 integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
 crossorigin="anonymous"
 ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./assets/script/script.js"></script>
   </body>
