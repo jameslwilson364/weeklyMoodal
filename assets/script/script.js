@@ -774,40 +774,12 @@ function weatherGrab () {
           console.log(dailyWeather);
           storedWeather.push(dailyWeather);
           localStorage.setItem("Weather Code", JSON.stringify(storedWeather));
+          weatherLocalStorage();
 
-          // Current Day
-          if (dailyWeather == 800) {
-              forecastCurrentCity.attr("style","background-image:url(./assets/images/sunny.png)");
-              forecastWeatherFlip.hide();
-              
-          } else if (dailyWeather > 800 && data.weather[0].id < 805) {
-              forecastCurrentCity.attr("style","background-image:url(./assets/images/cloudy.png)");
-              forecastWeatherFlip.hide();
-              
-          } else if (dailyWeather > 499 && data.weather[0].id < 521) {
-              forecastCurrentCity.attr("style","background-image:url(./assets/images/rain.png)");
-              forecastWeatherFlip.hide();
-              
-          } else if (dailyWeather > 199 && data.weather[0].id < 233) {
-              forecastCurrentCity.attr("style","background-image:url(./assets/images/storm.png)");
-              forecastWeatherFlip.hide();
-              
-          } else if (dailyWeather > 599 && data.weather[0].id < 623) {
-              forecastCurrentCity.attr("style","background-image:url(./assets/images/snow.png)");
-              forecastWeatherFlip.hide();
-              
-          } else if (dailyWeather === 741) {
-              forecastCurrentCity.attr("style","background-image:url(./assets/images/fog.png)");
-              forecastWeatherFlip.hide();
-              
-          } else {
-              forecastCurrentCity.textContent = ("You got some weird weather");   
-          }
 });
 }
 
 // weather local storage
-
 function weatherLocalStorage() {
   var blockWeatherSunday = $('#block-weather-sunday');
   var weatherSunday = $('#weather-Sunday');
@@ -1025,7 +997,7 @@ if (storedWeather[6] == 800) {
   blockWeatherSaturday.attr("style","background-image:url(./assets/images/weatherback.jpg)");   
 }
 }
-weatherLocalStorage();
+
 
 //checks for any data in the local storage
 function checkTrue() {
