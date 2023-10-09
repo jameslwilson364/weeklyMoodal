@@ -51,6 +51,7 @@ section.section {
     transition: ease-out 0.45s;
     box-shadow: 5px 5px 10px grey;
     
+    
 }
 
 .modal-image {
@@ -69,7 +70,7 @@ section.section {
     border: 5px solid white;
     justify-content: center;
     border-radius: 15px;
-    min-width:  220px;
+    min-width:  230px;
 
     text-align: center;
 }
@@ -163,6 +164,17 @@ section.section {
 .weather-location:hover {
     scale: 1.1;
     transition :ease-in 0.3s;
+}
+
+.weekly {
+    width: fit-content;
+    background-color: rgb(14, 102, 189);
+    border: 2px solid white;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: white;
+    font-weight: 500;
+
 }
 
 .right {
