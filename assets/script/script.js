@@ -347,12 +347,24 @@ $(".save").click(function(event) {
 
   if (moodInput == "happy") {
     moodDisplay.addClass("happy-back");
+    moodDisplay.removeClass("neutral-back");
+    moodDisplay.removeClass("sad-back");
+    moodDisplay.removeClass("stressed-back");
   } else if (moodInput == "neutral") {
     moodDisplay.addClass("neutral-back");
+    moodDisplay.removeClass("happy-back");
+    moodDisplay.removeClass("sad-back");
+    moodDisplay.removeClass("stressed-back");
   } else if (moodInput == "sad") {
     moodDisplay.addClass("sad-back");
+    moodDisplay.removeClass("neutral-back");
+    moodDisplay.removeClass("happpy-back");
+    moodDisplay.removeClass("stressed-back");
   } else if (moodInput == "angry") {
     moodDisplay.addClass("stressed-back");
+    moodDisplay.removeClass("neutral-back");
+    moodDisplay.removeClass("sad-back");
+    moodDisplay.removeClass("happy-back");
   };
 
   waterDisplay.text("Water: " + waterInput + " units");
@@ -1146,21 +1158,7 @@ function finalModal() {
       }
     }
     console.log(moodMostCommon);
-  }
-
-//   var str = JSON.stringify(sundayStuff[2] + " " + mondayStuff[2] + " " + tuesdayStuff[2] + " " + wednesdayStuff[2] + " " + thursdayStuff[2] + " " + fridayStuff[2] + " " + saturdayStuff[2]),
-//     split = str.split(" "),
-//     obj = {};
-
-// for (var x = 0; x < split.length; x++) {
-//   if (obj[split[x]] === undefined) {
-//     obj[split[x]] = 1;
-//   } else {
-//     obj[split[x]]++;
-//   }
-// }
-
-// console.log(obj);
+  };
 
 
 
@@ -1174,11 +1172,25 @@ function finalModal() {
 }).then(function(data) {
   var playlist;
 
-for (var i = 0; i < data.items.length; i++) {
-if (data.items[i].snippet.title == "End of Week") {
-    playlist = data.items[i].id;
-};
-};
+  for (var i = 0; i < data.items.length; i++) {
+    if (data.items[i].snippet.title == "Mood:Happy") {
+      if (moodMostCommon == "happy") {
+        playlist = data.items[i].id;
+      };
+    } else if (data.items[i].snippet.title == "Mood:Neutral") {
+      if (moodMostCommon == "neutral") {
+        playlist = data.items[i].id;
+      };
+    } else if (data.items[i].snippet.title == "Mood:Sad") {
+      if (moodMostCommon == "sad") {
+        playlist = data.items[i].id;
+      };
+    }  else if (data.items[i].snippet.title == "Mood:Angry") {
+      if (moodMostCommon == "angry") {
+        playlist = data.items[i].id;
+      };
+    };
+    };
 
 var requestVideo = "https://youtube.googleapis.com/youtube/v3/playlistItems?max_results=20&part=snippet&playlistId=" + playlist + apiKey;
 
