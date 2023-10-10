@@ -732,6 +732,7 @@ $(closeButton).click(function(event) {
   $(modalSorryEl).removeClass("is-active");
   $(endButton).removeClass("hidden");
   $ (xButton).addClass("hidden");
+
 })
 
 $(endButton).click(function(event) {
@@ -1102,13 +1103,17 @@ function finalModal() {
   //sleep pattern
   var finalSleep = ((parseInt(sundayStuff[4]) + parseInt(mondayStuff[4]) + parseInt(tuesdayStuff[4]) + parseInt(wednesdayStuff[4]) + parseInt(thursdayStuff[4]) + parseInt(fridayStuff[4]) + parseInt(saturdayStuff[4])) / 7).toFixed(2);
   var finalSleepRating = $("#final-sleep-rating");
+  var lineTwo = $("#final-sleep-rating-2");
 
   if (finalSleep < 6) {
-    finalSleepRating.text(finalSleep + " hours! You should try to get more sleep everyday...");
+    finalSleepRating.text(finalSleep + " hours!");
+    lineTwo.text("You should try to get more sleep everyday");
   } else if (finalSleep = 6 || finalSleep > 6) {
-    finalSleepRating.text(finalSleep + " hours! You have a good sleeping pattern!");
+    finalSleepRating.text(finalSleep + " hours!");
+    lineTwo.text("You should try to get more sleep everyday");
   } else if (finalSleep > 9) {
-    finalSleepRating.text(finalSleep + " hours! You should try to sleep a bit less...");
+    finalSleepRating.text(finalSleep + " hours!");
+    LineTwo.text("You should try to get more sleep everyday");
   };
 
   //mood overall
@@ -1229,12 +1234,12 @@ html2canvas(modal, {
 // audio
 $('.button').on('click', function () { 
   var obj = document.createElement('audio');
-  obj.src = '../assets/audio/click2.wav'; 
+  obj.src = './assets/audio/click2.wav'; 
   obj.play(); 
 });
 
 $('#close').on('click', function() {
   var obj = document.createElement('audio');
-  obj.src = '../assets/audio/click.wav';
+  obj.src = './assets/audio/click.wav';
   obj.play();
 })
