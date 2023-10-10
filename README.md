@@ -16,7 +16,10 @@ Acceptance Criteria
 - I am able to provide feedback to the user making recommendations based on how they felt that week
 
 
-Learning and Motivation
+## Screenshot of Deployed App
+![screenshot](./assets/images/Live-Screenshot.png)
+
+## Learning and Motivation
 
 - What was your motivation? There are a myriad of devices and applications that a user could pull data points from regarding their physical and mental well being.  The team wanted to create a simple and easy to use tracking tool that doesn’t overwhelm the user.
 
