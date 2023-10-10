@@ -1013,32 +1013,32 @@ if (storedWeather.length === 7) {
     weatherCount[number] = (weatherCount[number] || 0) + 1;
   });
   console.log(weatherCount);
-  var weatherMostCommon = null;
-  var weatherOccurrences = 0;
+  var moodMostCommon = null;
+  var moodOccurrences = 0;
   for (var number in weatherCount) {
-    if (weatherCount[number] > weatherOccurrences) {
-      weatherOccurrences = weatherCount[number];
-      weatherMostCommon = number;
+    if (weatherCount[number] > moodOccurrences) {
+      moodOccurrences = weatherCount[number];
+      moodMostCommon = number;
     }
   }
-  if (weatherOccurrences > storedWeather.length / 2) {
-    console.log(weatherMostCommon);
-    if (weatherMostCommon == 800) {
+  if (moodOccurrences > storedWeather.length / 2) {
+    console.log(moodMostCommon);
+    if (moodMostCommon == 800) {
       weatherFinal.attr("style","background-image:url(./assets/images/sunny.png)");
       weatherFinalText.hide();
-    } else if (weatherMostCommon > 800 && weatherMostCommon < 805) {
+    } else if (moodMostCommon > 800 && moodMostCommon < 805) {
       weatherFinal.attr("style","background-image:url(./assets/images/cloudy.png)");
       weatherFinalText.hide();
-    } else if (weatherMostCommon > 499 && weatherMostCommon < 521) {
+    } else if (moodMostCommon > 499 && moodMostCommon < 521) {
       weatherFinal.attr("style","background-image:url(./assets/images/rain.png)");
       weatherFinalText.hide();
-    } else if (weatherMostCommon > 199 && weatherMostCommon < 233) {
+    } else if (moodMostCommon > 199 && moodMostCommon < 233) {
       weatherFinal.attr("style","background-image:url(./assets/images/storm.png)");
       weatherFinalText.hide();
-    } else if (weatherMostCommon > 599 && weatherMostCommon < 623) {
+    } else if (moodMostCommon > 599 && moodMostCommon < 623) {
       weatherFinal.attr("style","background-image:url(./assets/images/snow.png)");
       weatherFinalText.hide();
-    } else if (weatherMostCommon === 741) {
+    } else if (moodMostCommon === 741) {
       weatherFinal.attr("style","background-image:url(./assets/images/fog.png)");
       weatherFinalText.hide();
     }else {
@@ -1112,21 +1112,50 @@ function finalModal() {
   };
 
   //mood overall
-  var blockMood = $("#final-mood");
+  var blockMood = $(".mood-wrap");
 
-  var str = JSON.stringify(sundayStuff[2] + " " + mondayStuff[2] + " " + tuesdayStuff[2] + " " + wednesdayStuff[2] + " " + thursdayStuff[2] + " " + fridayStuff[2] + " " + saturdayStuff[2]),
-    split = str.split(" "),
-    obj = {};
+  var moodArray = [sundayStuff[2], mondayStuff[2], tuesdayStuff[2], wednesdayStuff[2], thursdayStuff[2], fridayStuff[2], saturdayStuff[2]]
 
-for (var x = 0; x < split.length; x++) {
-  if (obj[split[x]] === undefined) {
-    obj[split[x]] = 1;
-  } else {
-    obj[split[x]]++;
+  if (moodArray.length === 7) {
+    var moodCount = {};
+    moodArray.forEach(function(number){
+      moodCount[number] = (moodCount[number] || 0) + 1;
+    });
+    console.log(moodCount);
+    var moodMostCommon = null;
+    var moodOccurrences = 0;
+    for (var number in moodCount) {
+      if (moodCount[number] > moodOccurrences) {
+        moodOccurrences = moodCount[number];
+        moodMostCommon = number;
+
+        if (moodMostCommon == "happy") {
+          blockMood.addClass("happy-back");
+        } else if (moodMostCommon == "neutral") {
+          blockMood.addClass("neutral-back");
+        } else if (moodMostCommon == "sad") {
+          blockMood.addClass("sad-back");
+        } else if (moodMostCommon == "angry") {
+          blockMood.addClass("stressed-back");
+        };
+      }
+    }
+    console.log(moodMostCommon);
   }
-}
 
-console.log(obj);
+//   var str = JSON.stringify(sundayStuff[2] + " " + mondayStuff[2] + " " + tuesdayStuff[2] + " " + wednesdayStuff[2] + " " + thursdayStuff[2] + " " + fridayStuff[2] + " " + saturdayStuff[2]),
+//     split = str.split(" "),
+//     obj = {};
+
+// for (var x = 0; x < split.length; x++) {
+//   if (obj[split[x]] === undefined) {
+//     obj[split[x]] = 1;
+//   } else {
+//     obj[split[x]]++;
+//   }
+// }
+
+// console.log(obj);
 
 
 
