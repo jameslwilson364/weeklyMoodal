@@ -30,7 +30,7 @@ Learning and Motivation
 
 - Application is fully developed as is.  No installation is required for this application.
 
-link the deployed site
+https://jameslwilson364.github.io/weeklyMoodal/
 
 ## Usage
 

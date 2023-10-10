@@ -1113,6 +1113,7 @@ function finalModal() {
 
   //mood overall
   var blockMood = $("#final-mood");
+  
 
   var str = JSON.stringify(sundayStuff[2] + " " + mondayStuff[2] + " " + tuesdayStuff[2] + " " + wednesdayStuff[2] + " " + thursdayStuff[2] + " " + fridayStuff[2] + " " + saturdayStuff[2]),
     split = str.split(" "),
