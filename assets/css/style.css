@@ -732,6 +732,9 @@ option {
 }
 
 .video-display {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: auto;
     margin-bottom: 50px;
     justify-content: center;

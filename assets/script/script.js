@@ -1062,22 +1062,107 @@ function finalModal() {
   modalEndEl.addClass ("is-active");
   xButton.removeClass("hidden");
 
+  var sundayFinal = localStorage.getItem("sunday");
+  var sundayStuff = JSON.parse(sundayFinal);
+
+  var mondayFinal = localStorage.getItem("monday");
+  var mondayStuff = JSON.parse(mondayFinal);
+
+  var tuesdayFinal = localStorage.getItem("tuesday");
+  var tuesdayStuff = JSON.parse(tuesdayFinal);
+
+  var wednesdayFinal = localStorage.getItem("wednesday");
+  var wednesdayStuff = JSON.parse(wednesdayFinal);
+
+  var thursdayFinal = localStorage.getItem("thursday");
+  var thursdayStuff = JSON.parse(thursdayFinal);
+
+  var fridayFinal = localStorage.getItem("friday");
+  var fridayStuff = JSON.parse(fridayFinal);
+
+  var saturdayFinal = localStorage.getItem("saturday");
+  var saturdayStuff = JSON.parse(saturdayFinal);
+
+
   //water total
-  var finalWater = parseInt(sundayData[0]) + parseInt(mondayData[0]) + parseInt(tuesdayData[0]) + parseInt(wednesdayData[0]) + parseInt(thursdayData[0]) + parseInt(fridayData[0]) + parseInt(saturdayData[0]);
+  var finalWater = parseInt(sundayStuff[0]) + parseInt(mondayStuff[0]) + parseInt(tuesdayStuff[0]) + parseInt(wednesdayStuff[0]) + parseInt(thursdayStuff[0]) + parseInt(fridayStuff[0]) + parseInt(saturdayStuff[0]);
   var finalWaterEl = $("#final-water-count");
   finalWaterEl.text(finalWater);
 
   //stress average
-  var finalStress = (parseInt(sundayData[1]) + parseInt(mondayData[1]) + parseInt(tuesdayData[1]) + parseInt(wednesdayData[1]) + parseInt(thursdayData[1]) + parseInt(fridayData[1]) + parseInt(saturdayData[1])) / 7;
+  var finalStress = (parseInt(sundayStuff[1]) + parseInt(mondayStuff[1]) + parseInt(tuesdayStuff[1]) + parseInt(wednesdayStuff[1]) + parseInt(thursdayStuff[1]) + parseInt(fridayStuff[1]) + parseInt(saturdayStuff[1])) / 7;
   var finalStressEl = $("#final-stress-level");
   finalStressEl.text(Math.round(finalStress) + "%");
 
   //energy average
-  var finalEnergy = (parseInt(sundayData[3]) + parseInt(mondayData[3]) + parseInt(tuesdayData[3]) + parseInt(wednesdayData[3]) + parseInt(thursdayData[3]) + parseInt(fridayData[3]) + parseInt(saturdayData[3])) / 7;
+  var finalEnergy = (parseInt(sundayStuff[3]) + parseInt(mondayStuff[3]) + parseInt(tuesdayStuff[3]) + parseInt(wednesdayStuff[3]) + parseInt(thursdayStuff[3]) + parseInt(fridayStuff[3]) + parseInt(saturdayStuff[3])) / 7;
   var finalEnergyEl = $("#final-energy-level");
   finalEnergyEl.text(Math.round(finalEnergy) + "%");
 
   //sleep pattern
+  var finalSleep = ((parseInt(sundayStuff[4]) + parseInt(mondayStuff[4]) + parseInt(tuesdayStuff[4]) + parseInt(wednesdayStuff[4]) + parseInt(thursdayStuff[4]) + parseInt(fridayStuff[4]) + parseInt(saturdayStuff[4])) / 7).toFixed(2);
+  var finalSleepRating = $("#final-sleep-rating");
+
+  if (finalSleep < 6) {
+    finalSleepRating.text(finalSleep + " hours! You should try to get more sleep everyday...");
+  } else if (finalSleep = 6 || finalSleep > 6) {
+    finalSleepRating.text(finalSleep + " hours! You have a good sleeping pattern!");
+  } else if (finalSleep > 9) {
+    finalSleepRating.text(finalSleep + " hours! You should try to sleep a bit less...");
+  };
+
+  //mood overall
+  var blockMood = $("#final-mood");
+
+  var str = JSON.stringify(sundayStuff[2] + " " + mondayStuff[2] + " " + tuesdayStuff[2] + " " + wednesdayStuff[2] + " " + thursdayStuff[2] + " " + fridayStuff[2] + " " + saturdayStuff[2]),
+    split = str.split(" "),
+    obj = {};
+
+for (var x = 0; x < split.length; x++) {
+  if (obj[split[x]] === undefined) {
+    obj[split[x]] = 1;
+  } else {
+    obj[split[x]]++;
+  }
+}
+
+console.log(obj);
+
+
+
+  //display end of week vid
+
+  var apiKey = "&key=AIzaSyBTgwqLQXrNGV8cBN_dax-0Sh54ihhk-_A";
+  var requestPlaylist = "https://youtube.googleapis.com/youtube/v3/playlists?max_results=20&part=snippet&channelId=UCwba4_oWoLr5T5Qeqx-YGNw" + apiKey;
+
+  fetch(requestPlaylist).then(function(response) {
+  return response.json();
+}).then(function(data) {
+  var playlist;
+
+for (var i = 0; i < data.items.length; i++) {
+if (data.items[i].snippet.title == "End of Week") {
+    playlist = data.items[i].id;
+};
+};
+
+var requestVideo = "https://youtube.googleapis.com/youtube/v3/playlistItems?max_results=20&part=snippet&playlistId=" + playlist + apiKey;
+
+fetch(requestVideo).then(function(response) {
+  return response.json();
+}).then(function(data) {
+
+  for (var i = 0; i < Math.floor(Math.random() * data.items.length + 1); i++) {
+      var video = data.items[i].snippet.resourceId.videoId;
+
+      $("#final-link").attr("href", "https://www.youtube.com/watch?v=" + video + "&list=" + playlist);
+      $("#final-link").attr("target", "_blank");
+      $(".video-display").css("background-image", "url(" + data.items[i].snippet.thumbnails.medium.url + ")"); //pulls thumbnail and sets bg image           
+      };
+
+
+  });
+});
 
 };
 
