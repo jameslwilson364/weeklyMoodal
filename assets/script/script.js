@@ -1107,13 +1107,13 @@ function finalModal() {
 
   if (finalSleep < 6) {
     finalSleepRating.text(finalSleep + " hours!");
-    lineTwo.text("You should try to get more sleep everyday");
+    lineTwo.text("You should Sleep more!");
   } else if (finalSleep = 6 || finalSleep > 6) {
     finalSleepRating.text(finalSleep + " hours!");
-    lineTwo.text("You should try to get more sleep everyday");
-  } else if (finalSleep > 9) {
+    lineTwo.text("Great job!  You have an excellent Sleep Pattern!");
+  } else if (finalSleep > 8) {
     finalSleepRating.text(finalSleep + " hours!");
-    LineTwo.text("You should try to get more sleep everyday");
+    lineTwo.text("You should get a little less Sleep!");
   };
 
   //mood overall
