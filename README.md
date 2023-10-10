@@ -2,14 +2,14 @@
 
 ## Project 1- Mental Health Tracker
 
-User Stories
+### User Stories
 
 - As a user I want to track how I was feeling today and save the data.
 - As a user I want to capture sleep, water in take, mood & stress
 - As a user I want to be able to provide my input to single or multiple days (7 day week)
 - As a user I want to see recommendations based on how I felt for the entire week
 
-Acceptance Criteria
+### Acceptance Criteria
 
 - I capture the user’s mental health (sleep, mood and stress) inputs and water intake, and save them in a calendar day
 - I am able to capture user inputs for mental health and water consumption and save those items for the calendar week
@@ -41,11 +41,13 @@ Use as you see fit.
 
 ## Credits
 
-Ryan Fann
-Luis Olmos
-James Wilson
+#### Ryan Fann
+#### Luis Olmos
+#### James Wilson
 and a plethora of web documentation MDN, Slack Overflow, etc.!
 
 ## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 No restrictions on license
