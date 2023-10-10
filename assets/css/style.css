@@ -76,7 +76,7 @@ section.section {
 }
 
 .container {
-    scale: .85;
+    scale: .90;
     width: 85%;
     display: flex;
     justify-content: center;
@@ -155,7 +155,7 @@ section.section {
 }
 
 .weather-location {
-    width: 100px;
+    width: 130px;
     margin-left: 20px;
     margin-top: 10px;
    
